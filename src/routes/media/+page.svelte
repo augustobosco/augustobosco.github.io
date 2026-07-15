@@ -36,6 +36,7 @@
 	allowfullscreen
 ></iframe>
 
+<!--
 <iframe
 	class="video"
 	src="https://drive.google.com/file/d/13WsEwhVW-fhDSmlbxjtv84U1vhSGm_E0/preview"
@@ -45,6 +46,7 @@
 	referrerpolicy="strict-origin-when-cross-origin"
 	allowfullscreen
 ></iframe>
+-->
 
 <!-- <iframe
 	class="video"
