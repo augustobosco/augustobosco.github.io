@@ -36,8 +36,7 @@
 	allowfullscreen
 ></iframe>
 
-<!--
-<iframe
+<!--<iframe
 	class="video"
 	src="https://drive.google.com/file/d/13WsEwhVW-fhDSmlbxjtv84U1vhSGm_E0/preview"
 	title="Drive video player"
@@ -45,8 +44,7 @@
 	allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 	referrerpolicy="strict-origin-when-cross-origin"
 	allowfullscreen
-></iframe>
--->
+></iframe>-->
 
 <!-- <iframe
 	class="video"
