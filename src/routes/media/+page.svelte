@@ -78,7 +78,7 @@
 		aspect-ratio: 16 / 9;
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 1024px) {
 		
 		.contenedor-videos {
 			order: 1;       
