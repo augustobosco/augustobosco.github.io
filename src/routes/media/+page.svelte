@@ -18,7 +18,7 @@
 
 <iframe 
 	class="video"
-	src="https://www.youtube.com/embed/_JwYA9JxTQA?si=6bqKwoyQOS-iQN9g" 
+	src="https://www.youtube.com/embed/Q3euyGgazgE?si=MNbyK5eOelHqR72m" 
 	title="YouTube video player" 
 	frameborder="0" 
 	allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -28,7 +28,7 @@
 
 <iframe
 	class="video"
-	src="https://www.youtube.com/embed/mfM6DWBora0?si=-aJxivU5ChTpKyvT"
+	src="https://www.youtube.com/embed/jIgz_IhCmEY?si=eifrKg2jNKpt1p4P"
 	title="YouTube video player"
 	frameborder="0"
 	allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -38,7 +38,7 @@
 
 <iframe 
 	class="video"
-	src="https://www.youtube.com/embed/G6HxuAImJyY?si=omi9ldbqqUWhtzvT" 
+	src="https://www.youtube.com/embed/nps4-HFdQBc?si=RQRn5OFdsZl98MZl" 
 	title="YouTube video player" 
 	frameborder="0" 
 	allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
