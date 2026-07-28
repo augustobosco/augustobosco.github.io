@@ -64,12 +64,10 @@
 			color 0.25s;
 	}
 
-	@media (hover: hover) {
-		.title:hover {
-			cursor: pointer;
-			letter-spacing: 0.22em;
-			color: rgb(188, 180, 232);
-		}
+	.title:hover, .title:active {
+		cursor: pointer;
+		letter-spacing: 0.22em;
+		color: rgb(188, 180, 232);
 	}
 
 	.subtitle {
@@ -96,7 +94,7 @@
 		}
 		
 		.title {
-			font-size: 1.7rem;
+			font-size: 1.4rem;
 			letter-spacing: 0.15em;
 		}
 	}
