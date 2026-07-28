@@ -16,15 +16,9 @@
 	<img src={img4} />
 </div>
 
-<iframe 
-	class="video"
-	src="https://drive.google.com/file/d/13WsEwhVW-fhDSmlbxjtv84U1vhSGm_E0/view?usp=sharing" 
-	title="YouTube video player" 
-	frameborder="0" 
-	allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-	referrerpolicy="strict-origin-when-cross-origin" 
-	allowfullscreen
-></iframe>
+<video class="video" controls preload="metadata">
+  <source src="https://drive.google.com/uc?export=download&id=13WsEwhVW-fhDSmlbxjtv84U1vhSGm_E0" type="video/mp4">
+</video>
 
 <iframe
 	class="video"
