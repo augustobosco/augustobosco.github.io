@@ -36,35 +36,14 @@
 	allowfullscreen
 ></iframe>
 
-<!--<iframe
+<iframe 
 	class="video"
-	src="https://drive.google.com/file/d/13WsEwhVW-fhDSmlbxjtv84U1vhSGm_E0/preview"
-	title="Drive video player"
-	frameborder="0"
-	allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-	referrerpolicy="strict-origin-when-cross-origin"
-	allowfullscreen
-></iframe>
-
-<iframe
-	class="video"
-	src="https://drive.google.com/file/d/1NPvBXMPs1KRcV0Yrksludym6WrnWwlcA/preview"
-	title="Drive video player"
-	frameborder="0"
-	allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-	referrerpolicy="strict-origin-when-cross-origin"
-	allowfullscreen
-></iframe>
-
-<iframe
-	class="video"
-	src="https://drive.google.com/file/d/115S64kYdddtMsrcx7E2Ng6WOdodUGQcU/preview"
-	title="Drive video player"
-	frameborder="0"
-	allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-	referrerpolicy="strict-origin-when-cross-origin"
-	allowfullscreen
-></iframe> -->
+	src="https://www.youtube.com/embed/G6HxuAImJyY?si=omi9ldbqqUWhtzvT" 
+	title="YouTube video player" 
+	frameborder="0" 
+	allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+	referrerpolicy="strict-origin-when-cross-origin" 
+	allowfullscreen></iframe>
 
 <style>
 	.mosaic {
