@@ -43,7 +43,7 @@
 			referrerpolicy="strict-origin-when-cross-origin" 
 			allowfullscreen
 			loading="lazy"
-		</iframe>
+		></iframe>
 	</div>
 
 </div>
