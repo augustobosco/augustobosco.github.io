@@ -6,6 +6,7 @@
 	import img3 from '$lib/assets/media/3.png';
 	import img4 from '$lib/assets/media/4.png';
 
+	let v1 = $state(false);
 	let yt1 = $state(false);
 	let yt2 = $state(false);
 </script>
@@ -22,9 +23,19 @@
 	</div>
 
 	<div class="contenedor-videos">
-		<video class="video" controls preload="metadata" poster="/MEDIA/HowlsMovingCastle/portada-howl.jpg">
-		  <source src="/MEDIA/HowlsMovingCastle/video-howl.mp4" type="video/mp4">
-		</video>
+		
+		{#if v1}
+			<video class="video" controls autoplay>
+				<source src="/MEDIA/HowlsMovingCastle/video-howl.mp4" type="video/mp4">
+			</video>
+		{:else}
+			<button class="video fachada" style="background-image: url('/MEDIA/HowlsMovingCastle/portada-howl.jpg');" onclick={() => v1 = true}>
+				<svg viewBox="0 0 68 48" class="boton-youtube">
+					<path class="fondo-boton" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#212121" fill-opacity="0.8"></path>
+					<path d="M 45,24 27,14 27,34" fill="#fff"></path>
+				</svg>
+			</button>
+		{/if}
 
 		{#if yt1}
 			<iframe
@@ -38,7 +49,10 @@
 			></iframe>
 		{:else}
 			<button class="video fachada" style="background-image: url('https://img.youtube.com/vi/jIgz_IhCmEY/maxresdefault.jpg');" onclick={() => yt1 = true}>
-				<div class="boton-play">▶</div>
+				<svg viewBox="0 0 68 48" class="boton-youtube">
+					<path class="fondo-boton" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#212121" fill-opacity="0.8"></path>
+					<path d="M 45,24 27,14 27,34" fill="#fff"></path>
+				</svg>
 			</button>
 		{/if}
 
@@ -54,7 +68,10 @@
 			></iframe>
 		{:else}
 			<button class="video fachada" style="background-image: url('https://img.youtube.com/vi/nps4-HFdQBc/maxresdefault.jpg');" onclick={() => yt2 = true}>
-				<div class="boton-play">▶</div>
+				<svg viewBox="0 0 68 48" class="boton-youtube">
+					<path class="fondo-boton" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#212121" fill-opacity="0.8"></path>
+					<path d="M 45,24 27,14 27,34" fill="#fff"></path>
+				</svg>
 			</button>
 		{/if}
 	</div>
@@ -103,23 +120,18 @@
 		padding: 0;
 	}
 
-	.boton-play {
-		font-size: 3rem;
-		color: white;
-		background-color: rgba(0, 0, 0, 0.7);
-		border-radius: 50%;
-		width: 80px;
-		height: 80px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding-left: 5px;
-		transition: background-color 0.2s, transform 0.2s;
+	.boton-youtube {
+		width: 68px;
+		height: 48px;
 	}
 
-	.fachada:hover .boton-play {
-		background-color: red;
-		transform: scale(1.1);
+	.fondo-boton {
+		transition: fill 0.1s cubic-bezier(0.4, 0, 1, 1), fill-opacity 0.1s cubic-bezier(0.4, 0, 1, 1);
+	}
+
+	.fachada:hover .fondo-boton {
+		fill: #ff0000;
+		fill-opacity: 1;
 	}
 
 	@media (max-width: 1024px) {
