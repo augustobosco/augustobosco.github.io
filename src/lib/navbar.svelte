@@ -15,16 +15,6 @@
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-	@media (max-width: 768px) {
-		.navbar {
-			padding: 0.3rem 0 0.5rem 0;
-		}
-		.tabs {
-			padding-top: 0.25rem;
-			font-size: 1.2rem;
-		}
-	}
-
 	.navbar {
 		font-family: 'Raleway';
 		top: 0;
@@ -50,6 +40,7 @@
 		color: grey;
 		transition: color 0.25s;
 	}
+	
 	.tab:hover {
 		cursor: pointer;
 		color: white;
@@ -61,20 +52,24 @@
 
 	.title {
 		transform: translateX(0.2rem);
-		font-size: clamp(2rem, 8vw, 2rem);
+		font-size: 2rem;
 		letter-spacing: 0.2em;
 		color: rgb(153, 135, 255);
 		mix-blend-mode: lighten;
 		text-align: center;
 		margin-bottom: -0.5rem;
+		white-space: nowrap;
 		transition:
 			letter-spacing 0.25s,
 			color 0.25s;
 	}
-	.title:hover {
-		cursor: pointer;
-		letter-spacing: 0.22em;
-		color: rgb(188, 180, 232);
+
+	@media (hover: hover) {
+		.title:hover {
+			cursor: pointer;
+			letter-spacing: 0.22em;
+			color: rgb(188, 180, 232);
+		}
 	}
 
 	.subtitle {
@@ -87,5 +82,22 @@
 
 	a {
 		display: inline-flex;
+		text-decoration: none;
+	}
+
+	@media (max-width: 768px) {
+		.navbar {
+			padding: 0.3rem 0 0.5rem 0;
+		}
+		
+		.tabs {
+			padding-top: 0.25rem;
+			font-size: 1.2rem;
+		}
+		
+		.title {
+			font-size: 1.7rem;
+			letter-spacing: 0.15em;
+		}
 	}
 </style>
