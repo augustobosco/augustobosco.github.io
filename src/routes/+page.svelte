@@ -12,7 +12,7 @@
 
 <Navbar selected="" />
 
-<section class="parallax" style="background-image: url({HomeImage});">
+<section class="parallax" style="--bg-desktop: url({HomeImage}); --bg-mobile: url({img1});">
 	<button onclick={scroll} class="hook" title="Know more">
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -32,9 +32,6 @@
 </section>
 
 <section class="content" bind:this={content}>
-
-	<img src={img1} class="imagen-bienvenida-celu" />
-
 	<p class="summary">
 		Augusto Bosco is a composer, orchestrator, and music producer specializing in music for film,
 		animation, and video games. With a Bachelor’s Degree in Film Scoring from the Pontifical
@@ -55,7 +52,6 @@
 		allow=""
 		src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%3Aplaylists%3A2182925621%3Fsecret_token%3Ds-QT5rYje2bwR&color=%2313101e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
 	></iframe>
-
 </section>
 
 <style>
@@ -64,10 +60,6 @@
 	html,
 	body {
 		overflow-x: hidden;
-	}
-
-	.imagen-bienvenida-celu {
-		display: none;
 	}
 
 	.summary {
@@ -81,6 +73,7 @@
 		position: relative;
 		padding-top: 2rem;
 		height: 60vh;
+		background-image: var(--bg-desktop);
 		background-attachment: scroll;
 		background-position: calc(50% + 0em) 50%;
 		background-repeat: no-repeat;
@@ -143,12 +136,8 @@
 	}
 	
 	@media (max-width: 768px) {
-		.imagen-bienvenida-celu {
-			display: block;
-			width: 100%;
-			height: auto;
-			margin-bottom: 2rem;
-			border-radius: 4px;
+		.parallax {
+			background-image: var(--bg-mobile);
 		}
 
 		.content {
