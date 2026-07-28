@@ -17,7 +17,7 @@
 </div>
 
 <iframe 
-	width="560" height="315" 
+	class="video"
 	src="https://www.youtube.com/embed/_JwYA9JxTQA?si=6bqKwoyQOS-iQN9g" 
 	title="YouTube video player" 
 	frameborder="0" 
