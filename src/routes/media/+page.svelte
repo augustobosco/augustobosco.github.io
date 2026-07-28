@@ -9,25 +9,18 @@
 
 <Navbar selected="media" />
 
-<!-- Envolvemos todo en un gran contenedor para poder reordenar las piezas -->
 <div class="contenedor-general">
 
-	<!-- ESTA IMAGEN 1 SUELTA: Solo se enciende en celulares (Turno 1) -->
-	<img src={img1} class="img1-celular" />
-
-	<!-- EL MOSAICO: En compu va primero. En celu va último (Turno 3) -->
 	<div class="mosaic">
-		<!-- Esta es la imagen 1 normal. Se apaga en celulares para no repetirse -->
-		<img src={img1} class="img1-compu" />
+		<img src={img1} class="imagen-uno" />
 		<img src={img2} />
 		<img src={img3} />
 		<img src={img4} />
 	</div>
 
-	<!-- LOS VIDEOS: En compu van al final. En celu van al medio (Turno 2) -->
 	<div class="contenedor-videos">
-		<video class="video" controls preload="metadata" poster="/MEDIA/HowlsMovingCastle/portada-howl.jpg">
-		  <source src="/MEDIA/HowlsMovingCastle/video-howl.mp4" type="video/mp4">
+		<video class="video" controls preload="metadata" poster="/portada-howl.jpg">
+		  <source src="/video-howl.mp4" type="video/mp4">
 		</video>
 
 		<iframe
@@ -54,7 +47,6 @@
 </div>
 
 <style>
-	/* --- REGLAS DE ESTRUCTURA Y ORDEN EN COMPUTADORA --- */
 	.contenedor-general {
 		display: flex;
 		flex-direction: column;
@@ -63,11 +55,6 @@
 	.mosaic { order: 1; }
 	.contenedor-videos { order: 2; }
 
-	.img1-celular { display: none; } /* Apagamos la imagen suelta en la compu */
-	.img1-compu { display: block; }  /* Mantenemos encendida la del mosaico */
-
-
-	/* --- TUS ESTILOS DE DISEÑO (Sin modificar) --- */
 	.mosaic {
 		display: flex;
 		flex-direction: row;
@@ -89,33 +76,18 @@
 		aspect-ratio: 16 / 9;
 	}
 
-
-	/* --- EL ORDEN EN CELULARES --- */
 	@media (max-width: 768px) {
 		
-		/* 1. La imagen 1 suelta salta arriba de todo */
-		.img1-celular {
-			display: block; 
+		.contenedor-videos {
 			order: 1;       
-			width: 85%;     
-			margin: 2rem auto 0 auto; 
-			object-fit: cover;
 		}
 
-		/* 2. Los videos saltan al medio */
-		.contenedor-videos {
+		.mosaic {
 			order: 2;       
 		}
 
-		/* 3. El resto del mosaico se va abajo de los videos */
-		.mosaic {
-			order: 3;       
-			margin-top: 0;
-		}
-
-		/* Apagamos la imagen 1 de adentro del mosaico */
-		.img1-compu {
-			display: none;  
+		.imagen-uno {
+			display: none;
 		}
 
 		.video {
@@ -124,7 +96,7 @@
 
 		.mosaic img {
 			height: auto;
-			width: 85%; /* <- Acá faltaba el % y te lo agregué */
+			width: 85%; 
 		}
 	}
 </style>

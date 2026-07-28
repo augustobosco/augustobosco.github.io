@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Navbar from '$lib/navbar.svelte';
 	import HomeImage from '$lib/assets/homepage.jpg';
+	import img1 from '$lib/assets/media/1.png';
 
 	let content: HTMLElement;
 
@@ -31,6 +32,9 @@
 </section>
 
 <section class="content" bind:this={content}>
+
+	<img src={img1} class="imagen-bienvenida-celu" />
+
 	<p class="summary">
 		Augusto Bosco is a composer, orchestrator, and music producer specializing in music for film,
 		animation, and video games. With a Bachelor’s Degree in Film Scoring from the Pontifical
@@ -51,23 +55,7 @@
 		allow=""
 		src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%3Aplaylists%3A2182925621%3Fsecret_token%3Ds-QT5rYje2bwR&color=%2313101e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
 	></iframe>
-	<!-- <div
-		style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"
-	>
-		<a
-			href="https://soundcloud.com/augustobosco"
-			title="Augusto Bosco"
-			target="_blank"
-			style="color: #cccccc; text-decoration: none;">Augusto Bosco</a
-		>
-		·
-		<a
-			href="https://soundcloud.com/augustobosco/sets/fire-blossom"
-			title="Fire Blossom"
-			target="_blank"
-			style="color: #cccccc; text-decoration: none;">Fire Blossom</a
-		>
-	</div> -->
+
 </section>
 
 <style>
@@ -76,6 +64,10 @@
 	html,
 	body {
 		overflow-x: hidden;
+	}
+
+	.imagen-bienvenida-celu {
+		display: none;
 	}
 
 	.summary {
@@ -93,9 +85,6 @@
 		background-position: calc(50% + 0em) 50%;
 		background-repeat: no-repeat;
 		background-size: cover;
-		/* animation: parallax linear both;
-		animation-timeline: scroll();
-		animation-range: 0% 100%; */
 	}
 	.parallax::after {
 		content: '';
@@ -108,9 +97,6 @@
 		opacity: 0.1;
 		background-attachment: scroll;
 		background-position: center;
-		/* animation: parallax linear both;
-		animation-timeline: scroll();
-		animation-range: 0% 100%; */
 	}
 
 	.hook {
@@ -155,7 +141,16 @@
 		align-items: center;
 		padding: 2rem 10vw 3rem 10vw;
 	}
+	
 	@media (max-width: 768px) {
+		.imagen-bienvenida-celu {
+			display: block;
+			width: 100%;
+			height: auto;
+			margin-bottom: 2rem;
+			border-radius: 4px;
+		}
+
 		.content {
 			padding: 2rem 5vw 3rem 5vw;
 		}
