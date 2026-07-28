@@ -16,8 +16,8 @@
 	<img src={img4} />
 </div>
 
-<video class="video" controls preload="metadata">
-  <source src="https://drive.google.com/uc?export=download&id=13WsEwhVW-fhDSmlbxjtv84U1vhSGm_E0" type="video/mp4">
+<video class="video" controls preload="metadata" poster="/portada-howl.jpg">
+  <source src="/video-howl.mp4" type="video/mp4">
 </video>
 
 <iframe
