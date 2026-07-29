@@ -38,10 +38,10 @@
 			
 			<!-- PROYECTO 1: HOWL'S MOVING CASTLE -->
 			<div class="tarjeta-video">
-				<div class="encabezado-video">
+				<button class="encabezado-video" onclick={() => modalHowl = true} title="Project Info">
 					<span class="titulo-video">HOWL’S MOVING CASTLE | LIVE ORCHESTRA</span>
-					<button class="boton-info" onclick={() => modalHowl = true} title="Project Info">↗</button>
-				</div>
+					<span class="boton-info">↗</span>
+				</button>
 
 				{#if v1}
 					<video class="video" controls autoplay>
@@ -59,10 +59,10 @@
 
 			<!-- PROYECTO 2: YOUTUBE 1 -->
 			<div class="tarjeta-video">
-				<div class="encabezado-video">
+				<button class="encabezado-video" onclick={() => modalYt1 = true} title="Project Info">
 					<span class="titulo-video">DRAGONS | OVERWATCH ANIMATED SHORT</span>
-					<button class="boton-info" onclick={() => modalYt1 = true} title="Project Info">↗</button>
-				</div>
+					<span class="boton-info">↗</span>
+				</button>
 
 				{#if yt1}
 					<iframe
@@ -86,10 +86,10 @@
 
 			<!-- PROYECTO 3: YOUTUBE 2 -->
 			<div class="tarjeta-video">
-				<div class="encabezado-video">
+				<button class="encabezado-video" onclick={() => modalYt2 = true} title="Project Info">
 					<span class="titulo-video">DISNEY POCAHONTAS | RESCORE</span>
-					<button class="boton-info" onclick={() => modalYt2 = true} title="Project Info">↗</button>
-				</div>
+					<span class="boton-info">↗</span>
+				</button>
 
 				{#if yt2}
 					<iframe 
@@ -122,7 +122,23 @@
 		<div class="modal-tarjeta" onclick={(e) => e.stopPropagation()}>
 			<button class="modal-cerrar" onclick={() => modalHowl = false}>✕</button>
 			<h3>HOWL'S MOVING CASTLE — RESCORE</h3>
-			<img src="/MEDIA/HowlsMovingCastle/portada-howl.jpg" class="modal-img" />
+			
+			<!-- Video de la orquesta (reemplazá la ruta src por el tuyo) -->
+			<video class="modal-media" controls>
+				<source src="https://www.youtube.com/watch?v=LOQVj4U3RDA" type="video/mp4">
+			</video>
+
+			<!-- Reproductor de SoundCloud -->
+			<iframe
+				title="Soundcloud Howl"
+				width="100%"
+				height="120"
+				scrolling="no"
+				frameborder="no"
+				class="modal-soundcloud"
+				src="https://soundcloud.com/augustobosco/la-luna-2023?si=3ed4a6c41ff748d1b87340510984272c&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharingcolor=%2313101e&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
+			></iframe>
+
 			<p>This project was presented live at the UCA Auditorium in 2023, marking the first public performance of my reorchestration for Howl’s Moving Castle. I am deeply grateful to the orchestra, conductor, and faculty for making this experience possible, as it became a milestone in my growth as a composer and orchestrator.
 Beyond the creative process of composition, this project demanded the full responsibility of preparing professional materials: delivering a complete conductor’s score as well as clear, accurate parts for each instrument, all within strict deadlines. It required balancing readability with musical intention, ensuring performers could confidently bring the music to life in a single rehearsal cycle.
 From an orchestration perspective, the challenge was to use all available instruments in a way that each voice contributed meaningfully, building a coherent soundscape that matched the imagery on screen. Every decision was made with synchronization in mind, ensuring the live performance aligned seamlessly with the film’s narrative flow. Is clearly inspired by Joe Hisaishi’s original score, particularly in its use of a waltz as the structural foundation. I also considered other waltz traditions I’ve studied such as Shostakovich, though only as a very subtle influence that colored some of my decisions without altering the essence of the piece.
@@ -137,7 +153,19 @@ The main difference from the original lies in the form. Hisaishi’s version int
 		<div class="modal-tarjeta" onclick={(e) => e.stopPropagation()}>
 			<button class="modal-cerrar" onclick={() => modalYt1 = false}>✕</button>
 			<h3>ANIMATION SCORE PROJECT</h3>
-			<img src="https://img.youtube.com/vi/jIgz_IhCmEY/maxresdefault.jpg" class="modal-img" />
+			<img src="https://img.youtube.com/vi/jIgz_IhCmEY/maxresdefault.jpg" class="modal-media" />
+
+			<!-- Reproductor de SoundCloud -->
+			<iframe
+				title="Soundcloud Dragons"
+				width="100%"
+				height="120"
+				scrolling="no"
+				frameborder="no"
+				class="modal-soundcloud"
+				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2182925621&color=%2313101e&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
+			></iframe>
+
 			<p>This project is my personal tribute to Blizzard’s Dragons cinematic. I recreated the entire soundtrack with original music, recorded in my studio, and redesigned the soundscape by layering assets from the original game together with custom sounds and commercial libraries. The result is a fully reimagined audio experience that respects the spirit of the short while offering my own interpretation.
 For the score, I drew on a blend of feudal Japanese aesthetics and cyberpunk elements, inspired by contemporary Japanese music and composers such as Joe Hisaishi. I began by focusing on the sound design, carefully editing and synchronizing audio cues. Ableton was used to sculpt new textures, while Nuendo provided the environment for assembling and finalizing the soundscape. The original dialogue was preserved, but all other elements were reworked to give the project a distinct identity.
 Once the sound design foundation was in place, I composed original motifs for the two main characters, writing the first drafts traditionally on paper before moving into Dorico for orchestration. The challenge was to create a coherent score within a highly variable tempo map, following the structure of the cinematic while shaping my own musical narrative.
@@ -153,7 +181,19 @@ This project showcases my ability to integrate composition, orchestration, sound
 		<div class="modal-tarjeta" onclick={(e) => e.stopPropagation()}>
 			<button class="modal-cerrar" onclick={() => modalYt2 = false}>✕</button>
 			<h3>CINEMATIC SOUND DESIGN</h3>
-			<img src="https://img.youtube.com/vi/nps4-HFdQBc/maxresdefault.jpg" class="modal-img" />
+			<img src="https://img.youtube.com/vi/nps4-HFdQBc/maxresdefault.jpg" class="modal-media" />
+
+			<!-- Reproductor de SoundCloud -->
+			<iframe
+				title="Soundcloud Pocahontas"
+				width="100%"
+				height="120"
+				scrolling="no"
+				frameborder="no"
+				class="modal-soundcloud"
+				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2182925621&color=%2313101e&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
+			></iframe>
+
 			<p>This is a project I completed in 2024, with both the composition and production created during that time. It remains one of my favorite works from my student years, largely because of the challenge it presented, the scene depicts the first meeting between Pocahontas and John Smith, their very first glance at each other. For me, as a composer, capturing that moment felt monumental (it was a true challenge), but I believe I managed to resolve it in a way that feels effective and different from the original. While the original score leaned more toward intimacy, I wanted to highlight the feeling of love at first sight.
 As a student work, the piece draws inspiration from both Dvořák’s Symphony No. 9 and Hisaishi’s thematic writing, since both composers often worked with folk-inspired materials, the references emerged after a thorough personal investigation and a detailed analysis of the scene. What I consider my personal achievement in this piece lies in the construction and realization of the music: although I drew on these two references, I also found a way to create something that came from my own voice.
 In addition to the composition, I handled the sound design and reworked aspects of the production (essentially remastering it), so that it could fit well in my portfolio. For me it serves not only as a showcase of my early craft but also as a meaningful reminder of those formative years.</p>
@@ -209,35 +249,41 @@ In addition to the composition, I handled the sound design and reworked aspects 
 		flex-direction: column;
 	}
 
+	/* Título y flecha clicables e interactivos */
 	.encabezado-video {
+		background: none;
+		border: none;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		gap: 0.5rem;
 		margin-bottom: 0.6rem;
+		cursor: pointer;
+		padding: 0;
 	}
 
 	.titulo-video {
-		color: rgb(210, 195, 130); /* Tono dorado tenue elegante similar al de Noah */
+		color: rgb(210, 195, 130);
 		font-family: 'Raleway', sans-serif;
 		font-size: 0.78rem;
 		letter-spacing: 0.12em;
 		font-weight: 500;
 		text-align: center;
+		transition: color 0.2s;
 	}
 
 	.boton-info {
-		background: none;
-		border: none;
 		color: rgb(153, 135, 255);
 		font-size: 1rem;
-		cursor: pointer;
-		padding: 0;
 		line-height: 1;
 		transition: transform 0.2s, color 0.2s;
 	}
 
-	.boton-info:hover {
+	.encabezado-video:hover .titulo-video {
+		color: white;
+	}
+
+	.encabezado-video:hover .boton-info {
 		transform: translate(2px, -2px);
 		color: white;
 	}
@@ -275,7 +321,7 @@ In addition to the composition, I handled the sound design and reworked aspects 
 		fill-opacity: 1;
 	}
 
-	/* ESTILOS DE LA VENTANA FLOTANTE (MODAL) */
+	/* ESTILOS DE LA VENTANA FLOTANTE (MODAL) PERFECTA EN MÓVIL */
 	.modal-fondo {
 		position: fixed;
 		top: 0;
@@ -287,30 +333,34 @@ In addition to the composition, I handled the sound design and reworked aspects 
 		justify-content: center;
 		align-items: center;
 		z-index: 1000;
-		padding: 1.5rem;
+		padding: 1rem;
 	}
 
 	.modal-tarjeta {
 		background-color: rgb(35, 30, 67);
 		color: white;
 		font-family: 'Raleway', sans-serif;
-		padding: 2rem;
+		padding: 2rem 1.5rem;
 		border-radius: 6px;
-		max-width: 550px;
+		max-width: 600px;
 		width: 100%;
 		position: relative;
 		border: 1px solid rgba(255, 255, 255, 0.15);
+		max-height: 85vh; /* Altura máxima para que nunca se corte en el teléfono */
+		overflow-y: auto; /* Scroll interno para leer todo el texto cómodamente */
 	}
 
 	.modal-cerrar {
-		position: absolute;
-		top: 1rem;
-		right: 1.2rem;
+		position: sticky;
+		top: 0;
+		float: right;
 		background: none;
 		border: none;
 		color: grey;
-		font-size: 1.2rem;
+		font-size: 1.4rem;
 		cursor: pointer;
+		margin-top: -1rem;
+		margin-right: -0.5rem;
 	}
 
 	.modal-cerrar:hover {
@@ -326,24 +376,31 @@ In addition to the composition, I handled the sound design and reworked aspects 
 		font-weight: 500;
 	}
 
-	.modal-img {
+	.modal-media {
 		width: 100%;
 		height: auto;
 		border-radius: 4px;
 		margin-bottom: 1rem;
+		display: block;
+	}
+
+	.modal-soundcloud {
+		margin-bottom: 1rem;
+		border-radius: 4px;
 	}
 
 	.modal-tarjeta p {
 		line-height: 1.6;
-		font-size: 0.95rem;
+		font-size: 0.95rem; /* Acá podés cambiar el tamaño de la letra de la explicación */
 		color: rgb(220, 220, 230);
 		margin: 0;
+		white-space: pre-line; /* Mantiene los párrafos separados del texto que pegaste */
 	}
 
 	/* ADAPTACIÓN PARA CELULARES Y PANTALLAS CHICAS */
 	@media (max-width: 1024px) {
 		.grilla-noah {
-			grid-template-columns: 1fr; /* Pasa a 1 columna en celulares */
+			grid-template-columns: 1fr;
 			gap: 2.5rem;
 		}
 
