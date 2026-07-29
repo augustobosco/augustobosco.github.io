@@ -13,6 +13,27 @@
 	let modalHowl = $state(false);
 	let modalYt1 = $state(false);
 	let modalYt2 = $state(false);
+
+	// Función inteligente: apaga todos los demás audios/videos y abre solo el que elegiste
+	function reproducirSolo(cual: string) {
+		v1 = cual === 'howl';
+		yt1 = cual === 'yt1';
+		yt2 = cual === 'yt2';
+	}
+
+	// Función inteligente para abrir modales y silenciar toda la página de fondo
+	function abrirModal(cual: string) {
+		reproducirSolo('ninguno'); // Apaga cualquier video que esté sonando de fondo
+		modalHowl = cual === 'howl';
+		modalYt1 = cual === 'yt1';
+		modalYt2 = cual === 'yt2';
+	}
+
+	function cerrarModales() {
+		modalHowl = false;
+		modalYt1 = false;
+		modalYt2 = false;
+	}
 </script>
 
 <Navbar selected="media" />
@@ -38,7 +59,7 @@
 			
 			<!-- PROYECTO 1: HOWL'S MOVING CASTLE -->
 			<div class="tarjeta-video">
-				<button class="encabezado-video" onclick={() => modalHowl = true} title="Project Info">
+				<button class="encabezado-video" onclick={() => abrirModal('howl')} title="Project Info">
 					<span class="titulo-video">HOWL’S MOVING CASTLE | LIVE ORCHESTRA</span>
 					<span class="boton-info">↗</span>
 				</button>
@@ -48,7 +69,7 @@
 						<source src="/MEDIA/HowlsMovingCastle/video-howl.mp4" type="video/mp4">
 					</video>
 				{:else}
-					<button class="video fachada" style="background-image: url('/MEDIA/HowlsMovingCastle/portada-howl.jpg');" onclick={() => v1 = true}>
+					<button class="video fachada" style="background-image: url('/MEDIA/HowlsMovingCastle/portada-howl.jpg');" onclick={() => reproducirSolo('howl')}>
 						<svg viewBox="0 0 68 48" class="boton-youtube">
 							<path class="fondo-boton" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#212121" fill-opacity="0.8"></path>
 							<path d="M 45,24 27,14 27,34" fill="#fff"></path>
@@ -59,7 +80,7 @@
 
 			<!-- PROYECTO 2: YOUTUBE 1 -->
 			<div class="tarjeta-video">
-				<button class="encabezado-video" onclick={() => modalYt1 = true} title="Project Info">
+				<button class="encabezado-video" onclick={() => abrirModal('yt1')} title="Project Info">
 					<span class="titulo-video">DRAGONS | OVERWATCH ANIMATED SHORT</span>
 					<span class="boton-info">↗</span>
 				</button>
@@ -75,7 +96,7 @@
 						allowfullscreen
 					></iframe>
 				{:else}
-					<button class="video fachada" style="background-image: url('https://img.youtube.com/vi/jIgz_IhCmEY/maxresdefault.jpg');" onclick={() => yt1 = true}>
+					<button class="video fachada" style="background-image: url('https://img.youtube.com/vi/jIgz_IhCmEY/maxresdefault.jpg');" onclick={() => reproducirSolo('yt1')}>
 						<svg viewBox="0 0 68 48" class="boton-youtube">
 							<path class="fondo-boton" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#212121" fill-opacity="0.8"></path>
 							<path d="M 45,24 27,14 27,34" fill="#fff"></path>
@@ -86,7 +107,7 @@
 
 			<!-- PROYECTO 3: YOUTUBE 2 -->
 			<div class="tarjeta-video">
-				<button class="encabezado-video" onclick={() => modalYt2 = true} title="Project Info">
+				<button class="encabezado-video" onclick={() => abrirModal('yt2')} title="Project Info">
 					<span class="titulo-video">DISNEY POCAHONTAS | RESCORE</span>
 					<span class="boton-info">↗</span>
 				</button>
@@ -102,7 +123,7 @@
 						allowfullscreen
 					></iframe>
 				{:else}
-					<button class="video fachada" style="background-image: url('https://img.youtube.com/vi/nps4-HFdQBc/maxresdefault.jpg');" onclick={() => yt2 = true}>
+					<button class="video fachada" style="background-image: url('https://img.youtube.com/vi/nps4-HFdQBc/maxresdefault.jpg');" onclick={() => reproducirSolo('yt2')}>
 						<svg viewBox="0 0 68 48" class="boton-youtube">
 							<path class="fondo-boton" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#212121" fill-opacity="0.8"></path>
 							<path d="M 45,24 27,14 27,34" fill="#fff"></path>
@@ -118,17 +139,20 @@
 
 <!-- VENTANA FLOTANTE 1: HOWL -->
 {#if modalHowl}
-	<div class="modal-fondo" onclick={() => modalHowl = false}>
+	<div class="modal-fondo" onclick={cerrarModales}>
 		<div class="modal-tarjeta" onclick={(e) => e.stopPropagation()}>
-			<button class="modal-cerrar" onclick={() => modalHowl = false}>✕</button>
+			<button class="modal-cerrar" onclick={cerrarModales}>✕</button>
 			<h3>HOWL'S MOVING CASTLE — RESCORE</h3>
 			
-			<!-- Video de la orquesta (reemplazá la ruta src por el tuyo) -->
-			<video class="modal-media" controls>
-				<source src="https://www.youtube.com/watch?v=LOQVj4U3RDA" type="video/mp4">
-			</video>
+			<iframe
+				class="modal-media"
+				src="https://www.youtube.com/embed/LOQVj4U3RDA"
+				title="Howl's Moving Castle Live Orchestra"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				allowfullscreen
+			></iframe>
 
-			<!-- Reproductor de SoundCloud -->
 			<iframe
 				title="Soundcloud Howl"
 				width="100%"
@@ -136,7 +160,7 @@
 				scrolling="no"
 				frameborder="no"
 				class="modal-soundcloud"
-				src="https://soundcloud.com/augustobosco/la-luna-2023?si=3ed4a6c41ff748d1b87340510984272c&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharingcolor=%2313101e&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
+				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2182925621&color=%2313101e&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
 			></iframe>
 
 			<p>This project was presented live at the UCA Auditorium in 2023, marking the first public performance of my reorchestration for Howl’s Moving Castle. I am deeply grateful to the orchestra, conductor, and faculty for making this experience possible, as it became a milestone in my growth as a composer and orchestrator.
@@ -149,13 +173,20 @@ The main difference from the original lies in the form. Hisaishi’s version int
 
 <!-- VENTANA FLOTANTE 2: YOUTUBE 1 -->
 {#if modalYt1}
-	<div class="modal-fondo" onclick={() => modalYt1 = false}>
+	<div class="modal-fondo" onclick={cerrarModales}>
 		<div class="modal-tarjeta" onclick={(e) => e.stopPropagation()}>
-			<button class="modal-cerrar" onclick={() => modalYt1 = false}>✕</button>
+			<button class="modal-cerrar" onclick={cerrarModales}>✕</button>
 			<h3>ANIMATION SCORE PROJECT</h3>
-			<img src="https://img.youtube.com/vi/jIgz_IhCmEY/maxresdefault.jpg" class="modal-media" />
+			
+			<iframe
+				class="modal-media"
+				src="https://www.youtube.com/embed/jIgz_IhCmEY"
+				title="Dragons Overwatch Animated Short"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				allowfullscreen
+			></iframe>
 
-			<!-- Reproductor de SoundCloud -->
 			<iframe
 				title="Soundcloud Dragons"
 				width="100%"
@@ -177,13 +208,20 @@ This project showcases my ability to integrate composition, orchestration, sound
 
 <!-- VENTANA FLOTANTE 3: YOUTUBE 2 -->
 {#if modalYt2}
-	<div class="modal-fondo" onclick={() => modalYt2 = false}>
+	<div class="modal-fondo" onclick={cerrarModales}>
 		<div class="modal-tarjeta" onclick={(e) => e.stopPropagation()}>
-			<button class="modal-cerrar" onclick={() => modalYt2 = false}>✕</button>
+			<button class="modal-cerrar" onclick={cerrarModales}>✕</button>
 			<h3>CINEMATIC SOUND DESIGN</h3>
-			<img src="https://img.youtube.com/vi/nps4-HFdQBc/maxresdefault.jpg" class="modal-media" />
+			
+			<iframe
+				class="modal-media"
+				src="https://www.youtube.com/embed/nps4-HFdQBc"
+				title="Disney Pocahontas Rescore"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				allowfullscreen
+			></iframe>
 
-			<!-- Reproductor de SoundCloud -->
 			<iframe
 				title="Soundcloud Pocahontas"
 				width="100%"
@@ -378,7 +416,7 @@ In addition to the composition, I handled the sound design and reworked aspects 
 
 	.modal-media {
 		width: 100%;
-		height: auto;
+		aspect-ratio: 16 / 9;
 		border-radius: 4px;
 		margin-bottom: 1rem;
 		display: block;
@@ -391,10 +429,10 @@ In addition to the composition, I handled the sound design and reworked aspects 
 
 	.modal-tarjeta p {
 		line-height: 1.6;
-		font-size: 0.95rem; /* Acá podés cambiar el tamaño de la letra de la explicación */
+		font-size: 0.95rem;
 		color: rgb(220, 220, 230);
 		margin: 0;
-		white-space: pre-line; /* Mantiene los párrafos separados del texto que pegaste */
+		white-space: pre-line;
 	}
 
 	/* ADAPTACIÓN PARA CELULARES Y PANTALLAS CHICAS */
