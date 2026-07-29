@@ -85,17 +85,21 @@
 
 	@media (max-width: 768px) {
 		.navbar {
-			padding: 0.3rem 0 0.5rem 0;
+			padding: 0.5rem 0 0.5rem 0;
 		}
 		
 		.tabs {
-			padding-top: 0.25rem;
+			padding-top: 0.40rem;
 			font-size: 1.2rem;
 		}
 		
 		.title {
-			font-size: 1.4rem;
+			font-size: 1.5rem;
 			letter-spacing: 0.15em;
+		}
+
+		.subtitle {
+			font-size: 0.90rem;
 		}
 	}
 </style>
