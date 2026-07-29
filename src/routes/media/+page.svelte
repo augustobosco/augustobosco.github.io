@@ -360,7 +360,7 @@ In addition to the composition, I handled the sound design and reworked aspects 
 	/* FOOTER AL FINAL */
 	.footer {
 		order: 3;
-		margin-top: 2rem;
+		margin-top: 3rem;
 		text-align: center;
 		color: rgba(255, 255, 255, 0.4);
 		font-size: 0.85rem;
