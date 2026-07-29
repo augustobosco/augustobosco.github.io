@@ -153,6 +153,7 @@
 				allowfullscreen
 			></iframe>
 
+			<!-- Reproductor SoundCloud Howl -->
 			<iframe
 				title="Soundcloud Howl"
 				width="100%"
@@ -160,7 +161,7 @@
 				scrolling="no"
 				frameborder="no"
 				class="modal-soundcloud"
-				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2182925621&color=%2313101e&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
+				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2370063893%3Fsecret_token%3Ds-M0i7BI8WaQ8&color=%2313101e&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
 			></iframe>
 
 			<p>This project was presented live at the UCA Auditorium in 2023, marking the first public performance of my reorchestration for Howl’s Moving Castle. I am deeply grateful to the orchestra, conductor, and faculty for making this experience possible, as it became a milestone in my growth as a composer and orchestrator.
@@ -171,7 +172,7 @@ The main difference from the original lies in the form. Hisaishi’s version int
 	</div>
 {/if}
 
-<!-- VENTANA FLOTANTE 2: YOUTUBE 1 -->
+<!-- VENTANA FLOTANTE 2: YOUTUBE 1 (DRAGONS) -->
 {#if modalYt1}
 	<div class="modal-fondo" onclick={cerrarModales}>
 		<div class="modal-tarjeta" onclick={(e) => e.stopPropagation()}>
@@ -187,6 +188,7 @@ The main difference from the original lies in the form. Hisaishi’s version int
 				allowfullscreen
 			></iframe>
 
+			<!-- Reproductor SoundCloud Dragons -->
 			<iframe
 				title="Soundcloud Dragons"
 				width="100%"
@@ -194,7 +196,7 @@ The main difference from the original lies in the form. Hisaishi’s version int
 				scrolling="no"
 				frameborder="no"
 				class="modal-soundcloud"
-				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2182925621&color=%2313101e&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
+				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2370047339%3Fsecret_token%3Ds-w33WSVsAxlY&color=%2313101e&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
 			></iframe>
 
 			<p>This project is my personal tribute to Blizzard’s Dragons cinematic. I recreated the entire soundtrack with original music, recorded in my studio, and redesigned the soundscape by layering assets from the original game together with custom sounds and commercial libraries. The result is a fully reimagined audio experience that respects the spirit of the short while offering my own interpretation.
@@ -206,7 +208,7 @@ This project showcases my ability to integrate composition, orchestration, sound
 	</div>
 {/if}
 
-<!-- VENTANA FLOTANTE 3: YOUTUBE 2 -->
+<!-- VENTANA FLOTANTE 3: YOUTUBE 2 (POCAHONTAS) -->
 {#if modalYt2}
 	<div class="modal-fondo" onclick={cerrarModales}>
 		<div class="modal-tarjeta" onclick={(e) => e.stopPropagation()}>
@@ -222,6 +224,7 @@ This project showcases my ability to integrate composition, orchestration, sound
 				allowfullscreen
 			></iframe>
 
+			<!-- Reproductor SoundCloud Pocahontas -->
 			<iframe
 				title="Soundcloud Pocahontas"
 				width="100%"
@@ -229,7 +232,7 @@ This project showcases my ability to integrate composition, orchestration, sound
 				scrolling="no"
 				frameborder="no"
 				class="modal-soundcloud"
-				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2182925621&color=%2313101e&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
+				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2370068753%3Fsecret_token%3Ds-ETTmEg6MgUS&color=%2313101e&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
 			></iframe>
 
 			<p>This is a project I completed in 2024, with both the composition and production created during that time. It remains one of my favorite works from my student years, largely because of the challenge it presented, the scene depicts the first meeting between Pocahontas and John Smith, their very first glance at each other. For me, as a composer, capturing that moment felt monumental (it was a true challenge), but I believe I managed to resolve it in a way that feels effective and different from the original. While the original score leaned more toward intimacy, I wanted to highlight the feeling of love at first sight.
