@@ -18,14 +18,15 @@
 		><span style="font-weight: bold">augustobosco0</span>@gmail.com</a
 	>
 	<div class="logos">
-		<a href="https://www.artstation.com/augustobosco" class="artstation"
-			><img src={Artstation} alt="Artstation" /></a
+		<a href="https://linkedin.com/in/augusto-bosco-848291182/"
+			><img src={LinkedIn} alt="LinkedIn" /></a
 		>
+		<a href="https://x.com/augustobosco_" class="twitter"><img src={Twitter} alt="Twitter" /></a>
 		<a href="https://soundcloud.com/augustobosco" class="soundcloud"
 			><img src={Soundcloud} alt="Soundcloud" /></a
 		>
-		<a href="https://linkedin.com/in/augusto-bosco-848291182/"
-			><img src={LinkedIn} alt="LinkedIn" /></a
+		<a href="https://www.artstation.com/augustobosco" class="artstation"
+			><img src={Artstation} alt="Artstation" /></a
 		>
 		<a href="https://instagram.com/augustobosco_/" class="instagram"
 			><img src={Instagram} alt="Instagram" /></a
@@ -35,7 +36,6 @@
 		<a href="https://www.facebook.com/profile.php?id=100009868776195"
 			><img src={Facebook} alt="Facebook" /></a
 		>
-		<a href="https://x.com/augustobosco_" class="twitter"><img src={Twitter} alt="Twitter" /></a>
 	</div>
 </section>
 
