@@ -86,13 +86,19 @@
 				</p>
 			</div>
 		</div>
-	</div>
+	</div> 
 	<div class="pics">
 		<img src={img1} alt="pic" />
 		<img src={img2} alt="pic" />
 		<img src={img4} alt="pic" />
 	</div>
 </section>
+
+<!-- FOOTER -->
+<div class="footer">
+	© 2026 Augusto Bosco <br>
+	Website by Zokalyx
+</div>
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
@@ -136,7 +142,6 @@
 		background-color: rgb(33, 34, 55);
 		padding-right: 3rem;
 		align-items: center;
-
 		border-radius: var(--radius);
 	}
 
@@ -145,6 +150,7 @@
 		flex-direction: column;
 		gap: 1rem;
 	}
+	
 	.pics img {
 		width: 100%;
 		height: auto; /* Mantiene la proporción real, sin zoom ni recortes */
@@ -157,18 +163,33 @@
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
-
 		color: white;
 	}
 
 	.content {
 		width: 80%;
+		/* ======================================================== */
+		/* ESTE ES EL LÍMITE QUE EVITA QUE SE ROMPA EN PANTALLAS 2K */
+		max-width: 1200px; 
+		/* ======================================================== */
 		margin: 2rem auto 2rem auto;
 		display: grid;
 		grid-template-columns: 6fr 2fr;
 		gap: 3rem;
 		font-family: 'Raleway';
-		align-items: start; /* ESTO ES LA MAGIA: Evita que la columna de fotos se estire */
+		align-items: start; /* Evita que la columna de fotos se estire */
+	}
+
+	/* ESTILOS DEL FOOTER */
+	.footer {
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+		text-align: center;
+		color: rgba(255, 255, 255, 0.4);
+		font-size: 0.85rem;
+		letter-spacing: 0.05em;
+		line-height: 1.8;
+		font-family: 'Raleway', sans-serif;
 	}
 
 	@media (max-width: 768px) {

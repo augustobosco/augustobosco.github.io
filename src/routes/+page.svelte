@@ -4,6 +4,9 @@
 	import img1 from '$lib/assets/media/1.png';
 
 	let content: HTMLElement;
+	
+	// Variable que controla si se hizo clic en la miniatura
+	let playReel = $state(false);
 
 	function scroll() {
 		content.scrollIntoView({ behavior: 'smooth' });
@@ -52,6 +55,49 @@
 		allow=""
 		src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%3Aplaylists%3A2182925621%3Fsecret_token%3Ds-QT5rYje2bwR&color=%2313101e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
 	></iframe>
+<!-- 
+	<div class="video-reel">
+		<!-- LÓGICA DE FACHADA PARA CARGA RÁPIDA 
+		{#if playReel}
+			<iframe 
+				class="video"
+				src="https://www.youtube.com/embed/LOQVj4U3RDA?autoplay=1" 
+				title="Video Reel" 
+				frameborder="0" 
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+				allowfullscreen>
+			</iframe>
+		{:else}
+			<button class="video fachada" style="background-image: url('https://img.youtube.com/vi/LOQVj4U3RDA/maxresdefault.jpg');" onclick={() => playReel = true}>
+				<svg viewBox="0 0 68 48" class="boton-youtube">
+					<path class="fondo-boton" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#212121" fill-opacity="0.8"></path>
+					<path d="M 45,24 27,14 27,34" fill="#fff"></path>
+				</svg>
+			</button>
+		{/if}
+	</div>
+	¡Es una decisión excelente! Al ocupar el 100% del ancho del contenedor en una pantalla grande, cualquier pérdida de resolución o pixelado se notaría muchísimo.
+
+Subir el reel a YouTube en 4K o 1080p con un bitrate alto es la jugada más inteligente: ellos ponen los servidores para procesar y streamear ese video gigante, y tu página sigue cargando en milisegundos gracias a la miniatura trampa. Es lo que hacen las agencias grandes.
+
+Cuando tengas esa miniatura en máxima calidad diseñada por vos, cambiarla en el código va a ser súper fácil. El proceso es exactamente el mismo que usaste para la portada local de Howl.
+
+Solo vas a tener que hacer dos cosas:
+
+Importar tu imagen arriba de todo junto con las otras:
+import portadaReel from '$lib/assets/portada-reel.jpg';
+
+Reemplazar el link de YouTube en el botón de la fachada por tu nueva variable:
+style="background-image: url({portadaReel});"
+
+De esa manera te asegurás de tener el control total sobre la primera impresión visual de la página de inicio, manteniendo el rendimiento impecable.
+	-->
+
+	<!-- FOOTER -->
+	<div class="footer">
+		© 2026 Augusto Bosco <br>
+		Website by Zokalyx
+	</div>
 </section>
 
 <style>
@@ -133,6 +179,62 @@
 		justify-content: flex-start;
 		align-items: center;
 		padding: 2rem 10vw 3rem 10vw;
+	}
+
+	/* ESTILO DEL VIDEO REEL */
+	.video-reel {
+		width: 100%;
+		margin-top: 3rem; /* Lo separa del soundcloud */
+		border-radius: 4px;
+		overflow: hidden;
+	}
+
+	/* =========================================== */
+	/* CLASES DE LA FACHADA DEL VIDEO (YT TRAP)    */
+	/* =========================================== */
+	.video {
+		display: block;
+		width: 100%;
+		aspect-ratio: 16 / 9; /* Reemplaza el height fijo y lo hace responsive */
+		border-radius: 4px;
+	}
+
+	.fachada {
+		background-size: cover;
+		background-position: center;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: black;
+		border: none;
+		padding: 0;
+	}
+
+	.boton-youtube {
+		width: 68px;
+		height: 48px;
+	}
+
+	.fondo-boton {
+		transition: fill 0.1s cubic-bezier(0.4, 0, 1, 1), fill-opacity 0.1s cubic-bezier(0.4, 0, 1, 1);
+	}
+
+	.fachada:hover .fondo-boton {
+		fill: #ff0000;
+		fill-opacity: 1;
+	}
+
+	/* ESTILOS DEL FOOTER */
+	.footer {
+		margin-top: 5rem;
+		text-align: center;
+		color: rgba(255, 255, 255, 0.4);
+		font-size: 0.85rem;
+		letter-spacing: 0.05em;
+		line-height: 1.8;
+		font-family: 'Raleway', sans-serif;
+		width: 100%;
 	}
 	
 	@media (max-width: 768px) {

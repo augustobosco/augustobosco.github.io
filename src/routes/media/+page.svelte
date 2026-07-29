@@ -6,41 +6,54 @@
 	import img3 from '$lib/assets/media/3.png';
 	import img4 from '$lib/assets/media/4.png';
 	
-	// Importamos las fotos nuevas para los modales
 	import img5 from '$lib/assets/media/5.jpeg';
 	import img6 from '$lib/assets/media/6.jpg';
 
-	let v1 = $state(false);
+	// IMPORTANTE: Si te tira error, cambiá ".jpg" por ".png" o ".jpeg" según corresponda a tu archivo real
+	import img7 from '$lib/assets/media/7.jpg';
+	import img8 from '$lib/assets/media/8.jpg';
+	import img9 from '$lib/assets/media/9.jpg';
+	import img10 from '$lib/assets/media/10.jpg';
+	import img11 from '$lib/assets/media/11.jpg';
+
+	// Variables para los reproductores de la grilla (fachadas)
+	let ytHowl = $state(false);
 	let yt1 = $state(false);
 	let yt2 = $state(false);
+	let vLuna = $state(false);
 
+	// Variables para las ventanas flotantes (modales)
 	let modalHowl = $state(false);
 	let modalYt1 = $state(false);
 	let modalYt2 = $state(false);
+	let modalLuna = $state(false);
 	
-	// NUEVA VARIABLE: Guarda qué foto se tiene que mostrar en grande
+	// Variable para la foto ampliada
 	let modalFoto = $state<string | null>(null);
 
-	// Función inteligente: apaga todos los demás audios/videos y abre solo el que elegiste
+	// Administrador inteligente de la grilla
 	function reproducirSolo(cual: string) {
-		v1 = cual === 'howl';
+		ytHowl = cual === 'howl';
 		yt1 = cual === 'yt1';
 		yt2 = cual === 'yt2';
+		vLuna = cual === 'luna';
 	}
 
-	// Función inteligente para abrir modales y silenciar toda la página de fondo
+	// Administrador inteligente de modales
 	function abrirModal(cual: string) {
-		reproducirSolo('ninguno'); // Apaga cualquier video que esté sonando de fondo
+		reproducirSolo('ninguno'); // Apaga cualquier cosa sonando de fondo
 		modalHowl = cual === 'howl';
 		modalYt1 = cual === 'yt1';
 		modalYt2 = cual === 'yt2';
+		modalLuna = cual === 'luna';
 	}
 
 	function cerrarModales() {
 		modalHowl = false;
 		modalYt1 = false;
 		modalYt2 = false;
-		modalFoto = null; // Cierra también la foto ampliada
+		modalLuna = false;
+		modalFoto = null; 
 	}
 </script>
 
@@ -48,33 +61,66 @@
 
 <div class="contenedor-general">
 
-	<!-- SECCIÓN DE FOTOS (PHOTO GALLERY) -->
+	<!-- SECCIÓN DE FOTOS (CÓDIGO ORIGINAL, NO RECORTA CABEZAS) -->
 	<div class="seccion-mosaico">
 		<h2 class="titulo-seccion">Photo Gallery</h2>
 		<div class="mosaic">
-			<!-- svelte-ignore a11y_click_events_have_key_events -->
-			<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
-			<img src={img1} class="imagen-uno foto-clicable" onclick={() => modalFoto = img1} alt="Gallery" />
-			<img src={img2} class="foto-clicable" onclick={() => modalFoto = img2} alt="Gallery" />
-			<img src={img3} class="foto-clicable" onclick={() => modalFoto = img3} alt="Gallery" />
+			<!-- Se intercambió img4 (primera) e img1 (quinta). La img1 se oculta en móvil -->
 			<img src={img4} class="foto-clicable" onclick={() => modalFoto = img4} alt="Gallery" />
+			<img src={img8} class="foto-clicable" onclick={() => modalFoto = img8} alt="Gallery" />
+			<img src={img2} class="foto-clicable" onclick={() => modalFoto = img2} alt="Gallery" />
+			<img src={img9} class="foto-clicable" onclick={() => modalFoto = img9} alt="Gallery" />
+			<img src={img1} class="imagen-uno foto-clicable" onclick={() => modalFoto = img1} alt="Gallery" />
+			<img src={img7} class="foto-clicable" onclick={() => modalFoto = img7} alt="Gallery" />
+			<img src={img10} class="foto-clicable" onclick={() => modalFoto = img10} alt="Gallery" />
 		</div>
 	</div>
 
-	<!-- SECCIÓN DE VIDEOS (VIDEO GALLERY ESTILO NOAH) -->
+	<!-- SECCIÓN DE VIDEOS -->
 	<div class="seccion-videos">
-		<h2 class="titulo-seccion">Video Gallery</h2>
+		
+		<!-- 1. TRABAJOS ORIGINALES (LA LUNA CON YOUTUBE LOQVj4U3RDA) -->
+		<h2 class="titulo-seccion">Original Works</h2>
 		
 		<div class="grilla-noah">
-			
-			<!-- PROYECTO 1: HOWL'S MOVING CASTLE -->
+			<div class="tarjeta-video">
+				<button class="encabezado-video" onclick={() => abrirModal('luna')} title="Project Info">
+					<span class="titulo-video">LA LUNA - WALTZ NO. 1</span>
+					<span class="boton-info">↗</span>
+				</button>
+
+				{#if vLuna}
+					<iframe
+						class="video"
+						src="https://www.youtube.com/embed/LOQVj4U3RDA?autoplay=1"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						allowfullscreen
+					></iframe>
+				{:else}
+					<button class="video fachada" style="background-image: url('https://img.youtube.com/vi/LOQVj4U3RDA/maxresdefault.jpg');" onclick={() => reproducirSolo('luna')}>
+						<svg viewBox="0 0 68 48" class="boton-youtube">
+							<path class="fondo-boton" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#212121" fill-opacity="0.8"></path>
+							<path d="M 45,24 27,14 27,34" fill="#fff"></path>
+						</svg>
+					</button>
+				{/if}
+			</div>
+		</div>
+
+		<!-- LÍNEA SEPARADORA -->
+		<hr class="linea-separadora">
+
+		<!-- 2. SPEC WORK (HOWL CON VIDEO LOCAL) -->
+		<div class="grilla-noah">
 			<div class="tarjeta-video">
 				<button class="encabezado-video" onclick={() => abrirModal('howl')} title="Project Info">
 					<span class="titulo-video">HOWL’S MOVING CASTLE | LIVE ORCHESTRA</span>
 					<span class="boton-info">↗</span>
 				</button>
 
-				{#if v1}
+				{#if ytHowl}
 					<video class="video" controls autoplay>
 						<source src="/MEDIA/HowlsMovingCastle/video-howl.mp4" type="video/mp4">
 					</video>
@@ -88,7 +134,7 @@
 				{/if}
 			</div>
 
-			<!-- PROYECTO 2: YOUTUBE 1 -->
+			<!-- DRAGONS -->
 			<div class="tarjeta-video">
 				<button class="encabezado-video" onclick={() => abrirModal('yt1')} title="Project Info">
 					<span class="titulo-video">DRAGONS | OVERWATCH ANIMATED SHORT</span>
@@ -102,7 +148,6 @@
 						title="YouTube video player"
 						frameborder="0"
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						referrerpolicy="strict-origin-when-cross-origin"
 						allowfullscreen
 					></iframe>
 				{:else}
@@ -115,7 +160,7 @@
 				{/if}
 			</div>
 
-			<!-- PROYECTO 3: YOUTUBE 2 -->
+			<!-- POCAHONTAS -->
 			<div class="tarjeta-video">
 				<button class="encabezado-video" onclick={() => abrirModal('yt2')} title="Project Info">
 					<span class="titulo-video">DISNEY POCAHONTAS | RESCORE</span>
@@ -129,7 +174,6 @@
 						title="YouTube video player" 
 						frameborder="0" 
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-						referrerpolicy="strict-origin-when-cross-origin" 
 						allowfullscreen
 					></iframe>
 				{:else}
@@ -145,6 +189,12 @@
 		</div>
 	</div>
 
+	<!-- FOOTER -->
+	<div class="footer">
+		© 2026 Augusto Bosco <br>
+		Website by Zokalyx
+	</div>
+
 </div>
 
 <!-- VENTANA FLOTANTE PARA VER FOTOS AMPLIADAS -->
@@ -157,6 +207,29 @@
 	</div>
 {/if}
 
+<!-- VENTANA FLOTANTE 4: LA LUNA - WALTZ NO. 1 (Ensayo ythCQF-ag_0) -->
+{#if modalLuna}
+	<div class="modal-fondo" onclick={cerrarModales}>
+		<div class="modal-tarjeta" onclick={(e) => e.stopPropagation()}>
+			<button class="modal-cerrar" onclick={cerrarModales}>✕</button>
+			<h3>LA LUNA - WALTZ NO. 1</h3>
+			
+			<iframe
+				class="modal-media"
+				src="https://www.youtube.com/embed/ythCQF-ag_0"
+				title="La Luna - Waltz No. 1"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				allowfullscreen
+			></iframe>
+
+			<!-- SIN SOUNDCLOUD AQUÍ -->
+
+			<p>Presented to the public for the first time in the UCA auditorium, I am very grateful to everyone involved in the presentation of the piece. During that year, I lived an experience that will accompany me throughout the development of my professional career. My approach to orchestration has evolved significantly over the years and many of the decisions I make today are a direct result of the invaluable experience gained during that time. There's a moment every composer knows: weeks of preparation in notation software, hundreds of hours of arranging, everything meticulously planned on screen. Then the first rehearsal happens, and suddenly it's all real.</p>
+		</div>
+	</div>
+{/if}
+
 <!-- VENTANA FLOTANTE 1: HOWL -->
 {#if modalHowl}
 	<div class="modal-fondo" onclick={cerrarModales}>
@@ -164,16 +237,8 @@
 			<button class="modal-cerrar" onclick={cerrarModales}>✕</button>
 			<h3>HOWL’S MOVING CASTLE | LIVE ORCHESTRA</h3>
 			
-			<iframe
-				class="modal-media"
-				src="https://www.youtube.com/embed/LOQVj4U3RDA"
-				title="Howl's Moving Castle Live Orchestra"
-				frameborder="0"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-				allowfullscreen
-			></iframe>
+			<img src={img11} class="modal-media" alt="Howl's Moving Castle Live Orchestra" />
 
-			<!-- Reproductor SoundCloud Howl -->
 			<iframe
 				title="Soundcloud Howl"
 				width="100%"
@@ -203,10 +268,8 @@ The main difference from the original lies in the form. Hisaishi’s version int
 			<button class="modal-cerrar" onclick={cerrarModales}>✕</button>
 			<h3>ANIMATION SCORE PROJECT</h3>
 			
-			<!-- IMAGEN DEL PROYECTO 6 -->
-			<img src={img6} class="modal-media" alt="Dragons Score Project" />
+			<img src={img3} class="modal-media" alt="Dragons Score Project" />
 
-			<!-- Reproductor SoundCloud Dragons -->
 			<iframe
 				title="Soundcloud Dragons"
 				width="100%"
@@ -238,10 +301,8 @@ This project showcases my ability to integrate composition, orchestration, sound
 			<button class="modal-cerrar" onclick={cerrarModales}>✕</button>
 			<h3>CINEMATIC SOUND DESIGN</h3>
 			
-			<!-- IMAGEN DEL PROYECTO 5.jpeg -->
 			<img src={img5} class="modal-media" alt="Pocahontas Sound Design" />
 
-			<!-- Reproductor SoundCloud Pocahontas -->
 			<iframe
 				title="Soundcloud Pocahontas"
 				width="100%"
@@ -264,8 +325,9 @@ In addition to the composition, I handled the sound design and reworked aspects 
 
 <style>
 	/* ---------------------------------------------------- */
-	/* 1. ESTILOS GENERALES Y LAYOUTS BASE (PC)             */
+	/* 1. ESTILOS GENERALES Y LAYOUTS BASE                  */
 	/* ---------------------------------------------------- */
+	
 	.contenedor-general {
 		display: flex;
 		flex-direction: column;
@@ -287,7 +349,29 @@ In addition to the composition, I handled the sound design and reworked aspects 
 		padding-bottom: 0.5rem;
 	}
 
-	/* GRILLA POR PASOS PARA FOTOS (PC) */
+	.linea-separadora {
+		width: 100%;
+		border: 0;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+	}
+
+	/* FOOTER AL FINAL */
+	.footer {
+		order: 3;
+		margin-top: 5rem;
+		text-align: center;
+		color: rgba(255, 255, 255, 0.4);
+		font-size: 0.85rem;
+		letter-spacing: 0.05em;
+		line-height: 1.8;
+		font-family: 'Raleway', sans-serif;
+	}
+
+	/* ========================================================== */
+	/* SISTEMA DE GRILLA ACTIVO: RESPETA TAMAÑO COMPLETO (AUTO)   */
+	/* ========================================================== */
 	.mosaic {
 		display: grid;
 		width: 100%;
@@ -298,7 +382,7 @@ In addition to the composition, I handled the sound design and reworked aspects 
 
 	.mosaic img {
 		width: 100%;
-		height: auto; 
+		height: auto; /* Muestra el 100% de la foto sin recortes verticales */
 		border-radius: 2px;
 		display: block;
 	}
@@ -528,23 +612,21 @@ In addition to the composition, I handled the sound design and reworked aspects 
 			grid-template-columns: repeat(2, 1fr);
 		}
 
-		/* ACÁ SE SOLUCIONA LO DE LOS VIDEOS */
 		.grilla-noah {
-			grid-template-columns: 1fr; /* Pone los videos en 1 sola columna */
+			grid-template-columns: 1fr;
 			gap: 2.5rem;
 		}
 
 		.seccion-videos {
-			order: 1; /* Pasa los videos arriba */
+			order: 1;
 			margin-top: 0;
 			margin-bottom: 2rem;
 		}
 
 		.seccion-mosaico {
-			order: 2; /* Pasa las fotos abajo */
+			order: 2;
 		}
 
-		/* Oculta la primera foto */
 		.mosaic img.imagen-uno {
 			display: none;
 		}
