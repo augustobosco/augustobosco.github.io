@@ -360,7 +360,7 @@ In addition to the composition, I handled the sound design and reworked aspects 
 	/* FOOTER AL FINAL */
 	.footer {
 		order: 3;
-		margin-top: 3rem;
+		margin-top: 5rem;
 		text-align: center;
 		color: rgba(255, 255, 255, 0.4);
 		font-size: 0.85rem;
@@ -418,12 +418,13 @@ In addition to the composition, I handled the sound design and reworked aspects 
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		gap: 0.3rem;
-		margin-bottom: 0.6rem;
+		gap: 0.4rem; /* Un poquito más de espacio entre el texto y la flecha */
+		margin-bottom: 1rem;
 		cursor: pointer;
 		padding: 0;
 	}
 
+	/* ========== TÍTULO Y FLECHA MEJORADOS ========== */
 	.titulo-video {
 		color: rgb(210, 195, 130);
 		font-family: 'Raleway', sans-serif;
@@ -431,24 +432,31 @@ In addition to the composition, I handled the sound design and reworked aspects 
 		letter-spacing: 0.12em;
 		font-weight: 500;
 		text-align: center;
-		transition: color 0.2s;
+		
+		text-decoration: underline;
+		text-decoration-color: rgba(210, 195, 130, 0.3);
+		text-underline-offset: 4px;
+		transition: color 0.2s, text-decoration-color 0.2s;
 	}
 
 	.boton-info {
-		color: rgb(153, 135, 255);
-		font-size: 1rem;
+		color: rgb(255, 226, 94);
+		font-size: 1.4rem; /* Flecha más grande y visible */
 		line-height: 1;
-		transition: transform 0.2s, color 0.2s;
+		transition: transform 0.25s ease, color 0.2s ease;
 	}
 
 	.encabezado-video:hover .titulo-video {
 		color: white;
+		text-decoration-color: white;
 	}
 
+	/* Animación de la flecha al pasar el mouse (se agranda y se desplaza) */
 	.encabezado-video:hover .boton-info {
-		transform: translate(2px, -2px);
+		transform: translate(3px, -3px) scale(1.1);
 		color: white;
 	}
+	/* ================================================================ */
 
 	.video {
 		display: block;
@@ -593,7 +601,6 @@ In addition to the composition, I handled the sound design and reworked aspects 
 		margin: 0;
 		white-space: pre-line;
 	}
-
 
 	/* ---------------------------------------------------- */
 	/* 2. MEDIA QUERIES (ADAPTACIÓN MÓVIL) - AL FINAL       */
