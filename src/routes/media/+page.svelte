@@ -5,6 +5,10 @@
 	import img2 from '$lib/assets/media/2.png';
 	import img3 from '$lib/assets/media/3.png';
 	import img4 from '$lib/assets/media/4.png';
+	
+	// Importamos las fotos nuevas para los modales
+	import img5 from '$lib/assets/media/5.jpeg';
+	import imgAbout3 from '$lib/assets/about/3.png';
 
 	let v1 = $state(false);
 	let yt1 = $state(false);
@@ -160,6 +164,7 @@
 				height="120"
 				scrolling="no"
 				frameborder="no"
+				loading="lazy"
 				class="modal-soundcloud"
 				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2370063893%3Fsecret_token%3Ds-M0i7BI8WaQ8&color=%2313101e&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
 			></iframe>
@@ -179,14 +184,8 @@ The main difference from the original lies in the form. Hisaishi’s version int
 			<button class="modal-cerrar" onclick={cerrarModales}>✕</button>
 			<h3>ANIMATION SCORE PROJECT</h3>
 			
-			<iframe
-				class="modal-media"
-				src="https://www.youtube.com/embed/jIgz_IhCmEY"
-				title="Dragons Overwatch Animated Short"
-				frameborder="0"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-				allowfullscreen
-			></iframe>
+			<!-- IMAGEN DEL PROYECTO DESDE LA CARPETA ABOUT -->
+			<img src={imgAbout3} class="modal-media" alt="Dragons Score Project" />
 
 			<!-- Reproductor SoundCloud Dragons -->
 			<iframe
@@ -195,6 +194,7 @@ The main difference from the original lies in the form. Hisaishi’s version int
 				height="120"
 				scrolling="no"
 				frameborder="no"
+				loading="lazy"
 				class="modal-soundcloud"
 				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2370047339%3Fsecret_token%3Ds-w33WSVsAxlY&color=%2313101e&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
 			></iframe>
@@ -215,14 +215,8 @@ This project showcases my ability to integrate composition, orchestration, sound
 			<button class="modal-cerrar" onclick={cerrarModales}>✕</button>
 			<h3>CINEMATIC SOUND DESIGN</h3>
 			
-			<iframe
-				class="modal-media"
-				src="https://www.youtube.com/embed/nps4-HFdQBc"
-				title="Disney Pocahontas Rescore"
-				frameborder="0"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-				allowfullscreen
-			></iframe>
+			<!-- IMAGEN DEL PROYECTO 5.jpeg -->
+			<img src={img5} class="modal-media" alt="Pocahontas Sound Design" />
 
 			<!-- Reproductor SoundCloud Pocahontas -->
 			<iframe
@@ -231,6 +225,7 @@ This project showcases my ability to integrate composition, orchestration, sound
 				height="120"
 				scrolling="no"
 				frameborder="no"
+				loading="lazy"
 				class="modal-soundcloud"
 				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2370068753%3Fsecret_token%3Ds-ETTmEg6MgUS&color=%2313101e&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
 			></iframe>
@@ -297,7 +292,7 @@ In addition to the composition, I handled the sound design and reworked aspects 
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		gap: 0.5rem;
+		gap: 0.3rem;
 		margin-bottom: 0.6rem;
 		cursor: pointer;
 		padding: 0;
@@ -306,7 +301,7 @@ In addition to the composition, I handled the sound design and reworked aspects 
 	.titulo-video {
 		color: rgb(210, 195, 130);
 		font-family: 'Raleway', sans-serif;
-		font-size: 0.78rem;
+		font-size: 0.85rem;
 		letter-spacing: 0.12em;
 		font-weight: 500;
 		text-align: center;
@@ -423,6 +418,7 @@ In addition to the composition, I handled the sound design and reworked aspects 
 		border-radius: 4px;
 		margin-bottom: 1rem;
 		display: block;
+		object-fit: cover;
 	}
 
 	.modal-soundcloud {
@@ -432,7 +428,13 @@ In addition to the composition, I handled the sound design and reworked aspects 
 
 	.modal-tarjeta p {
 		line-height: 1.6;
-		font-size: 0.95rem;
+		
+		/* ======================================================== */
+		/* ↓↓ ACÁ PODÉS CAMBIAR EL TAMAÑO DE LA LETRA DE LA INFO ↓↓ */
+		/* ======================================================== */
+		font-size: 1.05rem; 
+		/* ======================================================== */
+		
 		color: rgb(220, 220, 230);
 		margin: 0;
 		white-space: pre-line;
