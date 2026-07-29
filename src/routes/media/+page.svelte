@@ -17,6 +17,9 @@
 	let modalHowl = $state(false);
 	let modalYt1 = $state(false);
 	let modalYt2 = $state(false);
+	
+	// NUEVA VARIABLE: Guarda qué foto se tiene que mostrar en grande
+	let modalFoto = $state<string | null>(null);
 
 	// Función inteligente: apaga todos los demás audios/videos y abre solo el que elegiste
 	function reproducirSolo(cual: string) {
@@ -37,6 +40,7 @@
 		modalHowl = false;
 		modalYt1 = false;
 		modalYt2 = false;
+		modalFoto = null; // Cierra también la foto ampliada
 	}
 </script>
 
@@ -48,10 +52,12 @@
 	<div class="seccion-mosaico">
 		<h2 class="titulo-seccion">Photo Gallery</h2>
 		<div class="mosaic">
-			<img src={img1} class="imagen-uno" />
-			<img src={img2} />
-			<img src={img3} />
-			<img src={img4} />
+			<!-- svelte-ignore a11y_click_events_have_key_events -->
+			<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+			<img src={img1} class="imagen-uno foto-clicable" onclick={() => modalFoto = img1} alt="Gallery" />
+			<img src={img2} class="foto-clicable" onclick={() => modalFoto = img2} alt="Gallery" />
+			<img src={img3} class="foto-clicable" onclick={() => modalFoto = img3} alt="Gallery" />
+			<img src={img4} class="foto-clicable" onclick={() => modalFoto = img4} alt="Gallery" />
 		</div>
 	</div>
 
@@ -141,12 +147,22 @@
 
 </div>
 
+<!-- VENTANA FLOTANTE PARA VER FOTOS AMPLIADAS -->
+{#if modalFoto}
+	<div class="modal-fondo" onclick={cerrarModales}>
+		<div class="modal-tarjeta-foto" onclick={(e) => e.stopPropagation()}>
+			<button class="btn-cerrar-foto" onclick={cerrarModales}>✕</button>
+			<img src={modalFoto} class="foto-ampliada" alt="Ampliación" />
+		</div>
+	</div>
+{/if}
+
 <!-- VENTANA FLOTANTE 1: HOWL -->
 {#if modalHowl}
 	<div class="modal-fondo" onclick={cerrarModales}>
 		<div class="modal-tarjeta" onclick={(e) => e.stopPropagation()}>
 			<button class="modal-cerrar" onclick={cerrarModales}>✕</button>
-			<h3>HOWL’S MOVING CASTLE | LIVE ORCHESTRA</h3>
+			<h3>HOWL'S MOVING CASTLE — RESCORE</h3>
 			
 			<iframe
 				class="modal-media"
@@ -157,7 +173,7 @@
 				allowfullscreen
 			></iframe>
 
-			<!-- Reproductor SoundCloud Howl -->
+			<!-- Reproductor SoundCloud Howl NUEVO -->
 			<iframe
 				title="Soundcloud Howl"
 				width="100%"
@@ -166,7 +182,7 @@
 				frameborder="no"
 				loading="lazy"
 				class="modal-soundcloud"
-				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2370137360%3Fsecret_token%3Ds-8QTC0vOrImq&color=%231e1a0e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"
+				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2370137360%3Fsecret_token%3Ds-8QTC0vOrImq&color=%231e1a0e&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
 			></iframe>
 
 			<p>This project was presented live at the UCA Auditorium in 2023, marking the first public performance of my reorchestration for Howl’s Moving Castle. I am deeply grateful to the orchestra, conductor, and faculty for making this experience possible, as it became a milestone in my growth as a composer and orchestrator.
@@ -182,12 +198,12 @@ The main difference from the original lies in the form. Hisaishi’s version int
 	<div class="modal-fondo" onclick={cerrarModales}>
 		<div class="modal-tarjeta" onclick={(e) => e.stopPropagation()}>
 			<button class="modal-cerrar" onclick={cerrarModales}>✕</button>
-			<h3>DRAGONS | OVERWATCH ANIMATED SHORT</h3>
+			<h3>ANIMATION SCORE PROJECT</h3>
 			
 			<!-- IMAGEN DEL PROYECTO 6 -->
 			<img src={img6} class="modal-media" alt="Dragons Score Project" />
 
-			<!-- Reproductor SoundCloud Dragons -->
+			<!-- Reproductor SoundCloud Dragons NUEVO -->
 			<iframe
 				title="Soundcloud Dragons"
 				width="100%"
@@ -196,7 +212,7 @@ The main difference from the original lies in the form. Hisaishi’s version int
 				frameborder="no"
 				loading="lazy"
 				class="modal-soundcloud"
-				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2370140375%3Fsecret_token%3Ds-NnZvI4mfFod&color=%231e1a0e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"
+				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2370140375%3Fsecret_token%3Ds-NnZvI4mfFod&color=%231e1a0e&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
 			></iframe>
 
 			<p>This project is my personal tribute to Blizzard’s Dragons cinematic. I recreated the entire soundtrack with original music, recorded in my studio, and redesigned the soundscape by layering assets from the original game together with custom sounds and commercial libraries. The result is a fully reimagined audio experience that respects the spirit of the short while offering my own interpretation.
@@ -213,7 +229,7 @@ This project showcases my ability to integrate composition, orchestration, sound
 	<div class="modal-fondo" onclick={cerrarModales}>
 		<div class="modal-tarjeta" onclick={(e) => e.stopPropagation()}>
 			<button class="modal-cerrar" onclick={cerrarModales}>✕</button>
-			<h3>DISNEY POCAHONTAS | RESCORE</h3>
+			<h3>CINEMATIC SOUND DESIGN</h3>
 			
 			<!-- IMAGEN DEL PROYECTO 5.jpeg -->
 			<img src={img5} class="modal-media" alt="Pocahontas Sound Design" />
@@ -277,6 +293,18 @@ In addition to the composition, I handled the sound design and reworked aspects 
 		display: block;
 	}
 
+	/* EFECTO HOVER PARA LAS FOTOS (Indica que son clicables) */
+	.foto-clicable {
+		cursor: pointer;
+		transition: transform 0.3s ease, filter 0.3s ease;
+	}
+
+	.foto-clicable:hover {
+		transform: scale(1.03);
+		filter: brightness(1.15);
+		box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+	}
+
 	/* PASO 2 (Monitores medianos/Laptops): Bajamos a 3 columnas */
 	@media (max-width: 1400px) {
 		.mosaic {
@@ -318,7 +346,6 @@ In addition to the composition, I handled the sound design and reworked aspects 
 			gap: 1rem;
 		}
 	}
-
 
 	/* GRILLA A 2 COLUMNAS ESTILO NOAH GLADSTONE */
 	.grilla-noah {
@@ -404,7 +431,7 @@ In addition to the composition, I handled the sound design and reworked aspects 
 		fill-opacity: 1;
 	}
 
-	/* ESTILOS DE LA VENTANA FLOTANTE (MODAL) PERFECTA EN MÓVIL */
+	/* ESTILOS DE LA VENTANA FLOTANTE (MODALES GENERALES) */
 	.modal-fondo {
 		position: fixed;
 		top: 0;
@@ -429,8 +456,42 @@ In addition to the composition, I handled the sound design and reworked aspects 
 		width: 100%;
 		position: relative;
 		border: 1px solid rgba(255, 255, 255, 0.15);
-		max-height: 85vh; /* Altura máxima para que nunca se corte en el teléfono */
-		overflow-y: auto; /* Scroll interno para leer todo el texto cómodamente */
+		max-height: 85vh;
+		overflow-y: auto;
+	}
+
+	/* ESTILOS ESPECÍFICOS PARA LA FOTO AMPLIADA */
+	.modal-tarjeta-foto {
+		position: relative;
+		display: inline-block; /* Se ajusta exactamente al tamaño de la foto */
+	}
+
+	.foto-ampliada {
+		max-width: 90vw;
+		max-height: 85vh; /* Deja margen arriba para la X */
+		border-radius: 4px;
+		object-fit: contain;
+		box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+		display: block;
+	}
+
+	/* FUERZA LA X ARRIBA A LA DERECHA DE LA FOTO */
+	.btn-cerrar-foto {
+		position: absolute;
+		top: -35px;
+		right: 0px;
+		background: none;
+		border: none;
+		color: white !important;
+		font-size: 1.6rem;
+		cursor: pointer;
+		padding: 0;
+		margin: 0;
+		float: none;
+	}
+
+	.btn-cerrar-foto:hover {
+		color: #ff5555 !important;
 	}
 
 	.modal-cerrar {
@@ -444,6 +505,7 @@ In addition to the composition, I handled the sound design and reworked aspects 
 		cursor: pointer;
 		margin-top: -1rem;
 		margin-right: -0.5rem;
+		z-index: 10;
 	}
 
 	.modal-cerrar:hover {
@@ -475,13 +537,7 @@ In addition to the composition, I handled the sound design and reworked aspects 
 
 	.modal-tarjeta p {
 		line-height: 1.6;
-		
-		/* ======================================================== */
-		/* ↓↓ ACÁ PODÉS CAMBIAR EL TAMAÑO DE LA LETRA DE LA INFO ↓↓ */
-		/* ======================================================== */
 		font-size: 1.05rem; 
-		/* ======================================================== */
-		
 		color: rgb(220, 220, 230);
 		margin: 0;
 		white-space: pre-line;
