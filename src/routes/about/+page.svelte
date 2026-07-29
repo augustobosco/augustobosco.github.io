@@ -7,7 +7,6 @@
 
 	import img1 from '$lib/assets/about/1.png';
 	import img2 from '$lib/assets/about/2.png';
-	import img3 from '$lib/assets/about/3.png';
 	import img4 from '$lib/assets/about/4.png';
 </script>
 
@@ -91,7 +90,6 @@
 	<div class="pics">
 		<img src={img1} alt="pic" />
 		<img src={img2} alt="pic" />
-		<img src={img3} alt="pic" />
 		<img src={img4} alt="pic" />
 	</div>
 </section>

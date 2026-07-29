@@ -8,7 +8,7 @@
 	
 	// Importamos las fotos nuevas para los modales
 	import img5 from '$lib/assets/media/5.jpeg';
-	import imgAbout3 from '$lib/assets/about/3.png';
+	import img6 from '$lib/assets/media/6.jpg';
 
 	let v1 = $state(false);
 	let yt1 = $state(false);
@@ -146,7 +146,7 @@
 	<div class="modal-fondo" onclick={cerrarModales}>
 		<div class="modal-tarjeta" onclick={(e) => e.stopPropagation()}>
 			<button class="modal-cerrar" onclick={cerrarModales}>✕</button>
-			<h3>HOWL'S MOVING CASTLE — RESCORE</h3>
+			<h3>HOWL’S MOVING CASTLE | LIVE ORCHESTRA</h3>
 			
 			<iframe
 				class="modal-media"
@@ -182,10 +182,10 @@ The main difference from the original lies in the form. Hisaishi’s version int
 	<div class="modal-fondo" onclick={cerrarModales}>
 		<div class="modal-tarjeta" onclick={(e) => e.stopPropagation()}>
 			<button class="modal-cerrar" onclick={cerrarModales}>✕</button>
-			<h3>ANIMATION SCORE PROJECT</h3>
+			<h3>DRAGONS | OVERWATCH ANIMATED SHORT</h3>
 			
-			<!-- IMAGEN DEL PROYECTO DESDE LA CARPETA ABOUT -->
-			<img src={imgAbout3} class="modal-media" alt="Dragons Score Project" />
+			<!-- IMAGEN DEL PROYECTO 6 -->
+			<img src={img6} class="modal-media" alt="Dragons Score Project" />
 
 			<!-- Reproductor SoundCloud Dragons -->
 			<iframe
@@ -213,7 +213,7 @@ This project showcases my ability to integrate composition, orchestration, sound
 	<div class="modal-fondo" onclick={cerrarModales}>
 		<div class="modal-tarjeta" onclick={(e) => e.stopPropagation()}>
 			<button class="modal-cerrar" onclick={cerrarModales}>✕</button>
-			<h3>CINEMATIC SOUND DESIGN</h3>
+			<h3>DISNEY POCAHONTAS | RESCORE</h3>
 			
 			<!-- IMAGEN DEL PROYECTO 5.jpeg -->
 			<img src={img5} class="modal-media" alt="Pocahontas Sound Design" />
@@ -263,7 +263,8 @@ In addition to the composition, I handled the sound design and reworked aspects 
 	.mosaic {
 		display: grid;
 		width: 100%;
-		gap: 1.5rem; /* Espacio entre fotos */
+		gap: 1.5rem;
+		align-items: start;
 		
 		/* PASO 1 (PC Escritorio): 4 columnas fijas */
 		grid-template-columns: repeat(4, 1fr); 
@@ -271,12 +272,10 @@ In addition to the composition, I handled the sound design and reworked aspects 
 
 	.mosaic img {
 		width: 100%;
-		height: auto; /* ESTO ES CLAVE: Mantiene la proporción real de la foto, CERO deformación */
+		height: auto; /* Mantiene la proporción real de la foto, CERO deformación */
 		border-radius: 2px;
 		display: block;
 	}
-
-	/* Definimos los "Pasos" (saltos) para distintos tamaños de pantalla */
 
 	/* PASO 2 (Monitores medianos/Laptops): Bajamos a 3 columnas */
 	@media (max-width: 1400px) {
@@ -285,28 +284,41 @@ In addition to the composition, I handled the sound design and reworked aspects 
 		}
 	}
 
-	/* PASO 3 (Tablets): Bajamos a 2 columnas */
-	@media (max-width: 1000px) {
+	/* PASO 3 Y ADAPTACIÓN MÓVIL (Tablets y Celulares) */
+	@media (max-width: 1024px) {
 		.mosaic {
 			grid-template-columns: repeat(2, 1fr);
 		}
+
+		.grilla-noah {
+			grid-template-columns: 1fr;
+			gap: 2.5rem;
+		}
+
+		.seccion-videos {
+			order: 1;
+			margin-top: 0;
+			margin-bottom: 2rem;
+		}
+
+		.seccion-mosaico {
+			order: 2;
+		}
+
+		/* ACÁ ESTÁ LA REGLA CORREGIDA (Con Especificidad): Oculta la primera foto */
+		.mosaic img.imagen-uno {
+			display: none;
+		}
 	}
 
-	/* PASO 4 (Celulares): Bajamos a 1 columna */
-	@media (max-width: 700px) {
+	/* PASO 4 (Celulares chicos): Bajamos a 1 columna */
+	@media (max-width: 768px) {
 		.mosaic {
 			grid-template-columns: 1fr;
 			gap: 1rem;
 		}
 	}
 
-	/* En celular bajamos un poquito la altura para que entren mejor */
-	@media (max-width: 768px) {
-		.mosaic img {
-			height: 200px;
-			min-width: 100%; /* En celular ocupan todo el ancho */
-		}
-	}
 
 	/* GRILLA A 2 COLUMNAS ESTILO NOAH GLADSTONE */
 	.grilla-noah {
@@ -473,36 +485,5 @@ In addition to the composition, I handled the sound design and reworked aspects 
 		color: rgb(220, 220, 230);
 		margin: 0;
 		white-space: pre-line;
-	}
-
-	/* ADAPTACIÓN PARA CELULARES Y PANTALLAS CHICAS */
-	@media (max-width: 1024px) {
-		.grilla-noah {
-			grid-template-columns: 1fr;
-			gap: 2.5rem;
-		}
-
-		.seccion-videos {
-			order: 1;
-			margin-top: 0;
-			margin-bottom: 2rem;
-		}
-
-		.seccion-mosaico {
-			order: 2;
-		}
-
-		.imagen-uno {
-			display: none;
-		}
-
-		.mosaic {
-			column-count: 1; /* En celular, las fotos bajan a 1 sola columna ordenada */
-		}
-
-		.mosaic img {
-			height: auto;
-			width: 100%;
-		}
 	}
 </style>
