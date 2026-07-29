@@ -162,7 +162,7 @@
 	<div class="modal-fondo" onclick={cerrarModales}>
 		<div class="modal-tarjeta" onclick={(e) => e.stopPropagation()}>
 			<button class="modal-cerrar" onclick={cerrarModales}>✕</button>
-			<h3>HOWL'S MOVING CASTLE — RESCORE</h3>
+			<h3>HOWL’S MOVING CASTLE | LIVE ORCHESTRA</h3>
 			
 			<iframe
 				class="modal-media"
@@ -173,7 +173,7 @@
 				allowfullscreen
 			></iframe>
 
-			<!-- Reproductor SoundCloud Howl NUEVO -->
+			<!-- Reproductor SoundCloud Howl -->
 			<iframe
 				title="Soundcloud Howl"
 				width="100%"
@@ -182,7 +182,7 @@
 				frameborder="no"
 				loading="lazy"
 				class="modal-soundcloud"
-				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2370137360%3Fsecret_token%3Ds-8QTC0vOrImq&color=%231e1a0e&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
+				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2370137360%3Fsecret_token%3Ds-8QTC0vOrImq&color=%231e1a0e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"
 			></iframe>
 
 			<p>This project was presented live at the UCA Auditorium in 2023, marking the first public performance of my reorchestration for Howl’s Moving Castle. I am deeply grateful to the orchestra, conductor, and faculty for making this experience possible, as it became a milestone in my growth as a composer and orchestrator.
@@ -206,7 +206,7 @@ The main difference from the original lies in the form. Hisaishi’s version int
 			<!-- IMAGEN DEL PROYECTO 6 -->
 			<img src={img6} class="modal-media" alt="Dragons Score Project" />
 
-			<!-- Reproductor SoundCloud Dragons NUEVO -->
+			<!-- Reproductor SoundCloud Dragons -->
 			<iframe
 				title="Soundcloud Dragons"
 				width="100%"
@@ -215,7 +215,7 @@ The main difference from the original lies in the form. Hisaishi’s version int
 				frameborder="no"
 				loading="lazy"
 				class="modal-soundcloud"
-				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2370140375%3Fsecret_token%3Ds-NnZvI4mfFod&color=%231e1a0e&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
+				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2370140375%3Fsecret_token%3Ds-NnZvI4mfFod&color=%231e1a0e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"
 			></iframe>
 
 			<p>This project is my personal tribute to Blizzard’s Dragons cinematic. I recreated the entire soundtrack with original music, recorded in my studio, and redesigned the soundscape by layering assets from the original game together with custom sounds and commercial libraries. The result is a fully reimagined audio experience that respects the spirit of the short while offering my own interpretation.
@@ -263,6 +263,9 @@ In addition to the composition, I handled the sound design and reworked aspects 
 {/if}
 
 <style>
+	/* ---------------------------------------------------- */
+	/* 1. ESTILOS GENERALES Y LAYOUTS BASE (PC)             */
+	/* ---------------------------------------------------- */
 	.contenedor-general {
 		display: flex;
 		flex-direction: column;
@@ -284,25 +287,23 @@ In addition to the composition, I handled the sound design and reworked aspects 
 		padding-bottom: 0.5rem;
 	}
 
-	/* GRILLA POR PASOS (SISTEMA DEFINITIVO SIN ESTIRAMIENTO) */
+	/* GRILLA POR PASOS PARA FOTOS (PC) */
 	.mosaic {
 		display: grid;
 		width: 100%;
 		gap: 1.5rem;
 		align-items: start;
-		
-		/* PASO 1 (PC Escritorio): 4 columnas fijas */
 		grid-template-columns: repeat(4, 1fr); 
 	}
 
 	.mosaic img {
 		width: 100%;
-		height: auto; /* Mantiene la proporción real de la foto, CERO deformación */
+		height: auto; 
 		border-radius: 2px;
 		display: block;
 	}
 
-	/* EFECTO HOVER PARA LAS FOTOS (Indica que son clicables) */
+	/* EFECTO HOVER PARA LAS FOTOS */
 	.foto-clicable {
 		cursor: pointer;
 		transition: transform 0.3s ease, filter 0.3s ease;
@@ -314,49 +315,7 @@ In addition to the composition, I handled the sound design and reworked aspects 
 		box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 	}
 
-	/* PASO 2 (Monitores medianos/Laptops): Bajamos a 3 columnas */
-	@media (max-width: 1400px) {
-		.mosaic {
-			grid-template-columns: repeat(3, 1fr);
-		}
-	}
-
-	/* PASO 3 Y ADAPTACIÓN MÓVIL (Tablets y Celulares) */
-	@media (max-width: 1024px) {
-		.mosaic {
-			grid-template-columns: repeat(2, 1fr);
-		}
-
-		.grilla-noah {
-			grid-template-columns: 1fr;
-			gap: 2.5rem;
-		}
-
-		.seccion-videos {
-			order: 1;
-			margin-top: 0;
-			margin-bottom: 2rem;
-		}
-
-		.seccion-mosaico {
-			order: 2;
-		}
-
-		/* ACÁ ESTÁ LA REGLA CORREGIDA (Con Especificidad): Oculta la primera foto */
-		.mosaic img.imagen-uno {
-			display: none;
-		}
-	}
-
-	/* PASO 4 (Celulares chicos): Bajamos a 1 columna */
-	@media (max-width: 768px) {
-		.mosaic {
-			grid-template-columns: 1fr;
-			gap: 1rem;
-		}
-	}
-
-	/* GRILLA A 2 COLUMNAS ESTILO NOAH GLADSTONE */
+	/* GRILLA A 2 COLUMNAS ESTILO NOAH GLADSTONE PARA VIDEOS (PC) */
 	.grilla-noah {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -368,7 +327,7 @@ In addition to the composition, I handled the sound design and reworked aspects 
 		flex-direction: column;
 	}
 
-	/* Título y flecha clicables e interactivos */
+	/* Título y flecha de videos */
 	.encabezado-video {
 		background: none;
 		border: none;
@@ -440,7 +399,7 @@ In addition to the composition, I handled the sound design and reworked aspects 
 		fill-opacity: 1;
 	}
 
-	/* ESTILOS DE LA VENTANA FLOTANTE (MODALES GENERALES) */
+	/* ESTILOS DE LA VENTANA FLOTANTE GENERAL */
 	.modal-fondo {
 		position: fixed;
 		top: 0;
@@ -472,19 +431,18 @@ In addition to the composition, I handled the sound design and reworked aspects 
 	/* ESTILOS ESPECÍFICOS PARA LA FOTO AMPLIADA */
 	.modal-tarjeta-foto {
 		position: relative;
-		display: inline-block; /* Se ajusta exactamente al tamaño de la foto */
+		display: inline-block;
 	}
 
 	.foto-ampliada {
 		max-width: 90vw;
-		max-height: 85vh; /* Deja margen arriba para la X */
+		max-height: 85vh;
 		border-radius: 4px;
 		object-fit: contain;
 		box-shadow: 0 10px 40px rgba(0,0,0,0.6);
 		display: block;
 	}
 
-	/* FUERZA LA X ARRIBA A LA DERECHA DE LA FOTO */
 	.btn-cerrar-foto {
 		position: absolute;
 		top: -35px;
@@ -550,5 +508,53 @@ In addition to the composition, I handled the sound design and reworked aspects 
 		color: rgb(220, 220, 230);
 		margin: 0;
 		white-space: pre-line;
+	}
+
+
+	/* ---------------------------------------------------- */
+	/* 2. MEDIA QUERIES (ADAPTACIÓN MÓVIL) - AL FINAL       */
+	/* ---------------------------------------------------- */
+
+	/* Monitores medianos/Laptops */
+	@media (max-width: 1400px) {
+		.mosaic {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	/* Tablets y Celulares */
+	@media (max-width: 1024px) {
+		.mosaic {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		/* ACÁ SE SOLUCIONA LO DE LOS VIDEOS */
+		.grilla-noah {
+			grid-template-columns: 1fr; /* Pone los videos en 1 sola columna */
+			gap: 2.5rem;
+		}
+
+		.seccion-videos {
+			order: 1; /* Pasa los videos arriba */
+			margin-top: 0;
+			margin-bottom: 2rem;
+		}
+
+		.seccion-mosaico {
+			order: 2; /* Pasa las fotos abajo */
+		}
+
+		/* Oculta la primera foto */
+		.mosaic img.imagen-uno {
+			display: none;
+		}
+	}
+
+	/* Celulares chicos */
+	@media (max-width: 768px) {
+		.mosaic {
+			grid-template-columns: 1fr;
+			gap: 1rem;
+		}
 	}
 </style>
