@@ -148,7 +148,10 @@
 		gap: 1rem;
 	}
 	.pics img {
+		width: 100%;
+		height: auto; /* Mantiene la proporción real, sin zoom ni recortes */
 		border-radius: var(--radius);
+		display: block;
 	}
 
 	.text {
@@ -166,8 +169,8 @@
 		display: grid;
 		grid-template-columns: 6fr 2fr;
 		gap: 3rem;
-
 		font-family: 'Raleway';
+		align-items: start; /* ESTO ES LA MAGIA: Evita que la columna de fotos se estire */
 	}
 
 	@media (max-width: 768px) {

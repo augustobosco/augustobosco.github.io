@@ -259,18 +259,53 @@ In addition to the composition, I handled the sound design and reworked aspects 
 		padding-bottom: 0.5rem;
 	}
 
+	/* GRILLA POR PASOS (SISTEMA DEFINITIVO SIN ESTIRAMIENTO) */
 	.mosaic {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: center;
-		gap: 1.5em;
+		display: grid;
+		width: 100%;
+		gap: 1.5rem; /* Espacio entre fotos */
+		
+		/* PASO 1 (PC Escritorio): 4 columnas fijas */
+		grid-template-columns: repeat(4, 1fr); 
 	}
 
 	.mosaic img {
-		height: 18em;
-		object-fit: cover;
+		width: 100%;
+		height: auto; /* ESTO ES CLAVE: Mantiene la proporción real de la foto, CERO deformación */
 		border-radius: 2px;
+		display: block;
+	}
+
+	/* Definimos los "Pasos" (saltos) para distintos tamaños de pantalla */
+
+	/* PASO 2 (Monitores medianos/Laptops): Bajamos a 3 columnas */
+	@media (max-width: 1400px) {
+		.mosaic {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	/* PASO 3 (Tablets): Bajamos a 2 columnas */
+	@media (max-width: 1000px) {
+		.mosaic {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	/* PASO 4 (Celulares): Bajamos a 1 columna */
+	@media (max-width: 700px) {
+		.mosaic {
+			grid-template-columns: 1fr;
+			gap: 1rem;
+		}
+	}
+
+	/* En celular bajamos un poquito la altura para que entren mejor */
+	@media (max-width: 768px) {
+		.mosaic img {
+			height: 200px;
+			min-width: 100%; /* En celular ocupan todo el ancho */
+		}
 	}
 
 	/* GRILLA A 2 COLUMNAS ESTILO NOAH GLADSTONE */
@@ -459,6 +494,10 @@ In addition to the composition, I handled the sound design and reworked aspects 
 
 		.imagen-uno {
 			display: none;
+		}
+
+		.mosaic {
+			column-count: 1; /* En celular, las fotos bajan a 1 sola columna ordenada */
 		}
 
 		.mosaic img {
