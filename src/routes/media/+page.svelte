@@ -87,7 +87,7 @@
 			<!-- PROYECTO 3: YOUTUBE 2 -->
 			<div class="tarjeta-video">
 				<div class="encabezado-video">
-					<span class="titulo-video">DISNEY POCAHONTAS 1995</span>
+					<span class="titulo-video">DISNEY POCAHONTAS 1995 | RESCORE</span>
 					<button class="boton-info" onclick={() => modalYt2 = true} title="Project Info">↗</button>
 				</div>
 
