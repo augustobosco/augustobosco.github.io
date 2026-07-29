@@ -112,7 +112,7 @@
 
 	/* ESTILOS DEL FOOTER */
 	.footer {
-		margin-top: 2rem;
+		margin-top: 1rem;
 		margin-bottom: 3rem;
 		text-align: center;
 		color: rgba(255, 255, 255, 0.4);
