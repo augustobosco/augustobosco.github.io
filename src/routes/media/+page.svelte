@@ -186,8 +186,11 @@
 			></iframe>
 
 			<p>This project was presented live at the UCA Auditorium in 2023, marking the first public performance of my reorchestration for Howl’s Moving Castle. I am deeply grateful to the orchestra, conductor, and faculty for making this experience possible, as it became a milestone in my growth as a composer and orchestrator.
+
 Beyond the creative process of composition, this project demanded the full responsibility of preparing professional materials: delivering a complete conductor’s score as well as clear, accurate parts for each instrument, all within strict deadlines. It required balancing readability with musical intention, ensuring performers could confidently bring the music to life in a single rehearsal cycle.
+
 From an orchestration perspective, the challenge was to use all available instruments in a way that each voice contributed meaningfully, building a coherent soundscape that matched the imagery on screen. Every decision was made with synchronization in mind, ensuring the live performance aligned seamlessly with the film’s narrative flow. Is clearly inspired by Joe Hisaishi’s original score, particularly in its use of a waltz as the structural foundation. I also considered other waltz traditions I’ve studied such as Shostakovich, though only as a very subtle influence that colored some of my decisions without altering the essence of the piece.
+
 The main difference from the original lies in the form. Hisaishi’s version introduces a change once the characters reach the balcony, building into a large orchestral tutti as Howl departs. In my approach, I kept the music continuous: it begins with the first scene and flows seamlessly until the next, creating a single arc rather than a sectional shift.</p>
 		</div>
 	</div>
@@ -216,9 +219,13 @@ The main difference from the original lies in the form. Hisaishi’s version int
 			></iframe>
 
 			<p>This project is my personal tribute to Blizzard’s Dragons cinematic. I recreated the entire soundtrack with original music, recorded in my studio, and redesigned the soundscape by layering assets from the original game together with custom sounds and commercial libraries. The result is a fully reimagined audio experience that respects the spirit of the short while offering my own interpretation.
+
 For the score, I drew on a blend of feudal Japanese aesthetics and cyberpunk elements, inspired by contemporary Japanese music and composers such as Joe Hisaishi. I began by focusing on the sound design, carefully editing and synchronizing audio cues. Ableton was used to sculpt new textures, while Nuendo provided the environment for assembling and finalizing the soundscape. The original dialogue was preserved, but all other elements were reworked to give the project a distinct identity.
+
 Once the sound design foundation was in place, I composed original motifs for the two main characters, writing the first drafts traditionally on paper before moving into Dorico for orchestration. The challenge was to create a coherent score within a highly variable tempo map, following the structure of the cinematic while shaping my own musical narrative.
+
 The orchestral mockup was produced in Nuendo using Kontakt libraries, switching between large ensembles for epic moments and smaller groups for intimate passages. Finally, I recorded live violins, cellos, and quena (a Peruvian flute whose timbre closely resembles the Japanese shakuhachi), adding a personal and organic layer to the mix.
+
 This project showcases my ability to integrate composition, orchestration, sound design, live recording, and production into a cohesive storytelling tool for games and animation.</p>
 		</div>
 	</div>
@@ -247,7 +254,9 @@ This project showcases my ability to integrate composition, orchestration, sound
 			></iframe>
 
 			<p>This is a project I completed in 2024, with both the composition and production created during that time. It remains one of my favorite works from my student years, largely because of the challenge it presented, the scene depicts the first meeting between Pocahontas and John Smith, their very first glance at each other. For me, as a composer, capturing that moment felt monumental (it was a true challenge), but I believe I managed to resolve it in a way that feels effective and different from the original. While the original score leaned more toward intimacy, I wanted to highlight the feeling of love at first sight.
+				
 As a student work, the piece draws inspiration from both Dvořák’s Symphony No. 9 and Hisaishi’s thematic writing, since both composers often worked with folk-inspired materials, the references emerged after a thorough personal investigation and a detailed analysis of the scene. What I consider my personal achievement in this piece lies in the construction and realization of the music: although I drew on these two references, I also found a way to create something that came from my own voice.
+
 In addition to the composition, I handled the sound design and reworked aspects of the production (essentially remastering it), so that it could fit well in my portfolio. For me it serves not only as a showcase of my early craft but also as a meaningful reminder of those formative years.</p>
 		</div>
 	</div>
