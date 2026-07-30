@@ -227,7 +227,7 @@ De esa manera te asegurás de tener el control total sobre la primera impresión
 
 	/* ESTILOS DEL FOOTER */
 	.footer {
-		margin-top: 3rem;
+		margin-top: 2rem;
 		text-align: center;
 		color: rgba(255, 255, 255, 0.4);
 		font-size: 0.85rem;
