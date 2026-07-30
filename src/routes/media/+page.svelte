@@ -225,7 +225,9 @@
 
 			<!-- SIN SOUNDCLOUD AQUÍ -->
 
-			<p>Presented to the public for the first time in the UCA auditorium, I am very grateful to everyone involved in the presentation of the piece. During that year, I lived an experience that will accompany me throughout the development of my professional career. My approach to orchestration has evolved significantly over the years and many of the decisions I make today are a direct result of the invaluable experience gained during that time. There's a moment every composer knows: weeks of preparation in notation software, hundreds of hours of arranging, everything meticulously planned on screen. Then the first rehearsal happens, and suddenly it's all real.</p>
+			<p>Presented to the public for the first time in the UCA auditorium, I am very grateful to everyone involved in the presentation of the piece. During that year, I lived an experience that will accompany me throughout the development of my professional career. 
+				
+				My approach to orchestration has evolved significantly over the years and many of the decisions I make today are a direct result of the invaluable experience gained during that time. There's a moment every composer knows: weeks of preparation in notation software, hundreds of hours of arranging, everything meticulously planned on screen. Then the first rehearsal happens, and suddenly it's all real.</p>
 		</div>
 	</div>
 {/if}
