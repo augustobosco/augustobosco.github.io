@@ -437,14 +437,13 @@ In addition to the composition, I handled the sound design and reworked aspects 
 		font-weight: 500;
 		text-align: center;
 		
-		/*
+		
 		text-decoration: underline;
 		text-decoration-color: rgba(210, 195, 130, 0.3);
 		text-underline-offset: 4px;
 		transition: color 0.2s, text-decoration-color 0.2s;
 	}
-		*/
-	
+
 	.boton-info {
 		color: rgb(255, 226, 94);
 		font-size: 1.4rem; /* Flecha más grande y visible */
