@@ -37,12 +37,15 @@
 		<a href="https://youtube.com/@augustobosco_">
 			<img src={Youtube} alt="Youtube" />
 		</a>
+		<!--
 		<a href="https://patreon.com/AugustoBosco">
 			<img src={Patreon} alt="Patreon" />
 		</a>
+
 		<a href="https://www.facebook.com/profile.php?id=100009868776195">
 			<img src={Facebook} alt="Facebook" />
 		</a>
+		  -->
 	</div>
 </section>
 
@@ -99,7 +102,7 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr 1fr 1fr;
-		gap: 1rem;
+		gap: 3rem;
 	}
 
 	a {

@@ -66,7 +66,7 @@
 		<h2 class="titulo-seccion">Photo Gallery</h2>
 		<div class="mosaic">
 			<!-- Se intercambió img4 (primera) e img1 (quinta). La img1 se oculta en móvil -->
-			<img src={img4} class="foto-clicable" onclick={() => modalFoto = img4} alt="Gallery" />
+			<!--<img src={img4} class="foto-clicable" onclick={() => modalFoto = img4} alt="Gallery" />-->
 			<img src={img8} class="foto-clicable" onclick={() => modalFoto = img8} alt="Gallery" />
 			<img src={img2} class="foto-clicable" onclick={() => modalFoto = img2} alt="Gallery" />
 			<img src={img9} class="foto-clicable" onclick={() => modalFoto = img9} alt="Gallery" />
@@ -289,7 +289,9 @@ Once the sound design foundation was in place, I composed original motifs for th
 
 The orchestral mockup was produced in Nuendo using Kontakt libraries, switching between large ensembles for epic moments and smaller groups for intimate passages. Finally, I recorded live violins, cellos, and quena (a Peruvian flute whose timbre closely resembles the Japanese shakuhachi), adding a personal and organic layer to the mix.
 
-This project showcases my ability to integrate composition, orchestration, sound design, live recording, and production into a cohesive storytelling tool for games and animation.</p>
+This project showcases my ability to integrate composition, orchestration, sound design, live recording, and production into a cohesive storytelling tool for games and animation.
+
+Special thanks to Gonzalo Naessens, who assisted in some artistic decisions during the mix.</p>
 		</div>
 	</div>
 {/if}
