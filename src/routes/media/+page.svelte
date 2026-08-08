@@ -7,7 +7,7 @@
 	import img4 from '$lib/assets/media/4.png';
 	
 	import img5 from '$lib/assets/media/5.jpeg';
-	import img6 from '$lib/assets/media/6.jpg';
+	// ELIMINÉ EL IMPORT DE img6 PORQUE NO EXISTE EN TU CARPETA Y ROMPÍA LA COMPILACIÓN
 
 	// IMPORTANTE: Si te tira error, cambiá ".jpg" por ".png" o ".jpeg" según corresponda a tu archivo real
 	import img7 from '$lib/assets/media/7.jpg';
@@ -66,7 +66,6 @@
 		<h2 class="titulo-seccion">Photo Gallery</h2>
 		<div class="mosaic">
 			<!-- Se intercambió img4 (primera) e img1 (quinta). La img1 se oculta en móvil -->
-			<!--<img src={img4} class="foto-clicable" onclick={() => modalFoto = img4} alt="Gallery" />-->
 			<img src={img8} class="foto-clicable" onclick={() => modalFoto = img8} alt="Gallery" />
 			<img src={img2} class="foto-clicable" onclick={() => modalFoto = img2} alt="Gallery" />
 			<img src={img9} class="foto-clicable" onclick={() => modalFoto = img9} alt="Gallery" />
