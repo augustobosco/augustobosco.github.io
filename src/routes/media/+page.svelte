@@ -15,6 +15,7 @@
 	import img9 from '$lib/assets/media/9.jpg';
 	import img10 from '$lib/assets/media/10.jpg';
 	import img11 from '$lib/assets/media/11.jpg';
+	import img12 from '$lib/assets/media/12.jpeg';
 
 	// Variables para los reproductores de la grilla (fachadas)
 	let ytHowl = $state(false);
@@ -68,6 +69,7 @@
 			<img src={img8} class="foto-clicable" onclick={() => modalFoto = img8} alt="Gallery" />
 			<img src={img2} class="foto-clicable" onclick={() => modalFoto = img2} alt="Gallery" />
 			<img src={img9} class="foto-clicable" onclick={() => modalFoto = img9} alt="Gallery" />
+			<img src={img12} class="foto-clicable" onclick={() => modalFoto = img12} alt="Gallery" />
 			<img src={img1} class="imagen-uno foto-clicable" onclick={() => modalFoto = img1} alt="Gallery" />
 			<img src={img7} class="foto-clicable" onclick={() => modalFoto = img7} alt="Gallery" />
 			<img src={img10} class="foto-clicable" onclick={() => modalFoto = img10} alt="Gallery" />
