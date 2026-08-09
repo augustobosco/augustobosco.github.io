@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Navbar from '$lib/navbar.svelte';
+	import { onMount } from 'svelte';
 	import HomeImage from '$lib/assets/homepage.jpg';
 	import img1 from '$lib/assets/media/1.png';
 
@@ -7,6 +8,63 @@
 	
 	// Variable que controla si se hizo clic en la miniatura
 	let playReel = $state(false);
+
+	// ----------------------------------------------------
+	// CONTROL DE VOLUMEN PARA SOUNDCLOUD
+	// ----------------------------------------------------
+	let soundcloudIframe: HTMLIFrameElement;
+	let soundcloudWidget: any = null;
+
+	// Volumen inicial del reproductor. Cambiá este número si querés
+	// que la página arranque más fuerte o más suave (0 a 100).
+	let volumen = $state(50);
+
+	function cambiarVolumen(event: Event) {
+		const control = event.currentTarget as HTMLInputElement;
+		volumen = Number(control.value);
+		soundcloudWidget?.setVolume(volumen);
+	}
+
+	onMount(() => {
+		function inicializarSoundCloud() {
+			const SC = (window as any).SC;
+
+			if (!SC || !soundcloudIframe) return;
+
+			soundcloudWidget = SC.Widget(soundcloudIframe);
+
+			// Esperamos a que SoundCloud confirme que el reproductor está listo
+			// antes de aplicar el volumen inicial.
+			soundcloudWidget.bind(SC.Widget.Events.READY, () => {
+				soundcloudWidget.setVolume(volumen);
+			});
+		}
+
+		const scriptExistente = document.querySelector<HTMLScriptElement>(
+			'script[src="https://w.soundcloud.com/player/api.js"]'
+		);
+
+		if (scriptExistente) {
+			if ((window as any).SC) {
+				inicializarSoundCloud();
+			} else {
+				scriptExistente.addEventListener('load', inicializarSoundCloud, { once: true });
+			}
+		} else {
+			const script = document.createElement('script');
+			script.src = 'https://w.soundcloud.com/player/api.js';
+			script.async = true;
+			script.addEventListener('load', inicializarSoundCloud, { once: true });
+			document.head.appendChild(script);
+		}
+
+		return () => {
+			const SC = (window as any).SC;
+			if (soundcloudWidget && SC) {
+				soundcloudWidget.unbind(SC.Widget.Events.READY);
+			}
+		};
+	});
 
 	function scroll() {
 		content.scrollIntoView({ behavior: 'smooth' });
@@ -46,15 +104,33 @@
 		Augusto brings an international perspective to his collaborations, working with directors and
 		studios to create original music and immersive soundscapes for visual media.
 	</p>
-	<iframe
-		title="Soundcloud"
-		width="100%"
-		height="400"
-		scrolling="no"
-		frameborder="no"
-		allow=""
-		src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%3Aplaylists%3A2182925621%3Fsecret_token%3Ds-QT5rYje2bwR&color=%2313101e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-	></iframe>
+	<div class="soundcloud-bloque">
+		<iframe
+			bind:this={soundcloudIframe}
+			title="Soundcloud"
+			width="100%"
+			height="400"
+			scrolling="no"
+			frameborder="no"
+			allow=""
+			src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%3Aplaylists%3A2182925621%3Fsecret_token%3Ds-QT5rYje2bwR&color=%2313101e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+		></iframe>
+
+		<!-- CONTROL DE VOLUMEN EXTERNO PARA SOUNDCLOUD -->
+		<div class="control-volumen">
+			<span class="icono-volumen" aria-hidden="true">🔊</span>
+			<input
+				type="range"
+				min="0"
+				max="100"
+				step="1"
+				value={volumen}
+				oninput={cambiarVolumen}
+				aria-label="SoundCloud volume"
+			/>
+			<span class="numero-volumen">{volumen}%</span>
+		</div>
+	</div>
 <!-- 
 	<div class="video-reel">
 		<!-- LÓGICA DE FACHADA PARA CARGA RÁPIDA 
@@ -179,6 +255,45 @@ De esa manera te asegurás de tener el control total sobre la primera impresión
 		justify-content: flex-start;
 		align-items: center;
 		padding: 2rem 10vw 3rem 10vw;
+	}
+
+	/* =========================================== */
+	/* CONTROL DE VOLUMEN DEL PLAYER DE SOUNDCLOUD */
+	/* =========================================== */
+	.soundcloud-bloque {
+		width: 100%;
+	}
+
+	.soundcloud-bloque iframe {
+		display: block;
+	}
+
+	.control-volumen {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		margin-top: 0.75rem;
+		font-family: 'Raleway', sans-serif;
+		font-size: 0.8rem;
+		color: rgba(255, 255, 255, 0.65);
+	}
+
+	.control-volumen input[type='range'] {
+		flex: 1;
+		cursor: pointer;
+		accent-color: rgb(210, 195, 130);
+	}
+
+	.icono-volumen {
+		font-size: 1rem;
+		line-height: 1;
+	}
+
+	.numero-volumen {
+		min-width: 3rem;
+		text-align: right;
+		font-variant-numeric: tabular-nums;
 	}
 
 	/* ESTILO DEL VIDEO REEL */
