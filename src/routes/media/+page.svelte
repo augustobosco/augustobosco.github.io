@@ -5,9 +5,9 @@
 	import img2 from '$lib/assets/media/2.png';
 	import img3 from '$lib/assets/media/3.png';
 	import img4 from '$lib/assets/media/4.png';
+	
 	import img5 from '$lib/assets/media/5.jpeg';
-	import img6 from '$lib/assets/media/6.jpeg';
-	// ELIMINÉ EL IMPORT DE img6 PORQUE NO EXISTE EN TU CARPETA Y ROMPÍA LA COMPILACIÓN
+	import img6 from '$lib/assets/media/6.jpeg'; // <-- SOLO DEJAMOS ESTA. (Si es .jpg, borrale la 'e')
 
 	// IMPORTANTE: Si te tira error, cambiá ".jpg" por ".png" o ".jpeg" según corresponda a tu archivo real
 	import img7 from '$lib/assets/media/7.jpg';
@@ -15,7 +15,6 @@
 	import img9 from '$lib/assets/media/9.jpg';
 	import img10 from '$lib/assets/media/10.jpg';
 	import img11 from '$lib/assets/media/11.jpg';
-	import img6 from '$lib/assets/media/6.jpg';
 
 	// Variables para los reproductores de la grilla (fachadas)
 	let ytHowl = $state(false);
@@ -62,17 +61,18 @@
 
 <div class="contenedor-general">
 
-	<!-- SECCIÓN DE FOTOS (CÓDIGO ORIGINAL, NO RECORTA CABEZAS) -->
+	<!-- SECCIÓN DE FOTOS -->
 	<div class="seccion-mosaico">
 		<h2 class="titulo-seccion">Photo Gallery</h2>
 		<div class="mosaic">
-			<!-- Se intercambió img4 (primera) e img1 (quinta). La img1 se oculta en móvil -->
 			<img src={img8} class="foto-clicable" onclick={() => modalFoto = img8} alt="Gallery" />
 			<img src={img2} class="foto-clicable" onclick={() => modalFoto = img2} alt="Gallery" />
 			<img src={img9} class="foto-clicable" onclick={() => modalFoto = img9} alt="Gallery" />
 			<img src={img1} class="imagen-uno foto-clicable" onclick={() => modalFoto = img1} alt="Gallery" />
 			<img src={img7} class="foto-clicable" onclick={() => modalFoto = img7} alt="Gallery" />
 			<img src={img10} class="foto-clicable" onclick={() => modalFoto = img10} alt="Gallery" />
+			<!-- ¡ACÁ AGREGUÉ TU FOTO NUEVA PARA QUE SE VEA! -->
+			<img src={img6} class="foto-clicable" onclick={() => modalFoto = img6} alt="Gallery" />
 		</div>
 	</div>
 
@@ -207,7 +207,7 @@
 	</div>
 {/if}
 
-<!-- VENTANA FLOTANTE 4: LA LUNA - WALTZ NO. 1 (Ensayo ythCQF-ag_0) -->
+<!-- VENTANA FLOTANTE 4: LA LUNA - WALTZ NO. 1 -->
 {#if modalLuna}
 	<div class="modal-fondo" onclick={cerrarModales}>
 		<div class="modal-tarjeta" onclick={(e) => e.stopPropagation()}>
@@ -222,8 +222,6 @@
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 				allowfullscreen
 			></iframe>
-
-			<!-- SIN SOUNDCLOUD AQUÍ -->
 
 			<p>Presented to the public for the first time in the UCA auditorium, I am very grateful to everyone involved in the presentation of the piece. During that year, I lived an experience that will accompany me throughout the development of my professional career. 
 				
