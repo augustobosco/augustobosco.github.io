@@ -148,16 +148,16 @@
 		<a href="https://soundcloud.com/augustobosco" class="soundcloud">
 			<img src={Soundcloud} alt="Soundcloud" />
 		</a>
-		<a href="https://www.artstation.com/augustobosco" class="artstation">
-			<img src={Artstation} alt="Artstation" />
-		</a>
 		<a href="https://instagram.com/augustobosco_/" class="instagram">
 			<img src={Instagram} alt="Instagram" />
 		</a>
+		<!--
+		</a>
 		<a href="https://youtube.com/@augustobosco_">
 			<img src={Youtube} alt="Youtube" />
-		</a>
-		<!--
+			</a>
+		<a href="https://www.artstation.com/augustobosco" class="artstation">
+			<img src={Artstation} alt="Artstation" />
 		<a href="https://patreon.com/AugustoBosco">
 			<img src={Patreon} alt="Patreon" />
 		</a>
@@ -437,7 +437,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 3rem;
+		gap: 2rem;
 		padding-top: 4rem;
 		padding-bottom: 4rem;
 
@@ -451,14 +451,17 @@
 	}
 
 	.logos {
-		width: 50%;
-		align-items: center;
-		justify-items: center;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr 1fr 1fr 1fr;
-		gap: 3rem;
-	}
+	width: 50%;
+	align-items: center;
+	justify-items: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+	gap: 3rem;
+
+	/* ESPACIO ENTRE EL EMAIL Y LAS REDES */
+	margin-top: 1rem;
+}
 
 	/* Mantiene el tamaño original de los links de redes sin afectar
 	   al email ni a los botones/links nuevos del formulario */
