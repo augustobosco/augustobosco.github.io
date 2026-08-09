@@ -5,8 +5,8 @@
 	import img2 from '$lib/assets/media/2.png';
 	import img3 from '$lib/assets/media/3.png';
 	import img4 from '$lib/assets/media/4.png';
-	
 	import img5 from '$lib/assets/media/5.jpeg';
+	import img6 from '$lib/assets/media/6.jpeg';
 	// ELIMINÉ EL IMPORT DE img6 PORQUE NO EXISTE EN TU CARPETA Y ROMPÍA LA COMPILACIÓN
 
 	// IMPORTANTE: Si te tira error, cambiá ".jpg" por ".png" o ".jpeg" según corresponda a tu archivo real
@@ -15,6 +15,7 @@
 	import img9 from '$lib/assets/media/9.jpg';
 	import img10 from '$lib/assets/media/10.jpg';
 	import img11 from '$lib/assets/media/11.jpg';
+	import img6from '$lib/assets/media/6jpg';
 
 	// Variables para los reproductores de la grilla (fachadas)
 	let ytHowl = $state(false);
