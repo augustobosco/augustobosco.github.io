@@ -386,7 +386,14 @@ In addition to the composition, I handled the sound design and reworked aspects 
 
 	.mosaic img {
 		width: 100%;
-		height: auto; /* Muestra el 100% de la foto sin recortes verticales */
+
+		/* MINIATURAS PAREJAS: todas se muestran en proporción 4:3.
+		   La imagen original NO se recorta: object-fit solo oculta el sobrante
+		   dentro de la grilla. Al hacer click, el modal sigue mostrando la foto completa. */
+		aspect-ratio: 4 / 3;
+		object-fit: cover;
+		object-position: center;
+
 		border-radius: 2px;
 		display: block;
 	}
