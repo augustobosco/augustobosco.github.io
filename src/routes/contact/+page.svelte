@@ -137,6 +137,8 @@
 			<span style="font-weight: bold">augustobosco0</span>@gmail.com
 		</a>
 	</div>
+	
+	<hr class="linea-separadora">
 
 	<div class="logos">
 		<a href="https://linkedin.com/in/augusto-bosco-848291182/">
@@ -461,6 +463,7 @@
 
 	/* ESPACIO ENTRE EL EMAIL Y LAS REDES */
 	margin-top: 1rem;
+	
 }
 
 	/* Mantiene el tamaño original de los links de redes sin afectar
@@ -468,7 +471,15 @@
 	.logos a {
 		width: 50%;
 	}
-
+/* ======================================================== */
+/* LÍNEA SEPARADORA ENTRE EMAIL Y REDES                     */
+/* ======================================================== */
+.linea-separadora {
+	width: 50%;
+	border: 0;
+	border-bottom: 1px solid rgba(252, 246, 220, 0.253);
+	margin: 1rem 0 2rem 0;
+}
 	.instagram,
 	.soundcloud,
 	.artstation {
