@@ -70,7 +70,7 @@
 			<img src={img2} class="foto-clicable" onclick={() => modalFoto = img2} alt="Gallery" />
 			<img src={img9} class="foto-clicable" onclick={() => modalFoto = img9} alt="Gallery" />
 			<img src={img12} class="foto-clicable" onclick={() => modalFoto = img12} alt="Gallery" />
-			<img src={img1} class="imagen-uno foto-clicable" onclick={() => modalFoto = img1} alt="Gallery" />
+			<!-- <img src={img1} class="imagen-uno foto-clicable" onclick={() => modalFoto = img1} alt="Gallery" />-->
 			<img src={img7} class="foto-clicable" onclick={() => modalFoto = img7} alt="Gallery" />
 			<img src={img10} class="foto-clicable" onclick={() => modalFoto = img10} alt="Gallery" />
 			<!-- ¡ACÁ AGREGUÉ TU FOTO NUEVA PARA QUE SE VEA! -->
