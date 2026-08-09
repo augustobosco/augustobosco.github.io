@@ -15,7 +15,7 @@
 	import img9 from '$lib/assets/media/9.jpg';
 	import img10 from '$lib/assets/media/10.jpg';
 	import img11 from '$lib/assets/media/11.jpg';
-	import img6from '$lib/assets/media/6jpg';
+	import img6 from '$lib/assets/media/6.jpg';
 
 	// Variables para los reproductores de la grilla (fachadas)
 	let ytHowl = $state(false);
