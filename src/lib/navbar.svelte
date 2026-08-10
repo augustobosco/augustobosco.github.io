@@ -95,11 +95,13 @@
 		
 		.title {
 			font-size: 1.5rem;
-			letter-spacing: 0.15em;
+			letter-spacing: 0.13em;
 		}
 
 		.subtitle {
 			font-size: 0.90rem;
+			white-space: nowrap;
+			letter-spacing: 0.05em;
 		}
 	}
 </style>
