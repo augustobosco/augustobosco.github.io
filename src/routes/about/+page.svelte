@@ -15,49 +15,49 @@
 
 <section class="content">
 	<div class="text">
-		<p>
-			I’m a composer, orchestrator and music producer focused on music for animation, film and
-			interactive media. I hold a Bachelor’s Degree in Cinematic Music from the Pontifical Catholic
-			University of Argentina (UCA), where I studied composition, orchestration, harmony, film
-			scoring and music production.
-		</p>
+	<p>
+	I’m a composer, orchestrator and music producer focused on music for animation, film and
+	interactive media. I hold a Bachelor’s Degree in Cinematic Music from the Pontifical Catholic
+	University of Argentina (UCA), where I studied composition, orchestration, harmony, film
+	scoring and music production.
+</p>
 
-		<p>
-			During my studies, I had the opportunity to compose and orchestrate original works that were
-			rehearsed and performed by live ensembles. This gave me practical experience taking music
-			beyond the mockup: preparing conductor scores and instrumental parts, attending rehearsals,
-			communicating with conductors and performers, and hearing firsthand how musical decisions
-			translate from the studio into live performance.
-		</p>
+<p>
+	During my studies, I had the opportunity to compose and orchestrate original works that were
+	rehearsed and performed by live ensembles. This gave me practical experience taking music
+	beyond the mockup: preparing conductor scores and instrumental parts, attending rehearsals,
+	communicating with conductors and performers, and hearing firsthand how musical decisions
+	translate from the studio into live performance.
+</p>
 
-		<p>
-			That experience became an important part of the way I approach scoring today. My background
-			allows me to move through the complete musical process: Composition → Orchestration → Mockup
-			Production → Score Preparation → Live Performance → Audio Post-Production
-		</p>
+<p>
+	That experience became an important part of the way I approach scoring today. My background
+	allows me to move through the complete musical process: Composition → Orchestration → Mockup
+	Production → Score Preparation → Live Performance → Audio Post-Production.
+</p>
 
-		<p>
-			I combine classical musicianship with a strong technical background in modern music production.
-			Depending on the needs of a project, I can develop a score from its initial musical concept
-			through orchestration and production, or integrate into an existing music team to provide
-			additional music, arrangements, orchestration, mockups, score preparation and other production
-			support. My work is centered around musical storytelling. I’m particularly interested in
-			animation and story-driven projects where music can contribute directly to character,
-			atmosphere, pacing and worldbuilding. My approach ranges from traditional orchestral writing
-			to modern hybrid production, depending on the identity and dramatic needs of each project.
-		</p>
+<p>
+My approach combines a strong classical foundation with modern music production. I adapt to the 
+identity and creative direction of each project, whether developing a score from its initial 
+musical concept through orchestration and production, or integrating into an existing music team 
+to provide additional music, arrangements, orchestration, mockups, score preparation and other 
+production support. My work is centered around musical storytelling. I’m particularly interested 
+in animation and story-driven projects where music can contribute directly to character, 
+atmosphere, pacing and worldbuilding. Stylistically, my work ranges from traditional orchestral 
+writing to modern hybrid production.
+</p>
 
-		<p>
-			I work primarily with Nuendo, Pro Tools, Ableton Live and Dorico, alongside professional
-			orchestral production tools and virtual instruments. I also have experience with
-			interactive-audio workflows using Wwise and FMOD.
-		</p>
+<p>
+	My primary tools include Nuendo, Pro Tools, Ableton Live and Dorico, alongside professional
+	production tools and virtual instruments. I also have experience with interactive-audio
+	workflows using Wwise and FMOD.
+</p>
 
-		<p>
-			I speak Spanish and English and I’m currently studying Japanese. Based in Argentina, I’m
-			available to work remotely with composers, directors, producers and creative teams
-			internationally.
-		</p>
+<p>
+	I speak Spanish and English and I’m currently studying Japanese. Based in Argentina, I’m
+	available to work remotely with composers, directors, producers and creative teams
+	internationally.
+</p>
 
 		<h1 class="services">SERVICES</h1>
 
