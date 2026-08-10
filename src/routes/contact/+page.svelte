@@ -595,7 +595,7 @@
 		width: 50%;
 		border: 0;
 		border-bottom: 1px solid rgba(252, 246, 220, 0.253);
-		margin: 1rem 0 2rem 0;
+		margin: 1rem 0 0.2rem 0;
 	}
 
 
