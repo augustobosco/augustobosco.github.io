@@ -877,7 +877,7 @@ In addition to the composition, I handled the sound design and reworked aspects 
 	/* Contorno + relleno celeste */
 	.icono-info-relleno,
 	.icono-info-contorno {
-		fill: rgba(84, 201, 255, 0.521);
+		fill: rgba(79, 205, 255, 0.548);
 
 		transition: fill 0.25s ease;
 	}
