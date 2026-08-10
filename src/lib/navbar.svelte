@@ -89,7 +89,7 @@
 		}
 		
 		.tabs {
-			padding-top: 0.30rem;
+			padding-top: 0.20rem;
 			font-size: 1.2rem;
 		}
 		
@@ -102,7 +102,7 @@
 			font-size: 0.8rem;
 			transform: scaleY(1.05);
 			letter-spacing: 0.08em;
-			padding-top: 0rem;
+			padding-top: 0.3rem;
 		}
 	}
 </style>
