@@ -494,9 +494,11 @@
 				allowfullscreen
 			></iframe>
 
-			<p>Presented to the public for the first time in the UCA auditorium, I am very grateful to everyone involved in the presentation of the piece. During that year, I lived an experience that will accompany me throughout the development of my professional career. 
-				
-				My approach to orchestration has evolved significantly over the years and many of the decisions I make today are a direct result of the invaluable experience gained during that time. There's a moment every composer knows: weeks of preparation in notation software, hundreds of hours of arranging, everything meticulously planned on screen. Then the first rehearsal happens, and suddenly it's all real.</p>
+			<p>This work was premiered at the UCA Auditorium as part of a live orchestral performance, giving me the opportunity to take an original piece through the complete process from composition and orchestration to score preparation, rehearsal and performance.
+
+Preparing the music for a real ensemble required producing a complete conductor’s score and individual instrumental parts, working within fixed deadlines and then hearing those decisions translated by the orchestra in rehearsal. Being able to communicate directly with the conductor and musicians gave me a much clearer understanding of how orchestration behaves beyond the mockup.
+
+That experience had a lasting influence on the way I write today. Decisions involving balance, register, articulation, dynamics and instrumental roles are no longer purely theoretical for me — they are informed by having heard my own orchestrations performed and interpreted by a live ensemble.</p>
 
 		</div>
 
@@ -544,13 +546,13 @@
 				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2370137360%3Fsecret_token%3Ds-8QTC0vOrImq&color=%231e1a0e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"
 			></iframe>
 
-			<p>This project was presented live at the UCA Auditorium in 2023, marking the first public performance of my reorchestration for Howl’s Moving Castle. I am deeply grateful to the orchestra, conductor, and faculty for making this experience possible, as it became a milestone in my growth as a composer and orchestrator.
+			<p>This project combines my orchestral work with a scene from Howl’s Moving Castle, presenting the piece as a scoring and synchronization exercise for animation. The music was performed live at the UCA Auditorium in 2023, with a full conductor’s score and individual instrumental parts prepared for the ensemble.
 
-Beyond the creative process of composition, this project demanded the full responsibility of preparing professional materials: delivering a complete conductor’s score as well as clear, accurate parts for each instrument, all within strict deadlines. It required balancing readability with musical intention, ensuring performers could confidently bring the music to life in a single rehearsal cycle.
+The project required me to think simultaneously as a composer and orchestrator: shaping the musical arc around the picture while ensuring that every instrumental role remained practical and meaningful in live performance.
 
-From an orchestration perspective, the challenge was to use all available instruments in a way that each voice contributed meaningfully, building a coherent soundscape that matched the imagery on screen. Every decision was made with synchronization in mind, ensuring the live performance aligned seamlessly with the film’s narrative flow. Is clearly inspired by Joe Hisaishi’s original score, particularly in its use of a waltz as the structural foundation. I also considered other waltz traditions I’ve studied such as Shostakovich, though only as a very subtle influence that colored some of my decisions without altering the essence of the piece.
+The score is clearly influenced by Joe Hisaishi’s approach to orchestral storytelling, particularly his use of the waltz, while also drawing subtly from other waltz traditions I had studied. Rather than following the structural changes of the original soundtrack, I chose to maintain a continuous musical arc throughout the sequence, allowing the scene to develop as a single uninterrupted gesture.
 
-The main difference from the original lies in the form. Hisaishi’s version introduces a change once the characters reach the balcony, building into a large orchestral tutti as Howl departs. In my approach, I kept the music continuous: it begins with the first scene and flows seamlessly until the next, creating a single arc rather than a sectional shift.</p>
+Working through composition, orchestration, synchronization, score preparation and live performance made this project an important part of the way I approach music for animation today.</p>
 
 		</div>
 
@@ -598,17 +600,17 @@ The main difference from the original lies in the form. Hisaishi’s version int
 				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2370140375%3Fsecret_token%3Ds-NnZvI4mfFod&color=%231e1a0e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"
 			></iframe>
 
-			<p>This project is my personal tribute to Blizzard’s Dragons cinematic. I recreated the entire soundtrack with original music, recorded in my studio, and redesigned the soundscape by layering assets from the original game together with custom sounds and commercial libraries. The result is a fully reimagined audio experience that respects the spirit of the short while offering my own interpretation.
+			<p>This project is a complete rescore and sound redesign of Blizzard’s Dragons cinematic. With the exception of the original dialogue, I rebuilt the audio experience from the ground up with original music, redesigned sound effects and live instrumental recordings.
 
-For the score, I drew on a blend of feudal Japanese aesthetics and cyberpunk elements, inspired by contemporary Japanese music and composers such as Joe Hisaishi. I began by focusing on the sound design, carefully editing and synchronizing audio cues. Ableton was used to sculpt new textures, while Nuendo provided the environment for assembling and finalizing the soundscape. The original dialogue was preserved, but all other elements were reworked to give the project a distinct identity.
+For the score, I developed contrasting musical identities around the two central characters, combining orchestral writing with elements inspired by Japanese musical aesthetics and modern hybrid production. The music was written around a highly variable tempo map, allowing the score to follow the pacing, action and dramatic structure of the cinematic while maintaining a coherent musical arc.
 
-Once the sound design foundation was in place, I composed original motifs for the two main characters, writing the first drafts traditionally on paper before moving into Dorico for orchestration. The challenge was to create a coherent score within a highly variable tempo map, following the structure of the cinematic while shaping my own musical narrative.
+I developed the orchestration and mockup before recording live violins, cellos and quena, combining those performances with the larger virtual ensemble to bring an organic layer into the production.
 
-The orchestral mockup was produced in Nuendo using Kontakt libraries, switching between large ensembles for epic moments and smaller groups for intimate passages. Finally, I recorded live violins, cellos, and quena (a Peruvian flute whose timbre closely resembles the Japanese shakuhachi), adding a personal and organic layer to the mix.
+Alongside the score, I rebuilt the surrounding soundscape using edited game assets, custom-designed elements and additional sound libraries, carefully balancing music, dialogue and effects throughout the sequence.
 
-This project showcases my ability to integrate composition, orchestration, sound design, live recording, and production into a cohesive storytelling tool for games and animation.
+The project brings together the different areas of my workflow — composition, orchestration, mockup production, synchronization, live recording, sound design, editing and mixing — into a complete audiovisual production.
 
-Special thanks to Gonzalo Naessens, who assisted in some artistic decisions during the mix.</p>
+Special thanks to Gonzalo Naessens for his input on selected artistic decisions during the mix.</p>
 
 		</div>
 
@@ -656,11 +658,15 @@ Special thanks to Gonzalo Naessens, who assisted in some artistic decisions duri
 				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2370068753%3Fsecret_token%3Ds-ETTmEg6MgUS&color=%2313101e&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
 			></iframe>
 
-			<p>This is a project I completed in 2024, with both the composition and production created during that time. It remains one of my favorite works from my student years, largely because of the challenge it presented, the scene depicts the first meeting between Pocahontas and John Smith, their very first glance at each other. For me, as a composer, capturing that moment felt monumental (it was a true challenge), but I believe I managed to resolve it in a way that feels effective and different from the original. While the original score leaned more toward intimacy, I wanted to highlight the feeling of love at first sight.
-				
-As a student work, the piece draws inspiration from both Dvořák’s Symphony No. 9 and Hisaishi’s thematic writing, since both composers often worked with folk-inspired materials, the references emerged after a thorough personal investigation and a detailed analysis of the scene. What I consider my personal achievement in this piece lies in the construction and realization of the music: although I drew on these two references, I also found a way to create something that came from my own voice.
+			<p>This project is an original rescore of the first meeting between Pocahontas and John Smith, created in 2024 as an exercise in character-driven orchestral storytelling.
 
-In addition to the composition, I handled the sound design and reworked aspects of the production (essentially remastering it), so that it could fit well in my portfolio. For me it serves not only as a showcase of my early craft but also as a meaningful reminder of those formative years.</p>
+The central challenge was deciding how to interpret a moment that already carries a very strong emotional identity. While the original score approaches the scene with greater intimacy, I chose to emphasize the sense of discovery and immediate emotional connection between the characters, giving the first encounter a broader romantic arc.
+
+The composition draws from orchestral and folk-inspired influences, particularly Dvořák’s Symphony No. 9 and elements of Joe Hisaishi’s thematic writing. These references served as a starting point for exploring color, melody and orchestral texture while developing a musical identity specific to my interpretation of the scene.
+
+I handled the composition, orchestration, mockup production, synchronization and sound design, later revisiting the project to refine its editing and final production for the portfolio.
+
+The result represents a more intimate side of my orchestral writing and shows how I approach an existing dramatic scene by first identifying its emotional function and then building the music around that interpretation.</p>
 
 		</div>
 
