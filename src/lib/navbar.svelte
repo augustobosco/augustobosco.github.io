@@ -102,7 +102,7 @@
 			font-size: 0.8rem;
 			transform: scaleY(1.05);
 			letter-spacing: 0.08em;
-			padding-top: 0.10rem;
+			padding-top: 0rem;
 		}
 	}
 </style>
