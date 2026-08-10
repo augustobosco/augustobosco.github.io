@@ -207,7 +207,7 @@
 					title="Project Info"
 				>
 					<span class="titulo-video">
-						LA LUNA - WALTZ NO. 1
+						LA LUNA | WALTZ NO. 1
 					</span>
 
 					<span class="acciones-info" aria-hidden="true">
@@ -323,7 +323,7 @@
 					title="Project Info"
 				>
 					<span class="titulo-video">
-						DRAGONS | OVERWATCH ANIMATED SHORT
+						DRAGONS | SCORE & SOUND REDESIGN
 					</span>
 
 					<span class="acciones-info" aria-hidden="true">
@@ -376,7 +376,7 @@
 					title="Project Info"
 				>
 					<span class="titulo-video">
-						DISNEY POCAHONTAS | RESCORE
+						POCAHONTAS | SCORE & SOUND REDESIGN
 					</span>
 
 					<span class="acciones-info" aria-hidden="true">
@@ -483,7 +483,7 @@
 				✕
 			</button>
 
-			<h3>LA LUNA - WALTZ NO. 1</h3>
+			<h3>LA LUNA | WALTZ NO. 1</h3>
 			
 			<iframe
 				class="modal-media"
