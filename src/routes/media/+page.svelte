@@ -822,7 +822,7 @@ In addition to the composition, I handled the sound design and reworked aspects 
 
 	/* Únicamente la "i" queda amarilla */
 	.icono-info-letra {
-		fill: rgb(233, 232, 228);
+		fill: rgb(250, 200, 0);
 
 		transition: fill 0.25s ease;
 	}
@@ -844,9 +844,9 @@ In addition to the composition, I handled the sound design and reworked aspects 
 	.encabezado-video:hover .icono-info-svg,
 	.encabezado-video:focus-visible .icono-info-svg {
 		transform:
-			translateY(-2px)
-			scale(1.12)
-			rotate(5deg);
+			translateY(-5px)
+			scale(1.15)
+			rotate(10deg);
 
 		filter:
 			drop-shadow(0 0 5px rgba(100, 205, 255, 0.45))
@@ -859,7 +859,7 @@ In addition to the composition, I handled the sound design and reworked aspects 
 	.encabezado-video:hover .icono-info-contorno,
 	.encabezado-video:focus-visible .icono-info-relleno,
 	.encabezado-video:focus-visible .icono-info-contorno {
-		fill: rgb(125, 218, 255);
+		fill: rgba(125, 218, 255, 0.575);
 	}
 
 
