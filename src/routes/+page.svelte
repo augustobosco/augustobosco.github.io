@@ -353,21 +353,28 @@ De esa manera te asegurás de tener el control total sobre la primera impresión
 	}
 	
 	@media (max-width: 768px) {
-		.parallax {
-			background-image: var(--bg-mobile);
-		}
-
-		.content {
-			padding: 2rem 5vw 3rem 5vw;
-		}
-		.navbar {
-			padding: 0.3rem 0 0.5rem 0;
-		}
-		.tabs {
-			padding-top: 0.25rem;
-			font-size: 1.2rem;
-		}
+	.parallax {
+		background-image: var(--bg-mobile);
 	}
+
+	.content {
+		padding: 2rem 5vw 3rem 5vw;
+	}
+
+	/* SOLO EN TELÉFONO: texto alineado a la izquierda */
+	.summary {
+		text-align: left;
+	}
+
+	.navbar {
+		padding: 0.3rem 0 0.5rem 0;
+	}
+
+	.tabs {
+		padding-top: 0.25rem;
+		font-size: 1.2rem;
+	}
+}
 
 	@keyframes parallax {
 		from {
