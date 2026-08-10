@@ -4,7 +4,7 @@
 
 <section class="navbar">
 	<a href="/" class="title">AUGUSTO BOSCO</a>
-	<h1 class="subtitle">MUSIC PRODUCER FOR VISUAL MEDIA</h1>
+	<h1 class="subtitle">COMPOSER & ORCHESTRATOR FOR ANIMATION</h1>
 	<div class="tabs">
 		<a href="/about" class="tab" class:active={selected === 'about'}>ABOUT</a>
 		<a href="/contact" class="tab" class:active={selected === 'contact'}>CONTACT</a>

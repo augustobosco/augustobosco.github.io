@@ -16,78 +16,85 @@
 <section class="content">
 	<div class="text">
 		<p>
-			Augusto Bosco is a composer, orchestrator and music producer focused on scoring for film,
-			animation and videogame companies. He holds a degree in Cinematic Music from the Pontifical
-			Catholic University of Argentina (UCA), one of the region’s leading institutions in music
-			education. During his studies, his works were performed in concert by the UCA Orchestra,
-			showcasing his ability to deliver professional orchestral scores for live performance.
+			I’m a composer, orchestrator and music producer focused on music for animation, film and
+			interactive media. I hold a Bachelor’s Degree in Cinematic Music from the Pontifical Catholic
+			University of Argentina (UCA), where I studied composition, orchestration, harmony, film
+			scoring and music production.
 		</p>
+
 		<p>
-			His musical background began at a very young age with studies in piano, cello, violin, and
-			guitar, later expanded through formal training in composition and orchestration, which leads
-			to a strong classical background combined with his current passion in music technology, he is
-			adept at all phases of the music making process including composition, orchestration, mockup
-			production and score preparation along with proficiency in leading DAWs, notation software and
-			virtual instruments. This varied base enables him to tackle a project from numerous points of
-			view, including the artist’s vantage point as well that of technical demands in today’s
-			production.
+			During my studies, I had the opportunity to compose and orchestrate original works that were
+			rehearsed and performed by live ensembles. This gave me practical experience taking music
+			beyond the mockup: preparing conductor scores and instrumental parts, attending rehearsals,
+			communicating with conductors and performers, and hearing firsthand how musical decisions
+			translate from the studio into live performance.
 		</p>
+
 		<p>
-			Augusto is interested in writing music to support visual storytelling across all forms of
-			media: combining traditional orchestral techniques with modern production. He works with
-			industry-standard digital audio workstations (Nuendo, Ableton Live, Pro Tools), notation
-			software (Dorico, Finale) and top-notch virtual instrument libraries to create realistic
-			orchestral mockups as well as efficient scoring templates that are reliable enough to support
-			complex multimedia projects, always trying to be a versatile collaborator for both directors
-			and studios.
+			That experience became an important part of the way I approach scoring today. My background
+			allows me to move through the complete musical process: Composition → Orchestration → Mockup
+			Production → Score Preparation → Live Performance → Audio Post-Production
 		</p>
+
 		<p>
-			He specializes in original composition, orchestration for large ensembles, mockup production,
-			and score preparation. His professional interests are as wide-reaching in scope, encompassing
-			film, animation and video games, but he loves the interactive and animated mediums above all
-			else where music plays a key role in immersive storytelling.
+			I combine classical musicianship with a strong technical background in modern music production.
+			Depending on the needs of a project, I can develop a score from its initial musical concept
+			through orchestration and production, or integrate into an existing music team to provide
+			additional music, arrangements, orchestration, mockups, score preparation and other production
+			support. My work is centered around musical storytelling. I’m particularly interested in
+			animation and story-driven projects where music can contribute directly to character,
+			atmosphere, pacing and worldbuilding. My approach ranges from traditional orchestral writing
+			to modern hybrid production, depending on the identity and dramatic needs of each project.
 		</p>
+
 		<p>
-			Fluent in Spanish and English, and with basic Japanese skills, he had built in power for
-			collaboration in various cultural backgrounds including international ones. As he further
-			cements his reputation in the music industry, Augusto remains dedicated to creating full
-			end-to-end professional music offerings for creative teams worldwide.
+			I work primarily with Nuendo, Pro Tools, Ableton Live and Dorico, alongside professional
+			orchestral production tools and virtual instruments. I also have experience with
+			interactive-audio workflows using Wwise and FMOD.
 		</p>
+
+		<p>
+			I speak Spanish and English and I’m currently studying Japanese. Based in Argentina, I’m
+			available to work remotely with composers, directors, producers and creative teams
+			internationally.
+		</p>
+
 		<h1 class="services">SERVICES</h1>
+
 		<div class="service">
 			<img src={Film} alt="film" class="svg" />
 			<div class="service-text">
 				<p class="service-title">Music Composition & Scoring</p>
 				<p class="service-content">
-					Original music tailored to each project, from orchestral arrangements to modern hybrid
-					scores, always designed to enhance the storytelling and emotional depth of film,
-					animation, and video games.
+					Original orchestral and hybrid music developed around the narrative, characters and
+					visual identity of each project, from initial concept through final production and delivery.
 				</p>
 			</div>
 		</div>
+
 		<div class="service">
 			<img src={MusicFile} alt="music file" class="svg" />
 			<div class="service-text">
 				<p class="service-title">Orchestration & Mockups</p>
 				<p class="service-content">
-					Detailed orchestration and high-quality mockups that blend live instruments with virtual
-					libraries providing directors and producers with realistic previews and production-ready
-					materials.
+					Orchestration, arrangement, score preparation and detailed mockups for live or virtual
+					production, working either from my own compositions or material provided by another composer.
 				</p>
 			</div>
 		</div>
+
 		<div class="service">
 			<img src={SoundWave} alt="sound wave" class="svg" />
 			<div class="service-text">
-				<p class="service-title">Sound Design & Music Production</p>
+				<p class="service-title">Music Production & Additional Support</p>
 				<p class="service-content">
-					Unique sound palettes crafted to match the aesthetic of each project, combined with
-					comprehensive production support including arranging, editing, and preparing final
-					materials for synchronization and seamless integration into visual media.
+					Additional music, editing, stem preparation and production support for composers and
+					creative teams, available on a per-cue, episode or complete-project basis.
 				</p>
 			</div>
 		</div>
-	</div> 
+	</div>
+
 	<div class="pics">
 		<img src={img1} alt="pic" />
 		<img src={img2} alt="pic" />

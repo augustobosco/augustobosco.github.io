@@ -94,15 +94,15 @@
 
 <section class="content" bind:this={content}>
 	<p class="summary">
-		Augusto Bosco is a composer, orchestrator, and music producer specializing in music for film,
-		animation, and video games. With a Bachelor’s Degree in Film Scoring from the Pontifical
-		Catholic University of Argentina (UCA), his work bridges classical training with modern
-		production techniques, blending orchestral writing, sound design, and advanced mockup creation.
-		Having scored and designed sound for animated shorts and other visual projects, he combines
-		musical storytelling with technical expertise to deliver scores that are both emotionally
-		impactful and production-ready. Fluent in Spanish and English and currently studying Japanese,
-		Augusto brings an international perspective to his collaborations, working with directors and
-		studios to create original music and immersive soundscapes for visual media.
+	I’m a composer, orchestrator and music producer specializing in orchestral and hybrid music for animation, film and interactive media.
+
+I hold a Bachelor’s Degree in Cinematic Music from the Pontifical Catholic University of Argentina (UCA), where I developed a strong foundation in composition, orchestration and music for visual media. My work combines that classical background with modern music production, allowing me to take music from its initial concept through orchestration, mockup production, score preparation, recording and post-production.
+
+I’ve also had the opportunity to bring my own orchestral music from the studio to live performance, working directly with conductors and musicians during rehearsals and performances. That experience has shaped the way I write and produce music, keeping both the creative intention and the practical realities of performance in mind.
+
+I can work independently on complete scores or as part of a larger music team, providing additional music, orchestration, arrangements, mockups and production support when needed.
+
+I’m based in Argentina and available for international remote collaboration.
 	</p>
 	<div class="soundcloud-bloque">
 		<iframe
