@@ -47,32 +47,58 @@
 <Navbar selected="contact" />
 
 <section class="content">
+
 	<!-- ======================================================== -->
 	<!-- FORMULARIO DE CONTACTO                                   -->
 	<!-- ======================================================== -->
+
 	<div class="contact-intro">
 		<p class="contact-kicker">GET IN TOUCH</p>
+
 		<h1>Let’s create something together.</h1>
+
 		<p class="contact-description">
 			Have a project, collaboration or idea in mind? Send me a message and I’ll get back to you.
 		</p>
 	</div>
 
 	<div class="contact-form-container">
+
 		{#if estado === 'success'}
+
 			<div class="success-card" aria-live="polite">
+
 				<div class="success-icon">✓</div>
+
 				<h2>MESSAGE SENT</h2>
-				<p>Thank you for reaching out. I’ll get back to you as soon as possible.</p>
-				<button type="button" class="send-another" onclick={nuevoMensaje}>
+
+				<p>
+					Thank you for reaching out. I’ll get back to you as soon as possible.
+				</p>
+
+				<button
+					type="button"
+					class="send-another"
+					onclick={nuevoMensaje}
+				>
 					SEND ANOTHER MESSAGE
 				</button>
+
 			</div>
+
 		{:else}
-			<form class="contact-form" onsubmit={enviarFormulario}>
+
+			<form
+				class="contact-form"
+				onsubmit={enviarFormulario}
+			>
+
 				<div class="form-row">
+
 					<label class="field">
+
 						<span>NAME</span>
+
 						<input
 							type="text"
 							name="name"
@@ -80,10 +106,13 @@
 							autocomplete="name"
 							required
 						/>
+
 					</label>
 
 					<label class="field">
+
 						<span>EMAIL</span>
+
 						<input
 							type="email"
 							name="email"
@@ -91,75 +120,135 @@
 							autocomplete="email"
 							required
 						/>
+
 					</label>
+
 				</div>
 
 				<label class="field message-field">
+
 					<span>MESSAGE</span>
+
 					<textarea
 						name="message"
 						rows="7"
 						placeholder="Tell me a little about your project..."
 						required
 					></textarea>
+
 				</label>
 
 				<div class="form-bottom">
-					<p class="form-note">I’ll only use your email to reply to your message.</p>
+
+					<p class="form-note">
+						I’ll only use your email to reply to your message.
+					</p>
 
 					<button
 						type="submit"
 						class="submit-button"
 						disabled={estado === 'sending'}
 					>
+
 						{estado === 'sending' ? 'SENDING...' : 'SEND MESSAGE'}
+
 						{#if estado !== 'sending'}
 							<span class="submit-arrow">↗</span>
 						{/if}
+
 					</button>
+
 				</div>
 
 				{#if estado === 'error'}
+
 					<p class="form-error" aria-live="polite">
 						Something went wrong. Please try again, or email me directly below.
 					</p>
+
 				{/if}
+
 			</form>
+
 		{/if}
+
 	</div>
+
 
 	<!-- ======================================================== -->
 	<!-- EMAIL DIRECTO: SE MANTIENE COMO ALTERNATIVA / RESPALDO  -->
 	<!-- ======================================================== -->
+
 	<div class="email-section">
-		<p class="email-label">OR EMAIL ME DIRECTLY</p>
-		<a href="mailto:augustobosco0@gmail.com" class="email">
+
+		<p class="email-label">
+			OR EMAIL ME DIRECTLY
+		</p>
+
+		<a
+			href="mailto:augustobosco0@gmail.com"
+			class="email"
+		>
 			<span style="font-weight: bold">augustobosco0</span>@gmail.com
 		</a>
+
 	</div>
-	
-	<hr class="linea-separadora">
+
+
+	<!-- ======================================================== -->
+	<!-- LÍNEA SEPARADORA ENTRE EMAIL Y REDES                    -->
+	<!-- ======================================================== -->
+
+	<hr class="linea-separadora" />
+
+
+	<!-- ======================================================== -->
+	<!-- REDES SOCIALES                                          -->
+	<!-- ======================================================== -->
 
 	<div class="logos">
+
 		<a href="https://linkedin.com/in/augusto-bosco-848291182/">
 			<img src={LinkedIn} alt="LinkedIn" />
 		</a>
-		<a href="https://x.com/augustobosco_" class="twitter">
+
+		<a
+			href="https://x.com/augustobosco_"
+			class="twitter"
+		>
 			<img src={Twitter} alt="Twitter" />
 		</a>
-		<a href="https://soundcloud.com/augustobosco" class="soundcloud">
+
+		<a
+			href="https://soundcloud.com/augustobosco"
+			class="soundcloud"
+		>
 			<img src={Soundcloud} alt="Soundcloud" />
 		</a>
-		<a href="https://instagram.com/augustobosco_/" class="instagram">
+
+		<a
+			href="https://instagram.com/augustobosco_/"
+			class="instagram"
+		>
 			<img src={Instagram} alt="Instagram" />
 		</a>
-		<!--
-		</a>
+
+
+		<!-- ==================================================== -->
+		<!-- REDES OCULTAS POR AHORA                             -->
+		<!-- ====================================================
+
 		<a href="https://youtube.com/@augustobosco_">
 			<img src={Youtube} alt="Youtube" />
-			</a>
-		<a href="https://www.artstation.com/augustobosco" class="artstation">
+		</a>
+
+		<a
+			href="https://www.artstation.com/augustobosco"
+			class="artstation"
+		>
 			<img src={Artstation} alt="Artstation" />
+		</a>
+
 		<a href="https://patreon.com/AugustoBosco">
 			<img src={Patreon} alt="Patreon" />
 		</a>
@@ -167,22 +256,33 @@
 		<a href="https://www.facebook.com/profile.php?id=100009868776195">
 			<img src={Facebook} alt="Facebook" />
 		</a>
-		  -->
+
+		==================================================== -->
+
 	</div>
+
 </section>
 
-<!-- FOOTER -->
+
+<!-- ======================================================== -->
+<!-- FOOTER                                                   -->
+<!-- ======================================================== -->
+
 <div class="footer">
-	© 2026 Augusto Bosco <br>
+	© 2026 Augusto Bosco <br />
 	Website by Zokalyx
 </div>
 
+
 <style>
+
 	@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 	/* ======================================================== */
 	/* INTRO DEL FORMULARIO                                     */
 	/* ======================================================== */
+
 	.contact-intro {
 		width: min(820px, 90%);
 		text-align: left;
@@ -213,9 +313,11 @@
 		line-height: 1.65;
 	}
 
+
 	/* ======================================================== */
 	/* CONTENEDOR Y FORMULARIO                                  */
 	/* ======================================================== */
+
 	.contact-form-container {
 		width: min(820px, 90%);
 		box-sizing: border-box;
@@ -348,9 +450,11 @@
 		line-height: 1.5;
 	}
 
+
 	/* ======================================================== */
 	/* CONFIRMACIÓN DESPUÉS DEL ENVÍO                           */
 	/* ======================================================== */
+
 	.success-card {
 		width: 100%;
 		min-height: 300px;
@@ -394,9 +498,11 @@
 		line-height: 1.6;
 	}
 
+
 	/* ======================================================== */
 	/* EMAIL DIRECTO - RESPALDO                                 */
 	/* ======================================================== */
+
 	.email-section {
 		display: flex;
 		flex-direction: column;
@@ -432,6 +538,11 @@
 		color: rgb(210, 195, 130);
 	}
 
+
+	/* ======================================================== */
+	/* CONTENEDOR GENERAL                                       */
+	/* ======================================================== */
+
 	.content {
 		font-family: 'Raleway';
 		color: white;
@@ -452,41 +563,53 @@
 		/* ======================================================== */
 	}
 
-	.logos {
-	width: 50%;
-	align-items: center;
-	justify-items: center;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr 1fr;
-	gap: 3rem;
 
-	/* ESPACIO ENTRE EL EMAIL Y LAS REDES */
-	margin-top: 1rem;
-	
-}
+	/* ======================================================== */
+	/* REDES SOCIALES                                           */
+	/* ======================================================== */
+
+	.logos {
+		width: 50%;
+		align-items: center;
+		justify-items: center;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 3rem;
+
+		/* ESPACIO ENTRE LA LÍNEA Y LAS REDES */
+		margin-top: 1rem;
+	}
 
 	/* Mantiene el tamaño original de los links de redes sin afectar
 	   al email ni a los botones/links nuevos del formulario */
 	.logos a {
 		width: 50%;
 	}
-/* ======================================================== */
-/* LÍNEA SEPARADORA ENTRE EMAIL Y REDES                     */
-/* ======================================================== */
-.linea-separadora {
-	width: 50%;
-	border: 0;
-	border-bottom: 1px solid rgba(252, 246, 220, 0.253);
-	margin: 1rem 0 2rem 0;
-}
+
+
+	/* ======================================================== */
+	/* LÍNEA SEPARADORA ENTRE EMAIL Y REDES                     */
+	/* ======================================================== */
+
+	.linea-separadora {
+		width: 50%;
+		border: 0;
+		border-bottom: 1px solid rgba(252, 246, 220, 0.253);
+		margin: 1rem 0 2rem 0;
+	}
+
+
 	.instagram,
 	.soundcloud,
 	.artstation {
 		width: 60%;
 	}
 
-	/* ESTILOS DEL FOOTER */
+
+	/* ======================================================== */
+	/* ESTILOS DEL FOOTER                                       */
+	/* ======================================================== */
+
 	.footer {
 		margin-top: 1rem;
 		margin-bottom: 3rem;
@@ -498,7 +621,13 @@
 		font-family: 'Raleway', sans-serif;
 	}
 
+
+	/* ======================================================== */
+	/* CELULARES                                                */
+	/* ======================================================== */
+
 	@media (max-width: 768px) {
+
 		.contact-intro,
 		.contact-form-container {
 			width: 90%;
@@ -537,8 +666,8 @@
 
 		.logos {
 			grid-template-columns: 1fr;
-			grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 			width: 100%;
 		}
 	}
+
 </style>
