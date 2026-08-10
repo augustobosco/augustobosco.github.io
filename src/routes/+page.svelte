@@ -364,7 +364,7 @@ De esa manera te asegurás de tener el control total sobre la primera impresión
 	/* SOLO EN TELÉFONO: texto alineado a la izquierda */
 	.summary {
 		text-align: left;
-		font-size: 1.2rem;
+		font-size: 1.1rem;
 	}
 
 	.navbar {

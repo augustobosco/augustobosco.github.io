@@ -99,9 +99,8 @@
 		}
 
 		.subtitle {
-			font-size: 0.90rem;
-			white-space: nowrap;
-			letter-spacing: 0.05em;
+			font-size: 0.8rem;
+			letter-spacing: 0.10em;
 		}
 	}
 </style>
