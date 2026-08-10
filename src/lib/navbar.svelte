@@ -100,7 +100,7 @@
 
 		.subtitle {
 			font-size: 0.8rem;
-			transform: scaleY(1.08);
+			transform: scaleY(1.05);
 			letter-spacing: 0.08em;
 		}
 	}
