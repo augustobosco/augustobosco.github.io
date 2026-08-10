@@ -88,7 +88,7 @@
 			<div class="service-text">
 				<p class="service-title">Music Production & Additional Support</p>
 				<p class="service-content">
-					Additional music, creative review and feedback, editing, stem preparation and production 
+					Additional music, creative and technical feedback, editing, stem preparation and production 
 					support for composers and creative teams, available on a per-cue, episode or complete-project basis.
 				</p>
 			</div>
