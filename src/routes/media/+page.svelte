@@ -814,7 +814,7 @@ In addition to the composition, I handled the sound design and reworked aspects 
 	/* Contorno + relleno celeste */
 	.icono-info-relleno,
 	.icono-info-contorno {
-		fill: rgba(128, 215, 255, 0.349);
+		fill: rgba(75, 192, 247, 0.603);
 
 		transition: fill 0.25s ease;
 	}
@@ -822,7 +822,7 @@ In addition to the composition, I handled the sound design and reworked aspects 
 
 	/* Únicamente la "i" queda amarilla */
 	.icono-info-letra {
-		fill: rgb(250, 200, 0);
+		fill: rgb(250, 250, 250);
 
 		transition: fill 0.25s ease;
 	}
@@ -859,7 +859,7 @@ In addition to the composition, I handled the sound design and reworked aspects 
 	.encabezado-video:hover .icono-info-contorno,
 	.encabezado-video:focus-visible .icono-info-relleno,
 	.encabezado-video:focus-visible .icono-info-contorno {
-		fill: rgba(125, 218, 255, 0.575);
+		fill: rgba(125, 218, 255, 0.767);
 	}
 
 
