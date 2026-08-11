@@ -32,6 +32,7 @@
 		flex-direction: row;
 		justify-content: center;
 		gap: 2em;
+		padding-top: 0.15rem;
 	}
 
 	.tab {
@@ -76,6 +77,7 @@
 		letter-spacing: 0.1em;
 		mix-blend-mode: lighten;
 		text-align: center;
+		padding-top: 0.15rem;
 	}
 
 	a {

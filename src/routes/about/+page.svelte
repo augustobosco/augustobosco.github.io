@@ -23,11 +23,11 @@
 </p>
 
 <p>
-	During my studies, I had the opportunity to compose and orchestrate original works that were
-	rehearsed and performed by live ensembles. This gave me practical experience taking music
-	beyond the mockup: preparing conductor scores and instrumental parts, attending rehearsals,
-	communicating with conductors and performers, and hearing firsthand how musical decisions
-	translate from the studio into live performance.
+	I had the opportunity to compose and orchestrate original works that were rehearsed and performed
+	by live ensembles. This gave me practical experience taking music beyond the mockup: preparing 
+	conductor scores and instrumental parts, attending rehearsals, communicating with conductors
+	and performers, and hearing firsthand how musical decisions translate from the studio into
+	live performance.
 </p>
 
 <p>
@@ -54,7 +54,7 @@ writing to modern hybrid production.
 </p>
 
 <p>
-	I speak Spanish and English and I’m currently studying Japanese. Based in Argentina, I’m
+	I speak Spanish and English and I’m currently studying Japanese (JLPT N4). Based in Argentina, I’m
 	available to work remotely with composers, directors, producers and creative teams
 	internationally.
 </p>
