@@ -135,7 +135,7 @@ writing to modern hybrid production.
 	}
 
 	.service-title {
-		text-align: center;
+		text-align: left;
 		font-size: 1.8rem;
 	}
 
