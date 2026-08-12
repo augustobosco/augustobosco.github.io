@@ -1,5 +1,7 @@
 <script lang="ts">
+	import { page } from '$app/state';
 	import Navbar from '$lib/navbar.svelte';
+	import { mediaTranslations } from '$lib/i18n/media';
 
 	import img1 from '$lib/assets/media/1.png';
 	import img2 from '$lib/assets/media/2.png';
@@ -20,6 +22,15 @@
 	// Importamos los assets del video de Howl directamente desde la carpeta media
 	import portadaHowl from '$lib/assets/media/portada-howl.jpg';
 	import videoHowl from '$lib/assets/media/video-howl.mp4';
+
+	// ============================================================
+	// IDIOMA ACTUAL
+	// ============================================================
+	// /media/     → inglés
+	// /ja/media/  → japonés
+	const lang = $derived(page.params.lang === 'ja' ? 'ja' : 'en');
+
+	const t = $derived(mediaTranslations[lang]);
 
 	// Variables para los reproductores de la grilla (fachadas)
 	let ytHowl = $state(false);
@@ -173,21 +184,21 @@
 
 	<!-- SECCIÓN DE FOTOS -->
 	<div class="seccion-mosaico">
-		<h2 class="titulo-seccion">Photo Gallery</h2>
+		<h2 class="titulo-seccion">{t.photoGallery}</h2>
 
 		<div class="mosaic">
-			<img src={img8} class="foto-clicable" onclick={() => modalFoto = img8} alt="Gallery" />
-			<img src={img2} class="foto-clicable" onclick={() => modalFoto = img2} alt="Gallery" />
+			<img src={img8} class="foto-clicable" onclick={() => modalFoto = img8} alt={t.galleryAlt} />
+			<img src={img2} class="foto-clicable" onclick={() => modalFoto = img2} alt={t.galleryAlt} />
 
-			<!--<img src={img9} class="foto-clicable" onclick={() => modalFoto = img9} alt="Gallery" />-->
-			<!--<img src={img12} class="foto-clicable" onclick={() => modalFoto = img12} alt="Gallery" />>-->
-			<!--<img src={img1} class="imagen-uno foto-clicable" onclick={() => modalFoto = img1} alt="Gallery" />-->
+			<!--<img src={img9} class="foto-clicable" onclick={() => modalFoto = img9} alt={t.galleryAlt} />-->
+			<!--<img src={img12} class="foto-clicable" onclick={() => modalFoto = img12} alt={t.galleryAlt} />>-->
+			<!--<img src={img1} class="imagen-uno foto-clicable" onclick={() => modalFoto = img1} alt={t.galleryAlt} />-->
 
-			<img src={img7} class="foto-clicable" onclick={() => modalFoto = img7} alt="Gallery" />
-			<img src={img10} class="foto-clicable" onclick={() => modalFoto = img10} alt="Gallery" />
+			<img src={img7} class="foto-clicable" onclick={() => modalFoto = img7} alt={t.galleryAlt} />
+			<img src={img10} class="foto-clicable" onclick={() => modalFoto = img10} alt={t.galleryAlt} />
 
 			<!-- ¡ACÁ AGREGUÉ TU FOTO NUEVA PARA QUE SE VEA! -->
-			<!--<img src={img6} class="foto-clicable" onclick={() => modalFoto = img6} alt="Gallery" />-->
+			<!--<img src={img6} class="foto-clicable" onclick={() => modalFoto = img6} alt={t.galleryAlt} />-->
 		</div>
 	</div>
 
@@ -199,7 +210,7 @@
 		<!-- 1. TRABAJOS ORIGINALES                                  -->
 		<!-- ======================================================== -->
 
-		<h2 class="titulo-seccion">Original Works</h2>
+		<h2 class="titulo-seccion">{t.originalWorks}</h2>
 		
 		<div class="grilla-noah">
 
@@ -208,10 +219,10 @@
 				<button
 					class="encabezado-video"
 					onclick={() => abrirModal('luna')}
-					title="Project Info"
+					title={t.projectInfo}
 				>
 					<span class="titulo-video">
-						LA LUNA | WALTZ NO. 1
+						{t.projects.luna.cardTitle}
 					</span>
 
 					<span class="acciones-info" aria-hidden="true">
@@ -273,10 +284,10 @@
 				<button
 					class="encabezado-video"
 					onclick={() => abrirModal('howl')}
-					title="Project Info"
+					title={t.projectInfo}
 				>
 					<span class="titulo-video">
-						HOWL’S MOVING CASTLE | LIVE ORCHESTRA
+						{t.projects.howl.cardTitle}
 					</span>
 
 					<span class="acciones-info" aria-hidden="true">
@@ -324,10 +335,10 @@
 				<button
 					class="encabezado-video"
 					onclick={() => abrirModal('yt1')}
-					title="Project Info"
+					title={t.projectInfo}
 				>
 					<span class="titulo-video">
-						DRAGONS | SCORE & SOUND REDESIGN
+						{t.projects.dragons.cardTitle}
 					</span>
 
 					<span class="acciones-info" aria-hidden="true">
@@ -377,10 +388,10 @@
 				<button
 					class="encabezado-video"
 					onclick={() => abrirModal('yt2')}
-					title="Project Info"
+					title={t.projectInfo}
 				>
 					<span class="titulo-video">
-						POCAHONTAS | SCORE & SOUND REDESIGN
+						{t.projects.pocahontas.cardTitle}
 					</span>
 
 					<span class="acciones-info" aria-hidden="true">
@@ -458,7 +469,7 @@
 			<img
 				src={modalFoto}
 				class="foto-ampliada"
-				alt="Ampliación"
+				alt={t.enlargedPhotoAlt}
 			/>
 		</div>
 
@@ -487,7 +498,7 @@
 				✕
 			</button>
 
-			<h3>LA LUNA | WALTZ NO. 1</h3>
+			<h3>{t.projects.luna.modalTitle}</h3>
 			
 			<iframe
 				class="modal-media"
@@ -498,11 +509,7 @@
 				allowfullscreen
 			></iframe>
 
-			<p>This work was premiered at the UCA Auditorium as part of a live orchestral performance, giving me the opportunity to take an original piece through the complete process from composition and orchestration to score preparation, rehearsal and performance.
-
-Preparing the music for a real ensemble required producing a complete conductor’s score and individual instrumental parts, working within fixed deadlines and then hearing those decisions translated by the orchestra in rehearsal. Being able to communicate directly with the conductor and musicians gave me a much clearer understanding of how orchestration behaves beyond the mockup.
-
-That experience had a lasting influence on the way I write today. Decisions involving balance, register, articulation, dynamics and instrumental roles are no longer purely theoretical for me — they are informed by having heard my own orchestrations performed and interpreted by a live ensemble.</p>
+			<p>{t.projects.luna.description}</p>
 
 		</div>
 
@@ -531,12 +538,12 @@ That experience had a lasting influence on the way I write today. Decisions invo
 				✕
 			</button>
 
-			<h3>HOWL’S MOVING CASTLE | LIVE ORCHESTRA</h3>
+			<h3>{t.projects.howl.modalTitle}</h3>
 			
 			<img
 				src={img11}
 				class="modal-media"
-				alt="Howl's Moving Castle Live Orchestra"
+				alt={t.projects.howl.imageAlt}
 			/>
 
 			<iframe
@@ -550,13 +557,7 @@ That experience had a lasting influence on the way I write today. Decisions invo
 				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2370137360%3Fsecret_token%3Ds-8QTC0vOrImq&color=%231e1a0e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"
 			></iframe>
 
-			<p>This project combines my orchestral work with a scene from Howl’s Moving Castle, presenting the piece as a scoring and synchronization exercise for animation. The music was performed live at the UCA Auditorium in 2023, with a full conductor’s score and individual instrumental parts prepared for the ensemble.
-
-The project required me to think simultaneously as a composer and orchestrator: shaping the musical arc around the picture while ensuring that every instrumental role remained practical and meaningful in live performance.
-
-The score is clearly influenced by Joe Hisaishi’s approach to orchestral storytelling, particularly his use of the waltz, while also drawing subtly from other waltz traditions I had studied. Rather than following the structural changes of the original soundtrack, I chose to maintain a continuous musical arc throughout the sequence, allowing the scene to develop as a single uninterrupted gesture.
-
-Working through composition, orchestration, synchronization, score preparation and live performance made this project an important part of the way I approach music for animation today.</p>
+			<p>{t.projects.howl.description}</p>
 
 		</div>
 
@@ -585,12 +586,12 @@ Working through composition, orchestration, synchronization, score preparation a
 				✕
 			</button>
 
-			<h3>ANIMATION SCORE PROJECT</h3>
+			<h3>{t.projects.dragons.modalTitle}</h3>
 			
 			<img
 				src={img3}
 				class="modal-media"
-				alt="Dragons Score Project"
+				alt={t.projects.dragons.imageAlt}
 			/>
 
 			<iframe
@@ -604,17 +605,7 @@ Working through composition, orchestration, synchronization, score preparation a
 				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2370140375%3Fsecret_token%3Ds-NnZvI4mfFod&color=%231e1a0e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false"
 			></iframe>
 
-			<p>This project is a complete rescore and sound redesign of Blizzard’s Dragons cinematic. With the exception of the original dialogue, I rebuilt the audio experience from the ground up with original music, redesigned sound effects and live instrumental recordings.
-
-For the score, I developed contrasting musical identities around the two central characters, combining orchestral writing with elements inspired by Japanese musical aesthetics and modern hybrid production. The music was written around a highly variable tempo map, allowing the score to follow the pacing, action and dramatic structure of the cinematic while maintaining a coherent musical arc.
-
-I developed the orchestration and mockup before recording live violins, cellos and quena, combining those performances with the larger virtual ensemble to bring an organic layer into the production.
-
-Alongside the score, I rebuilt the surrounding soundscape using edited game assets, custom-designed elements and additional sound libraries, carefully balancing music, dialogue and effects throughout the sequence.
-
-The project brings together the different areas of my workflow — composition, orchestration, mockup production, synchronization, live recording, sound design, editing and mixing — into a complete audiovisual production.
-
-Special thanks to Gonzalo Naessens for his input on selected artistic decisions during the mix.</p>
+			<p>{t.projects.dragons.description}</p>
 
 		</div>
 
@@ -643,12 +634,12 @@ Special thanks to Gonzalo Naessens for his input on selected artistic decisions 
 				✕
 			</button>
 
-			<h3>CINEMATIC SOUND DESIGN</h3>
+			<h3>{t.projects.pocahontas.modalTitle}</h3>
 			
 			<img
 				src={img5}
 				class="modal-media"
-				alt="Pocahontas Sound Design"
+				alt={t.projects.pocahontas.imageAlt}
 			/>
 
 			<iframe
@@ -662,15 +653,7 @@ Special thanks to Gonzalo Naessens for his input on selected artistic decisions 
 				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2370068753%3Fsecret_token%3Ds-ETTmEg6MgUS&color=%2313101e&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
 			></iframe>
 
-			<p>This project is an original rescore of the first meeting between Pocahontas and John Smith, created in 2024 as an exercise in character-driven orchestral storytelling.
-
-The central challenge was deciding how to interpret a moment that already carries a very strong emotional identity. While the original score approaches the scene with greater intimacy, I chose to emphasize the sense of discovery and immediate emotional connection between the characters, giving the first encounter a broader romantic arc.
-
-The composition draws from orchestral and folk-inspired influences, particularly Dvořák’s Symphony No. 9 and elements of Joe Hisaishi’s thematic writing. These references served as a starting point for exploring color, melody and orchestral texture while developing a musical identity specific to my interpretation of the scene.
-
-I handled the composition, orchestration, mockup production, synchronization and sound design, later revisiting the project to refine its editing and final production for the portfolio.
-
-The result represents a more intimate side of my orchestral writing and shows how I approach an existing dramatic scene by first identifying its emotional function and then building the music around that interpretation.</p>
+			<p>{t.projects.pocahontas.description}</p>
 
 		</div>
 

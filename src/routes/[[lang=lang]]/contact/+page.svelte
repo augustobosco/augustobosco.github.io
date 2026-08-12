@@ -1,5 +1,7 @@
 <script lang="ts">
+	import { page } from '$app/state';
 	import Navbar from '$lib/navbar.svelte';
+	import { contactTranslations } from '$lib/i18n/contact';
 
 	import Youtube from '$lib/assets/youtube.png';
 	import Patreon from '$lib/assets/patreon.png';
@@ -10,7 +12,19 @@
 	import Twitter from '$lib/assets/twitter.png';
 	import Artstation from '$lib/assets/artstation.png';
 
-	// Estado del formulario de contacto
+	// ============================================================
+	// IDIOMA ACTUAL
+	// ============================================================
+	// /contact/     → inglés
+	// /ja/contact/  → japonés
+	const lang = $derived(page.params.lang === 'ja' ? 'ja' : 'en');
+
+	const t = $derived(contactTranslations[lang]);
+
+	// ============================================================
+	// ESTADO DEL FORMULARIO
+	// ============================================================
+
 	let estado = $state<'idle' | 'sending' | 'success' | 'error'>('idle');
 
 	async function enviarFormulario(event: SubmitEvent) {
@@ -53,12 +67,12 @@
 	<!-- ======================================================== -->
 
 	<div class="contact-intro">
-		<p class="contact-kicker">GET IN TOUCH</p>
+		<p class="contact-kicker">{t.kicker}</p>
 
-		<h1>Let’s create something together.</h1>
+		<h1>{t.title}</h1>
 
 		<p class="contact-description">
-			Have a project, collaboration or idea in mind? Send me a message and I’ll get back to you.
+			{t.description}
 		</p>
 	</div>
 
@@ -70,10 +84,10 @@
 
 				<div class="success-icon">✓</div>
 
-				<h2>MESSAGE SENT</h2>
+				<h2>{t.success.title}</h2>
 
 				<p>
-					Thank you for reaching out. I’ll get back to you as soon as possible.
+					{t.success.description}
 				</p>
 
 				<button
@@ -81,7 +95,7 @@
 					class="send-another"
 					onclick={nuevoMensaje}
 				>
-					SEND ANOTHER MESSAGE
+					{t.success.sendAnother}
 				</button>
 
 			</div>
@@ -97,12 +111,12 @@
 
 					<label class="field">
 
-						<span>NAME</span>
+						<span>{t.form.nameLabel}</span>
 
 						<input
 							type="text"
 							name="name"
-							placeholder="Your name"
+							placeholder={t.form.namePlaceholder}
 							autocomplete="name"
 							required
 						/>
@@ -111,12 +125,12 @@
 
 					<label class="field">
 
-						<span>EMAIL</span>
+						<span>{t.form.emailLabel}</span>
 
 						<input
 							type="email"
 							name="email"
-							placeholder="you@email.com"
+							placeholder={t.form.emailPlaceholder}
 							autocomplete="email"
 							required
 						/>
@@ -127,12 +141,12 @@
 
 				<label class="field message-field">
 
-					<span>MESSAGE</span>
+					<span>{t.form.messageLabel}</span>
 
 					<textarea
 						name="message"
 						rows="7"
-						placeholder="Tell me a little about your project..."
+						placeholder={t.form.messagePlaceholder}
 						required
 					></textarea>
 
@@ -141,7 +155,7 @@
 				<div class="form-bottom">
 
 					<p class="form-note">
-						I’ll only use your email to reply to your message.
+						{t.form.note}
 					</p>
 
 					<button
@@ -150,7 +164,7 @@
 						disabled={estado === 'sending'}
 					>
 
-						{estado === 'sending' ? 'SENDING...' : 'SEND MESSAGE'}
+						{estado === 'sending' ? t.form.sending : t.form.send}
 
 						{#if estado !== 'sending'}
 							<span class="submit-arrow">↗</span>
@@ -163,7 +177,7 @@
 				{#if estado === 'error'}
 
 					<p class="form-error" aria-live="polite">
-						Something went wrong. Please try again, or email me directly below.
+						{t.form.error}
 					</p>
 
 				{/if}
@@ -182,7 +196,7 @@
 	<div class="email-section">
 
 		<p class="email-label">
-			OR EMAIL ME DIRECTLY
+			{t.directEmail}
 		</p>
 
 		<a
@@ -237,7 +251,7 @@
 		<!-- ==================================================== -->
 		<!-- REDES OCULTAS POR AHORA                             -->
 		<!-- ====================================================
-
+	
 		<a href="https://youtube.com/@augustobosco_">
 			<img src={Youtube} alt="Youtube" />
 		</a>
@@ -551,7 +565,7 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 2rem;
-		padding-top: 2rem;
+		padding-top: 4rem;
 		padding-bottom: 4rem;
 
 		/* ======================================================== */

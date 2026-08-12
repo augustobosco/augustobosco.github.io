@@ -25,18 +25,13 @@
 	// ============================================================
 	// URL PRINCIPAL DEL SITIO
 	// ============================================================
-	// Se usa para generar URLs absolutas para Google.
+
 	const siteUrl = 'https://augustobosco.com';
 
 	// ============================================================
 	// RUTA ACTUAL SIN EL PREFIJO DE IDIOMA
 	// ============================================================
-	//
-	// /about/       → /about/
-	// /ja/about/    → /about/
-	// /ja/media/    → /media/
-	// /ja/          → /
-	//
+
 	const pathWithoutLanguage = $derived.by(() => {
 		let path = page.url.pathname.replace(/^\/(ja|es)(?=\/|$)/, '');
 
@@ -69,18 +64,20 @@
 	// PÁGINAS JAPONESAS YA TERMINADAS
 	// ============================================================
 	//
-	// MUY IMPORTANTE:
-	// Solo agregamos acá una página cuando su contenido principal
-	// ya está realmente traducido al japonés.
+	// TODAS LAS PÁGINAS PRINCIPALES YA ESTÁN TRADUCIDAS:
 	//
-	// Por ahora únicamente ABOUT está terminada.
+	// /           → Home
+	// /about/     → About
+	// /contact/   → Contact
+	// /media/     → Media
 	//
-	// Más adelante iremos agregando:
-	// '/'
-	// '/media/'
-	// '/contact/'
-	//
-	const japaneseReadyPaths = ['/about/'];
+
+	const japaneseReadyPaths = [
+		'/',
+		'/about/',
+		'/contact/',
+		'/media/'
+	];
 
 	const hasJapaneseVersion = $derived(
 		japaneseReadyPaths.includes(pathWithoutLanguage)
@@ -89,10 +86,7 @@
 	// ============================================================
 	// URL CANÓNICA
 	// ============================================================
-	//
-	// Inglés → su propia URL inglesa
-	// Japonés terminado → su propia URL japonesa
-	//
+
 	const canonicalUrl = $derived(
 		lang === 'ja' && hasJapaneseVersion
 			? japaneseUrl
@@ -103,9 +97,12 @@
 	// PÁGINAS JAPONESAS TODAVÍA SIN TRADUCIR
 	// ============================================================
 	//
-	// Evitamos que Google indexe temporalmente una página /ja/
-	// cuyo contenido principal todavía está en inglés.
+	// Por ahora todas las páginas principales japonesas
+	// están terminadas.
 	//
+	// Dejamos igualmente esta lógica preparada para futuras páginas.
+	//
+
 	const japanesePageNotReady = $derived(
 		lang === 'ja' && !hasJapaneseVersion
 	);
@@ -125,10 +122,6 @@
 	<!-- ======================================================== -->
 	<!-- SEO: VERSIONES DE IDIOMA                                -->
 	<!-- ======================================================== -->
-	<!--
-		Solo aparecen cuando la versión japonesa de esta página
-		ya está realmente terminada.
-	-->
 
 	{#if hasJapaneseVersion}
 		<link
@@ -151,7 +144,7 @@
 	{/if}
 
 	<!-- ======================================================== -->
-	<!-- SEO: JAPÓN TODAVÍA SIN TRADUCIR                         -->
+	<!-- SEO: PÁGINA JAPONESA TODAVÍA NO TERMINADA              -->
 	<!-- ======================================================== -->
 
 	{#if japanesePageNotReady}
