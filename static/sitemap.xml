@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+	<!-- ====================================================== -->
+	<!-- INGLÉS                                                -->
+	<!-- ====================================================== -->
+
+	<url>
+		<loc>https://augustobosco.com/</loc>
+	</url>
+
+	<url>
+		<loc>https://augustobosco.com/about/</loc>
+	</url>
+
+	<url>
+		<loc>https://augustobosco.com/media/</loc>
+	</url>
+
+	<url>
+		<loc>https://augustobosco.com/contact/</loc>
+	</url>
+
+
+	<!-- ====================================================== -->
+	<!-- JAPONÉS                                               -->
+	<!-- ====================================================== -->
+
+	<url>
+		<loc>https://augustobosco.com/ja/</loc>
+	</url>
+
+	<url>
+		<loc>https://augustobosco.com/ja/about/</loc>
+	</url>
+
+	<url>
+		<loc>https://augustobosco.com/ja/media/</loc>
+	</url>
+
+	<url>
+		<loc>https://augustobosco.com/ja/contact/</loc>
+	</url>
+
+</urlset>
