@@ -107,10 +107,25 @@
 <section class="content" bind:this={content}>
 
 	<!-- ======================================================== -->
-	<!-- RESUMEN - UN SOLO BLOQUE, COMO EN EL DISEÑO ORIGINAL    -->
+	<!-- RESUMEN SEGÚN IDIOMA                                    -->
 	<!-- ======================================================== -->
+	<!--
+		INGLÉS:
+		Se unen todos los textos y se muestran como un único bloque.
 
-	<p class="summary">{t.summary.join(' ')}</p>
+		JAPONÉS:
+		Cada elemento del array se muestra como un párrafo separado.
+	-->
+
+	{#if lang === 'ja'}
+		<div class="summary summary-ja">
+			{#each t.summary as paragraph}
+				<p>{paragraph}</p>
+			{/each}
+		</div>
+	{:else}
+		<p class="summary summary-en">{t.summary.join(' ')}</p>
+	{/if}
 
 	<div class="soundcloud-bloque">
 		<iframe
@@ -195,11 +210,46 @@ De esa manera te asegurás de tener el control total sobre la primera impresión
 		overflow-x: hidden;
 	}
 
+	/* ======================================================== */
+	/* TEXTO PRINCIPAL DEL HOME                                */
+	/* ======================================================== */
+
 	.summary {
 		color: white;
 		font-family: 'Raleway';
-		text-align: justify;
 		margin-bottom: 2rem;
+	}
+
+	/* ======================================================== */
+	/* INGLÉS                                                  */
+	/* ======================================================== */
+	/*
+		El texto inglés se mantiene como un único bloque
+		y queda JUSTIFICADO en computadora.
+	*/
+
+	.summary-en {
+		text-align: justify;
+	}
+
+	/* ======================================================== */
+	/* JAPONÉS                                                 */
+	/* ======================================================== */
+	/*
+		El japonés se divide en párrafos porque visualmente
+		es más cómodo de leer que un único bloque largo.
+	*/
+
+	.summary-ja {
+		text-align: left;
+	}
+
+	.summary-ja p {
+		margin: 0 0 1rem 0;
+	}
+
+	.summary-ja p:last-child {
+		margin-bottom: 0;
 	}
 
 	.parallax {
@@ -379,7 +429,14 @@ De esa manera te asegurás de tener el control total sobre la primera impresión
 			padding: 2rem 5vw 3rem 5vw;
 		}
 
-		/* SOLO EN TELÉFONO: texto alineado a la izquierda */
+		/* ==================================================== */
+		/* SOLO EN TELÉFONO                                    */
+		/* ==================================================== */
+		/*
+			Tanto inglés como japonés quedan alineados
+			a la izquierda en celular.
+		*/
+
 		.summary {
 			text-align: left;
 			font-size: 1.1rem;
