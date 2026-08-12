@@ -1,10 +1,22 @@
 <script lang="ts">
+	import { page } from '$app/state';
 	import Navbar from '$lib/navbar.svelte';
+	import { homeTranslations } from '$lib/i18n/home';
 	import { onMount } from 'svelte';
 	import HomeImage from '$lib/assets/homepage.jpg';
 	import img1 from '$lib/assets/media/1.png';
 
 	let content: HTMLElement;
+
+	// ============================================================
+	// IDIOMA ACTUAL
+	// ============================================================
+	// /       → inglés
+	// /ja/    → japonés
+	const lang = $derived(page.params.lang === 'ja' ? 'ja' : 'en');
+
+	// Textos correspondientes al idioma actual.
+	const t = $derived(homeTranslations[lang]);
 	
 	// Variable que controla si se hizo clic en la miniatura
 	let playReel = $state(false);
@@ -93,17 +105,13 @@
 </section>
 
 <section class="content" bind:this={content}>
-	<p class="summary">
-	I’m a composer, orchestrator and music producer specializing in orchestral and hybrid music for animation, film and interactive media.
 
-I hold a Bachelor’s Degree in Cinematic Music from the Pontifical Catholic University of Argentina (UCA), where I developed a strong foundation in composition, orchestration and music for visual media. My work combines that classical background with modern music production, allowing me to take music from its initial concept through orchestration, mockup production, score preparation, recording and post-production.
+	<!-- ======================================================== -->
+	<!-- RESUMEN - UN SOLO BLOQUE, COMO EN EL DISEÑO ORIGINAL    -->
+	<!-- ======================================================== -->
 
-I’ve also had the opportunity to bring my own orchestral music from the studio to live performance, working directly with conductors and musicians during rehearsals and performances. That experience has shaped the way I write and produce music, keeping both the creative intention and the practical realities of performance in mind.
+	<p class="summary">{t.summary.join(' ')}</p>
 
-I can work independently on complete scores or as part of a larger music team, providing additional music, orchestration, arrangements, mockups and production support when needed.
-
-I’m based in Argentina and available for international remote collaboration.
-	</p>
 	<div class="soundcloud-bloque">
 		<iframe
 			bind:this={soundcloudIframe}
@@ -119,6 +127,7 @@ I’m based in Argentina and available for international remote collaboration.
 		<!-- CONTROL DE VOLUMEN EXTERNO PARA SOUNDCLOUD -->
 		<div class="control-volumen">
 			<span class="icono-volumen" aria-hidden="true">🔊</span>
+
 			<input
 				type="range"
 				min="0"
@@ -128,9 +137,11 @@ I’m based in Argentina and available for international remote collaboration.
 				oninput={cambiarVolumen}
 				aria-label="SoundCloud volume"
 			/>
+
 			<span class="numero-volumen">{volumen}%</span>
 		</div>
 	</div>
+
 <!-- 
 	<div class="video-reel">
 		<!-- LÓGICA DE FACHADA PARA CARGA RÁPIDA 
@@ -201,6 +212,7 @@ De esa manera te asegurás de tener el control total sobre la primera impresión
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
+
 	.parallax::after {
 		content: '';
 		position: absolute;
@@ -234,6 +246,7 @@ De esa manera te asegurás de tener el control total sobre la primera impresión
 		animation-timeline: scroll();
 		animation-range: 0% 100%;
 	}
+
 	@media (hover: hover) {
 		.hook:hover {
 			cursor: pointer;
@@ -241,6 +254,7 @@ De esa manera te asegurás de tener el control total sobre la primera impresión
 			background-color: rgb(46, 41, 82);
 		}
 	}
+
 	.hook svg {
 		width: 50%;
 		height: 50%;
@@ -260,6 +274,7 @@ De esa manera te asegurás de tener el control total sobre la primera impresión
 	/* =========================================== */
 	/* CONTROL DE VOLUMEN DEL PLAYER DE SOUNDCLOUD */
 	/* =========================================== */
+
 	.soundcloud-bloque {
 		width: 100%;
 	}
@@ -297,9 +312,10 @@ De esa manera te asegurás de tener el control total sobre la primera impresión
 	}
 
 	/* ESTILO DEL VIDEO REEL */
+
 	.video-reel {
 		width: 100%;
-		margin-top: 3rem; /* Lo separa del soundcloud */
+		margin-top: 3rem;
 		border-radius: 4px;
 		overflow: hidden;
 	}
@@ -307,10 +323,11 @@ De esa manera te asegurás de tener el control total sobre la primera impresión
 	/* =========================================== */
 	/* CLASES DE LA FACHADA DEL VIDEO (YT TRAP)    */
 	/* =========================================== */
+
 	.video {
 		display: block;
 		width: 100%;
-		aspect-ratio: 16 / 9; /* Reemplaza el height fijo y lo hace responsive */
+		aspect-ratio: 16 / 9;
 		border-radius: 4px;
 	}
 
@@ -341,6 +358,7 @@ De esa manera te asegurás de tener el control total sobre la primera impresión
 	}
 
 	/* ESTILOS DEL FOOTER */
+
 	.footer {
 		margin-top: 2rem;
 		text-align: center;
@@ -353,34 +371,35 @@ De esa manera te asegurás de tener el control total sobre la primera impresión
 	}
 	
 	@media (max-width: 768px) {
-	.parallax {
-		background-image: var(--bg-mobile);
-	}
+		.parallax {
+			background-image: var(--bg-mobile);
+		}
 
-	.content {
-		padding: 2rem 5vw 3rem 5vw;
-	}
+		.content {
+			padding: 2rem 5vw 3rem 5vw;
+		}
 
-	/* SOLO EN TELÉFONO: texto alineado a la izquierda */
-	.summary {
-		text-align: left;
-		font-size: 1.1rem;
-	}
+		/* SOLO EN TELÉFONO: texto alineado a la izquierda */
+		.summary {
+			text-align: left;
+			font-size: 1.1rem;
+		}
 
-	.navbar {
-		padding: 0.3rem 0 0.5rem 0;
-	}
+		.navbar {
+			padding: 0.3rem 0 0.5rem 0;
+		}
 
-	.tabs {
-		padding-top: 0.25rem;
-		font-size: 1.2rem;
+		.tabs {
+			padding-top: 0.25rem;
+			font-size: 1.2rem;
+		}
 	}
-}
 
 	@keyframes parallax {
 		from {
 			background-position: center 0;
 		}
+
 		to {
 			background-position: center -200px;
 		}
@@ -391,10 +410,12 @@ De esa manera te asegurás de tener el control total sobre la primera impresión
 			opacity: 1;
 			visibility: visible;
 		}
+
 		50% {
 			opacity: 0;
 			visibility: hidden;
 		}
+
 		100% {
 			opacity: 0;
 			visibility: hidden;
