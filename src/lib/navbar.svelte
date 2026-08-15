@@ -323,7 +323,7 @@
 		right: 0.9rem;
 		display: flex;
 		align-items: center;
-		gap: 0.2rem;
+		gap: 0.4rem;
 		font-size: 0.99rem;
 		letter-spacing: 0.08em;
 	}
@@ -424,7 +424,7 @@
 		*/
 
 		.tabs.english-tabs {
-			gap: 2.25rem;
+			gap: 2.15rem;
 			padding-top: 0.3rem;
 			font-size: 1.17rem;
 			font-weight: 600;
