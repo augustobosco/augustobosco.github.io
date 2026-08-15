@@ -565,7 +565,7 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 2rem;
-		padding-top: 4rem;
+		padding-top: 2.3rem;
 		padding-bottom: 4rem;
 
 		/* ======================================================== */
