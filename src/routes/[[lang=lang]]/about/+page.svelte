@@ -126,6 +126,7 @@
 		gap: 1rem;
 		background-color: rgb(33, 34, 55);
 		padding-right: 3rem;
+		padding-bottom: 0.08rem;
 		align-items: center;
 		border-radius: var(--radius);
 	}
