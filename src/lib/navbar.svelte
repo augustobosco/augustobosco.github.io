@@ -397,10 +397,10 @@
 		/* ==================================================== */
 
 		.subtitle.english-subtitle {
-			font-size: 0.8rem;
+			font-size: 1rem;
 			transform: scaleY(1.05);
 			letter-spacing: 0.08em;
-			padding-top: 0.3rem;
+			padding-top: 0rem;
 		}
 
 		/* ==================================================== */
@@ -408,10 +408,10 @@
 		/* ==================================================== */
 
 		.subtitle.japanese-subtitle {
-			font-size: 0.8rem;
+			font-size: 1rem;
 			transform: scaleY(1.05);
 			letter-spacing: 0.08em;
-			padding-top: 0.3rem;
+			padding-top: 0rem;
 		}
 
 		/* ==================================================== */
@@ -422,8 +422,10 @@
 		*/
 
 		.tabs.english-tabs {
-			gap: 2rem;
-			font-size: 0.95rem;
+			gap: 2.5rem;
+			padding-top: 0.3rem;
+			font-size: 1rem;
+			font-weight: 600;
 			flex-wrap: nowrap;
 		}
 
@@ -432,8 +434,10 @@
 		/* ==================================================== */
 
 		.tabs.japanese-tabs {
-			gap: 2rem;
-			font-size: 0.95rem;
+			gap: 2.5rem;
+			padding-top: 0.3rem;
+			font-size: 1rem;
+			font-weight: 600;
 			flex-wrap: nowrap;
 		}
 
@@ -443,8 +447,9 @@
 
 		.language-switcher {
 			position: static;
-			margin-top: 0.35rem;
-			font-size: 0.68rem;
+			margin-top: 0.45rem;
+			font-size: 0.78rem;
+			font-weight: 600;
 		}
 	}
 </style>
