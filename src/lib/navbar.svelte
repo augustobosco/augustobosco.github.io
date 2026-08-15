@@ -397,11 +397,11 @@
 		/* ==================================================== */
 
 		.subtitle.english-subtitle {
-			font-size: 1rem;
-			transform: scaleY(1.05);
-			letter-spacing: 0em;
-			font-weight: 500;
-			padding-top: 0rem;
+			font-size: 0.8rem;
+			transform: scaleY(1.06);
+			letter-spacing: 0.1em;
+			font-weight: 600;
+			padding-top: 0.1rem;
 		}
 
 		/* ==================================================== */
@@ -425,7 +425,7 @@
 		.tabs.english-tabs {
 			gap: 2.5rem;
 			padding-top: 0.3rem;
-			font-size: 1rem;
+			font-size: 1.17rem;
 			font-weight: 600;
 			flex-wrap: nowrap;
 		}
