@@ -399,7 +399,8 @@
 		.subtitle.english-subtitle {
 			font-size: 1rem;
 			transform: scaleY(1.05);
-			letter-spacing: 0.08em;
+			letter-spacing: 0em;
+			font-weight: 500;
 			padding-top: 0rem;
 		}
 
