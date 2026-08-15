@@ -409,9 +409,10 @@
 		/* ==================================================== */
 
 		.subtitle.japanese-subtitle {
-			font-size: 0.9rem;
-			transform: scaleY(1.05);
+			font-size: 0.96rem;
+			transform: scaleY(1);
 			letter-spacing: 0.08em;
+			font-weight: 500;
 			padding-top: 0rem;
 		}
 
@@ -435,9 +436,9 @@
 		/* ==================================================== */
 
 		.tabs.japanese-tabs {
-			gap: 2.0rem;
-			padding-top: 0.3rem;
-			font-size: 1.16rem;
+			gap: 1.5rem;
+			padding-top: 0.2rem;
+			font-size: 1.19rem;
 			font-weight: 600;
 			flex-wrap: nowrap;
 		}
