@@ -409,7 +409,7 @@
 		/* ==================================================== */
 
 		.subtitle.japanese-subtitle {
-			font-size: 1rem;
+			font-size: 0.9rem;
 			transform: scaleY(1.05);
 			letter-spacing: 0.08em;
 			padding-top: 0rem;
@@ -423,7 +423,7 @@
 		*/
 
 		.tabs.english-tabs {
-			gap: 2.5rem;
+			gap: 2.25rem;
 			padding-top: 0.3rem;
 			font-size: 1.17rem;
 			font-weight: 600;
@@ -435,9 +435,9 @@
 		/* ==================================================== */
 
 		.tabs.japanese-tabs {
-			gap: 2.5rem;
+			gap: 2.0rem;
 			padding-top: 0.3rem;
-			font-size: 1rem;
+			font-size: 1.16rem;
 			font-weight: 600;
 			flex-wrap: nowrap;
 		}
