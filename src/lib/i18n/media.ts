@@ -78,9 +78,9 @@ The result represents a more intimate side of my orchestral writing and shows ho
 		enlargedPhotoAlt: '拡大写真',
 
 		projects: {
-			luna: {
-				cardTitle: 'LA LUNA | WALTZ NO. 1',
-				modalTitle: 'LA LUNA | WALTZ NO. 1',
+		luna: {
+				cardTitle: 'LA LUNA（月）| ワルツ第1番',
+				modalTitle: 'LA LUNA（月）| ワルツ第1番',
 
 				description: `本作はUCAの講堂でオーケストラによる実演作品として初演され、作曲・オーケストレーションからスコア制作、リハーサル、本番まで、オリジナル作品を実演へとつなげる一連の制作工程を経験したプロジェクトです。
 

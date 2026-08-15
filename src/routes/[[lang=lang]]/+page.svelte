@@ -86,7 +86,7 @@
 <Navbar selected="" />
 
 <section class="parallax" style="--bg-desktop: url({HomeImage}); --bg-mobile: url({img1});">
-	<button onclick={scroll} class="hook" title="Know more">
+	<!--<button onclick={scroll} class="hook" title="Know more">
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="40"
@@ -101,7 +101,7 @@
 			<line x1="12" y1="5" x2="12" y2="19"></line>
 			<polyline points="19 12 12 19 5 12"></polyline>
 		</svg>
-	</button>
+	</button>-->
 </section>
 
 <section class="content" bind:this={content}>

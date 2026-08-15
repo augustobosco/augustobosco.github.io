@@ -187,7 +187,7 @@
 		color: rgb(153, 135, 255);
 		mix-blend-mode: lighten;
 		text-align: center;
-		margin-bottom: -0.5rem;
+		margin-bottom: -0.3rem;
 		white-space: nowrap;
 
 		transition:
@@ -210,8 +210,10 @@
 	*/
 
 	.title.english-title {
-		font-size: 2rem;
-		letter-spacing: 0.2em;
+		font-size: 2.2rem;
+		letter-spacing: 0.15em;
+		margin-top: 0.2rem;
+		font-weight: 450;
 	}
 
 	.title.english-title:hover,
@@ -224,8 +226,9 @@
 	/* ======================================================== */
 
 	.title.japanese-title {
-		font-size: 2rem;
-		letter-spacing: 0.2em;
+		font-size: 2.2rem;
+		letter-spacing: 0.15em;
+		margin-top: 0.2rem;
 	}
 
 	.title.japanese-title:hover,
@@ -241,13 +244,13 @@
 		color: rgb(132, 124, 179);
 		mix-blend-mode: lighten;
 		text-align: center;
-		padding-top: 0.15rem;
+		padding-top: 0rem;
 		line-height: 1.2;
 
 		/* IMPORTANTE:
 		   Peso normal como estaba originalmente.
 		   No usamos bold. */
-		font-weight: 400;
+		font-weight: 600;
 
 		margin: 0;
 		white-space: nowrap;
@@ -258,8 +261,11 @@
 	/* ======================================================== */
 
 	.subtitle.english-subtitle {
-		font-size: 0.8rem;
+		font-size: 1.09rem;
 		letter-spacing: 0.1em;
+		margin-bottom: 0.0rem;
+		letter-spacing: 0.15em;
+		font-weight: 550;
 	}
 
 	/* ======================================================== */
@@ -267,8 +273,11 @@
 	/* ======================================================== */
 
 	.subtitle.japanese-subtitle {
-		font-size: 0.8rem;
+		font-size: 1.1rem;
 		letter-spacing: 0.1em;
+		margin-bottom: 0.0rem;
+		letter-spacing: 0.15em;
+		font-weight: 500;
 	}
 
 	/* ======================================================== */
@@ -277,7 +286,10 @@
 
 	.tabs.english-tabs {
 		gap: 2em;
-		font-size: 1rem;
+		font-size: 1.10rem;
+		padding-top: 0.4rem;
+		gap: 3.9em;
+		font-weight: 500;
 	}
 
 	/* ======================================================== */
@@ -286,7 +298,10 @@
 
 	.tabs.japanese-tabs {
 		gap: 2em;
-		font-size: 1rem;
+		font-size: 1.10rem;
+		padding-top: 0.4rem;
+		gap: 3.9em;
+		font-weight: 500;
 	}
 
 	/* ======================================================== */
@@ -304,12 +319,12 @@
 
 	.language-switcher {
 		position: absolute;
-		top: 1.8rem;
-		right: 1.2rem;
+		top: 2.6rem;
+		right: 0.9rem;
 		display: flex;
 		align-items: center;
-		gap: 0.45rem;
-		font-size: 0.89rem;
+		gap: 0.2rem;
+		font-size: 0.99rem;
 		letter-spacing: 0.08em;
 	}
 
