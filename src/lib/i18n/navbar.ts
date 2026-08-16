@@ -7,7 +7,7 @@ export const navbarTranslations = {
 	},
 
 	ja: {
-		subtitle: 'アニメ音楽｜作曲・オーケストレーション',
+		subtitle: 'アニメーション音楽｜作曲・オーケストレーション',
 		about: 'プロフィール',
 		contact: 'お問い合わせ',
 		media: '作品'
