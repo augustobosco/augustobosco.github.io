@@ -405,11 +405,11 @@
 		}
 
 		/* ==================================================== */
-		/* SUBTÍTULO - JAPONÉS - TELÉFONO                     */
+		/* SUBTÍTULO - JAPONÉS - TELÉFONO           spacing 0.96          */
 		/* ==================================================== */
 
 		.subtitle.japanese-subtitle {
-			font-size: 0.96rem;
+			font-size: 0.86rem;
 			transform: scaleY(1);
 			letter-spacing: 0.08em;
 			font-weight: 500;
