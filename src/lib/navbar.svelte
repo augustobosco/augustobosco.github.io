@@ -393,11 +393,16 @@
 		}
 
 		/* ==================================================== */
-		/* SUBTÍTULO - INGLÉS - TELÉFONO                      */
+		/* SUBTÍTULO - INGLÉS - TELÉFONO     
+			font-size: 0.8rem;
+			transform: scaleY(1.1);
+			letter-spacing: 0.1em;
+			font-weight: 600;
+			padding-top: 0.1rem;                 */
 		/* ==================================================== */
 
 		.subtitle.english-subtitle {
-			font-size: 0.8rem;
+			font-size: 0.9rem;
 			transform: scaleY(1.1);
 			letter-spacing: 0.1em;
 			font-weight: 600;
