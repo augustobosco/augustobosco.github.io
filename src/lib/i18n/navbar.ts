@@ -1,6 +1,6 @@
 export const navbarTranslations = {
 	en: {
-		subtitle: 'COMPOSER & ORCHESTRATOR FOR ANIMATION',
+		subtitle: 'MUSIC PRODUCER FOR VISUAL MEDIA',
 		about: 'ABOUT',
 		contact: 'CONTACT',
 		media: 'MEDIA'
